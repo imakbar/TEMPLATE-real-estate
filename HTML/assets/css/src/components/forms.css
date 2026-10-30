@@ -1,0 +1,197 @@
+/* ==========================================================================
+   COMPONENT · FORMS
+   Text input, textarea, select, checkbox, radio, switch, input with icon,
+   validation states. Uses Bootstrap's markup (.form-control, .form-select,
+   .form-check) so existing Bootstrap knowledge and JS still apply.
+   Sizes: .form-control-sm (36)  default (44)  .form-control-lg (52)
+   ========================================================================== */
+
+:root {
+  --chevron-down: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23173F35' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+  --check-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23F7F6F0' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M4.5 10.5l3.5 3.5 7.5-8'/%3E%3C/svg%3E");
+  --dash-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20' fill='none' stroke='%23F7F6F0' stroke-width='2.5' stroke-linecap='round'%3E%3Cpath d='M5 10h10'/%3E%3C/svg%3E");
+  --dot-white: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='2.2' fill='%23F7F6F0'/%3E%3C/svg%3E");
+  --knob-off: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%235F6763'/%3E%3C/svg%3E");
+  --knob-on: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3E%3Ccircle r='3' fill='%23F7F6F0'/%3E%3C/svg%3E");
+}
+
+/* ---- Labels and help text ---------------------------------------------- */
+body .form-label {
+  margin-bottom: var(--spacing-xs);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-text-primary);
+}
+body .form-text {
+  margin-top: var(--spacing-2xs);
+  font-size: 0.8125rem;
+  color: var(--color-text-secondary);
+}
+
+/* ---- Text input / select ------------------------------------------------ */
+body .form-control,
+body .form-select {
+  min-height: var(--size-control-md);
+  padding: 0 var(--spacing-md);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-card);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+  box-shadow: none;
+  transition: border-color var(--transition-fast), box-shadow var(--transition-fast),
+              background-color var(--transition-fast);
+}
+body .form-control::placeholder { color: var(--color-text-secondary); opacity: 0.85; }
+body .form-control:hover:not(:disabled):not([readonly]),
+body .form-select:hover:not(:disabled) { border-color: var(--color-border-strong); }
+body .form-control:focus,
+body .form-select:focus {
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-card);
+  border-color: var(--color-border-focus);
+  box-shadow: var(--focus-ring);
+  outline: 0;
+}
+body .form-control:disabled,
+body .form-select:disabled {
+  color: var(--color-text-disabled);
+  background-color: var(--color-bg-subtle);
+  border-color: var(--color-border-subtle);
+  cursor: not-allowed;
+}
+body .form-control[readonly] { background-color: var(--color-bg-subtle); }
+
+/* Sizes */
+body .form-control-sm,
+body .form-select-sm {
+  min-height: var(--size-control-sm);
+  padding: 0 var(--spacing-sm);
+  font-size: 0.875rem;
+  border-radius: var(--radius-md);
+}
+body .form-control-lg,
+body .form-select-lg {
+  min-height: var(--size-control-lg);
+  padding: 0 var(--spacing-md);
+  font-size: 1rem;
+  border-radius: var(--radius-md);
+}
+
+/* Textarea */
+body textarea.form-control {
+  min-height: 120px;
+  padding: var(--spacing-sm) var(--spacing-md);
+  resize: vertical;
+}
+
+/* Select: custom chevron in brand green */
+body .form-select {
+  --bs-form-select-bg-img: var(--chevron-down);
+  padding-right: 44px;
+  background-image: var(--chevron-down);
+  background-repeat: no-repeat;
+  background-position: right 14px center;
+  background-size: 18px 18px;
+}
+body .form-select-sm { padding-right: 40px; background-position: right 12px center; }
+
+/* ---- Validation --------------------------------------------------------- */
+body .form-control.is-invalid,
+body .form-select.is-invalid { border-color: var(--color-border-danger); background-image: none; padding-right: var(--spacing-md); }
+body .form-select.is-invalid { background-image: var(--chevron-down); padding-right: 44px; }
+body .form-control.is-invalid:focus,
+body .form-select.is-invalid:focus { border-color: var(--color-border-danger); box-shadow: 0 0 0 3px rgba(179, 64, 47, 0.25); }
+body .form-control.is-valid,
+body .form-select.is-valid { border-color: var(--green-600); background-image: none; padding-right: var(--spacing-md); }
+body .form-select.is-valid { background-image: var(--chevron-down); padding-right: 44px; }
+body .form-control.is-valid:focus,
+body .form-select.is-valid:focus { border-color: var(--green-600); box-shadow: var(--focus-ring); }
+body .invalid-feedback { margin-top: var(--spacing-2xs); font-size: 0.8125rem; color: var(--color-text-danger); }
+body .valid-feedback { margin-top: var(--spacing-2xs); font-size: 0.8125rem; color: var(--color-text-success); }
+
+/* ---- Input with icon ---------------------------------------------------- */
+.input-icon { position: relative; }
+.input-icon > .icon {
+  position: absolute;
+  top: 50%;
+  left: var(--spacing-md);
+  transform: translateY(-50%);
+  width: var(--size-icon-md);
+  height: var(--size-icon-md);
+  color: var(--color-text-secondary);
+  pointer-events: none;
+}
+.input-icon > .form-control { padding-left: 46px; }
+.input-icon > .icon-end { left: auto; right: var(--spacing-md); }
+.input-icon > .icon-end ~ .form-control { padding-left: var(--spacing-md); padding-right: 46px; }
+
+/* ---- Input group (prefix / suffix text) -------------------------------- */
+body .input-group-text {
+  min-height: var(--size-control-md);
+  padding: 0 var(--spacing-md);
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--color-text-secondary);
+  background-color: var(--color-bg-surface);
+  border: 1px solid var(--color-border-default);
+  border-radius: var(--radius-md);
+}
+
+/* ---- Checkbox and radio ------------------------------------------------- */
+body .form-check { min-height: 24px; padding-left: 2rem; margin-bottom: var(--spacing-xs); }
+body .form-check .form-check-input {
+  width: 20px;
+  height: 20px;
+  margin-top: 2px;
+  margin-left: -2rem;
+  background-color: var(--color-bg-card);
+  border: 1.5px solid var(--color-border-strong);
+  box-shadow: none;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast);
+}
+body .form-check-input[type="checkbox"] { border-radius: 5px; }
+body .form-check-input[type="radio"] { border-radius: 50%; }
+body .form-check-input:hover:not(:disabled) { border-color: var(--color-border-brand); }
+body .form-check-input:focus { box-shadow: none; border-color: var(--color-border-brand); }
+body .form-check-input:focus-visible { outline: 3px solid var(--color-border-focus); outline-offset: 2px; }
+body .form-check-input:checked,
+body .form-check-input[type="checkbox"]:indeterminate {
+  background-color: var(--color-bg-primary);
+  border-color: var(--color-bg-primary);
+}
+body .form-check-input:checked[type="checkbox"] { background-image: var(--check-white); background-size: 100% 100%; }
+body .form-check-input[type="checkbox"]:indeterminate { background-image: var(--dash-white); background-size: 100% 100%; }
+body .form-check-input:checked[type="radio"] { background-image: var(--dot-white); background-size: 100% 100%; }
+body .form-check-input:disabled { opacity: 0.5; }
+body .form-check-input:disabled ~ .form-check-label { color: var(--color-text-disabled); opacity: 1; }
+body .form-check-label { font-size: 1rem; cursor: pointer; }
+body .form-check-input:disabled ~ .form-check-label { cursor: not-allowed; }
+body .form-check-input.is-invalid { border-color: var(--color-border-danger); }
+body .form-check-input.is-invalid ~ .form-check-label { color: var(--color-text-danger); }
+
+/* ---- Switch ------------------------------------------------------------- */
+body .form-switch { padding-left: 3.5rem; }
+body .form-switch .form-check-input {
+  --bs-form-switch-bg: var(--knob-off);
+  width: 44px;
+  height: 24px;
+  margin-left: -3.5rem;
+  margin-top: 0;
+  border-radius: var(--radius-full);
+  background-color: var(--color-bg-subtle);
+  background-image: var(--knob-off);
+  background-position: left center;
+  background-size: contain;
+  transition: background-position var(--transition-fast), background-color var(--transition-fast);
+}
+body .form-switch .form-check-input:focus { --bs-form-switch-bg: var(--knob-off); background-image: var(--knob-off); }
+body .form-switch .form-check-input:checked {
+  --bs-form-switch-bg: var(--knob-on);
+  background-color: var(--color-bg-primary);
+  background-image: var(--knob-on);
+  background-position: right center;
+}
+body .form-switch .form-check-label { line-height: 24px; }

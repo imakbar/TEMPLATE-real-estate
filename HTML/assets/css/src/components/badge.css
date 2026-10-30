@@ -1,0 +1,51 @@
+/* ==========================================================================
+   COMPONENT · BADGE / STATUS LABEL
+   Listing:   .badge-sale  .badge-rent  .badge-sold  .badge-featured  .badge-new
+   Feedback:  .badge-success  .badge-danger  .badge-info  .badge-neutral  .badge-outline
+   Modifiers: .badge-pill  .badge-lg  .badge-dot
+   ========================================================================== */
+
+body .badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: 0.01em;
+  text-transform: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  color: var(--color-text-primary);
+  background-color: var(--color-bg-subtle);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+}
+body .badge .icon { width: 12px; height: 12px; vertical-align: 0; }
+
+/* ---- Listing status ----------------------------------------------------- */
+body .badge-sale     { color: var(--color-text-inverse); background-color: var(--color-bg-primary); }
+body .badge-rent     { color: var(--color-text-on-accent); background-color: var(--color-bg-accent); }
+body .badge-sold     { color: var(--color-text-inverse); background-color: var(--charcoal-700); }
+body .badge-featured { color: var(--color-text-accent); background-color: var(--color-bg-accent-subtle); }
+body .badge-new      { color: var(--color-text-brand); background-color: var(--color-bg-surface); }
+
+/* ---- Feedback ----------------------------------------------------------- */
+body .badge-success  { color: var(--color-text-success); background-color: var(--color-bg-success-subtle); }
+body .badge-danger   { color: var(--color-text-danger); background-color: var(--color-bg-danger-subtle); }
+body .badge-info     { color: var(--color-text-info); background-color: var(--color-bg-info-subtle); }
+body .badge-neutral  { color: var(--color-text-secondary); background-color: var(--color-bg-subtle); }
+body .badge-outline  { color: var(--color-text-brand); background-color: transparent; border-color: var(--color-border-default); }
+
+/* ---- Modifiers ---------------------------------------------------------- */
+body .badge-pill { border-radius: var(--radius-full); padding-left: 12px; padding-right: 12px; }
+body .badge-lg { padding: 8px 14px; font-size: 0.875rem; }
+body .badge-dot::before {
+  content: "";
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: currentColor;
+}

@@ -1,0 +1,41 @@
+/* ==========================================================================
+   COMPONENT · SKELETON LOADER
+   Blocks:   .skeleton  .skeleton-text  .skeleton-title  .skeleton-circle
+             .skeleton-image  .skeleton-button
+   Use:      Add placeholder markup while data loads, then swap in real content.
+             Add aria-hidden="true" to the placeholder and aria-busy="true"
+             to the region that is loading.
+   ========================================================================== */
+
+.skeleton {
+  display: block;
+  background-color: var(--sand-200);
+  background-image: linear-gradient(90deg,
+    var(--sand-200) 0%, var(--sand-100) 40%, var(--sand-200) 80%);
+  background-size: 300% 100%;
+  border-radius: var(--radius-sm);
+  color: transparent;
+  user-select: none;
+  pointer-events: none;
+  animation: skeleton-shimmer 1.6s ease-in-out infinite;
+}
+
+.skeleton-text   { height: 0.875rem; margin-bottom: var(--spacing-xs); }
+.skeleton-text:last-child { margin-bottom: 0; }
+.skeleton-text.w-75 { width: 75% !important; }
+.skeleton-text.w-50 { width: 50% !important; }
+.skeleton-text.w-25 { width: 25% !important; }
+.skeleton-title  { height: 1.5rem; width: 60%; margin-bottom: var(--spacing-sm); }
+.skeleton-circle { width: 40px; height: 40px; border-radius: 50%; flex: none; }
+.skeleton-image  { width: 100%; aspect-ratio: 4 / 3; border-radius: var(--radius-lg); }
+.skeleton-button { width: 120px; height: var(--size-control-md); border-radius: var(--radius-md); }
+
+@keyframes skeleton-shimmer {
+  0%   { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* Reduced motion: a calm static block */
+@media (prefers-reduced-motion: reduce) {
+  .skeleton { animation: none; background-image: none; }
+}

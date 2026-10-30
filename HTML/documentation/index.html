@@ -1,0 +1,344 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Documentation | Real Estate Template</title>
+  <meta name="description" content="Setup, customization and component reference for the Real Estate HTML template.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="doc-topbar">
+  <div class="container-xl">
+    <a class="doc-brand" href="../components.html">
+      <span class="doc-brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>
+      Real Estate Template
+    </a>
+    <nav class="doc-topnav" aria-label="Primary">
+      <a href="../components.html">Components</a>
+      <a href="index.html" aria-current="page">Documentation</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container-xl doc-layout">
+
+  <aside class="doc-sidebar" aria-label="Documentation navigation">
+    <h2>Getting started</h2>
+    <ul>
+      <li><a href="#introduction">Introduction</a></li>
+      <li><a href="#quick-start">Quick start</a></li>
+      <li><a href="#structure">File structure</a></li>
+    </ul>
+    <h2>Customizing</h2>
+    <ul>
+      <li><a href="#colors">Colors</a></li>
+      <li><a href="#typography">Typography and fonts</a></li>
+      <li><a href="#spacing">Spacing, radius, shadows</a></li>
+      <li><a href="#build">Rebuilding the CSS</a></li>
+      <li><a href="#bootstrap">Bootstrap: CDN or local</a></li>
+      <li><a href="#icons">Icons</a></li>
+    </ul>
+    <h2>Components</h2>
+    <ul>
+      <li><a href="#ref-button">Button</a></li>
+      <li><a href="#ref-forms">Form controls</a></li>
+      <li><a href="#ref-badge">Badge</a></li>
+      <li><a href="#ref-avatar">Avatar</a></li>
+      <li><a href="#ref-rating">Rating</a></li>
+      <li><a href="#ref-skeleton">Skeleton</a></li>
+    </ul>
+    <h2>More</h2>
+    <ul>
+      <li><a href="#accessibility">Accessibility</a></li>
+      <li><a href="#browsers">Browser support</a></li>
+      <li><a href="#credits">Credits and licenses</a></li>
+      <li><a href="#changelog">Changelog</a></li>
+    </ul>
+  </aside>
+
+  <main class="doc-main doc-prose">
+
+    <div class="doc-hero">
+      <span class="eyebrow">Documentation · Version 0.1.0</span>
+      <h1 class="display-2 mt-2 mb-3">Real Estate Template</h1>
+      <p class="lead mb-0">A clean, modern HTML template for real estate agencies, built on Bootstrap 5 with a Forest Green theme. This guide covers setup, customization and every component.</p>
+    </div>
+
+    <!-- ============================================ INTRODUCTION -->
+    <section class="doc-section" id="introduction">
+      <div class="section-head"><h2>Introduction</h2></div>
+      <p>The template is being delivered component by component, then assembled into pages. This release (<strong>0.1.0</strong>) contains the foundation: design tokens, base styles and the Phase 1 components.</p>
+      <ul>
+        <li><strong>Plain HTML, CSS and a little JavaScript.</strong> No build step is required to use it.</li>
+        <li><strong>Bootstrap 5.3 compatible.</strong> Components extend Bootstrap's own classes, so grid, utilities and JavaScript plugins all keep working.</li>
+        <li><strong>One source of truth for design.</strong> Every color, size and radius is a CSS variable, and the names match the variables in the Figma UI Kit.</li>
+        <li><strong>Accessible by default.</strong> Visible keyboard focus, readable contrast and reduced-motion support.</li>
+      </ul>
+    </section>
+
+    <!-- ================================================ QUICK START -->
+    <section class="doc-section" id="quick-start">
+      <div class="section-head"><h2>Quick start</h2></div>
+      <ol>
+        <li>Unzip the package and open <code>HTML/components.html</code> in any modern browser. Nothing needs installing.</li>
+        <li>Copy the markup of any component from its <strong>View code</strong> panel into your own page.</li>
+        <li>Use this head and script setup on every page:</li>
+      </ol>
+<pre class="doc-snippet"><code>&lt;!-- in &lt;head&gt; -->
+&lt;link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&amp;family=Fraunces:opsz,wght@9..144,500;9..144,600&amp;display=swap" rel="stylesheet">
+&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+&lt;link href="assets/css/style.min.css" rel="stylesheet">   &lt;!-- always AFTER bootstrap -->
+
+&lt;!-- before &lt;/body> -->
+&lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js">&lt;/script>
+&lt;script src="assets/js/icons.js">&lt;/script></code></pre>
+      <p><code>style.css</code> is the readable version and <code>style.min.css</code> is the same file minified for production.</p>
+    </section>
+
+    <!-- ================================================== STRUCTURE -->
+    <section class="doc-section" id="structure">
+      <div class="section-head"><h2>File structure</h2></div>
+<pre class="doc-snippet"><code>HTML/
+├── components.html          Component showcase (open this first)
+├── build.js                 Rebuilds style.css from the source files (Node, no dependencies)
+├── documentation/
+│   └── index.html           This guide
+└── assets/
+    ├── css/
+    │   ├── style.css        Compiled theme (readable)
+    │   ├── style.min.css    Compiled theme (minified, use in production)
+    │   ├── docs.css         Styles for the showcase and docs only (safe to delete)
+    │   └── src/             Edit these, then run build.js
+    │       ├── 00-tokens.css       Design tokens (colors, spacing, radius, fonts, shadows)
+    │       ├── 01-base.css         Bootstrap variable mapping, typography, links, focus
+    │       └── components/         One file per component
+    ├── js/
+    │   ├── icons.js         Inline SVG icon sprite
+    │   └── docs.js          "View code" panels (showcase only, safe to delete)
+    └── img/
+        └── avatars/         Placeholder avatar illustrations</code></pre>
+    </section>
+
+    <!-- ===================================================== COLORS -->
+    <section class="doc-section" id="colors">
+      <div class="section-head"><h2>Colors</h2></div>
+      <p>The palette lives in <code>assets/css/src/00-tokens.css</code> in two layers. <strong>Primitives</strong> are raw values such as <code>--green-900</code>. <strong>Semantic tokens</strong> such as <code>--color-bg-primary</code> point at primitives and are what components use. To re-brand, change the primitives and every component follows.</p>
+      <table class="doc-table">
+        <thead><tr><th>Token</th><th>Value</th><th>Used for</th></tr></thead>
+        <tbody>
+          <tr><td><code>--green-900</code></td><td>#173F35</td><td>Primary buttons, headings, brand surfaces</td></tr>
+          <tr><td><code>--green-700</code></td><td>#2E6B57</td><td>Primary hover, links</td></tr>
+          <tr><td><code>--green-100</code></td><td>#E8EDE7</td><td>Soft surfaces, secondary buttons</td></tr>
+          <tr><td><code>--sand-50</code></td><td>#F7F6F0</td><td>Page background</td></tr>
+          <tr><td><code>--charcoal-900</code></td><td>#252B28</td><td>Body text</td></tr>
+          <tr><td><code>--brass-500</code></td><td>#C0903F</td><td>Accent buttons, For Rent badge, ratings</td></tr>
+        </tbody>
+      </table>
+      <p class="mt-3">Example: to switch the primary color to navy, change the <code>--green-900</code>, <code>--green-700</code> and <code>--green-950</code> values and keep the names.</p>
+    </section>
+
+    <!-- ================================================= TYPOGRAPHY -->
+    <section class="doc-section" id="typography">
+      <div class="section-head"><h2>Typography and fonts</h2></div>
+      <p>Headings (<code>h1</code> to <code>h4</code>, <code>.display-1</code>, <code>.display-2</code>) use <strong>Fraunces</strong>. Body text, labels, <code>h5</code> and <code>h6</code> use <strong>DM Sans</strong>. Both are open-source fonts under the SIL Open Font License, which permits commercial use and redistribution.</p>
+      <p>To change fonts, edit <code>--font-heading</code> and <code>--font-body</code> in <code>00-tokens.css</code> and update the Google Fonts link in your pages.</p>
+      <p><strong>Self-hosting fonts</strong> (recommended for privacy rules such as GDPR): download the font files, place them in <code>assets/fonts/</code>, remove the Google Fonts link and add <code>@font-face</code> rules to <code>01-base.css</code>.</p>
+      <table class="doc-table">
+        <thead><tr><th>Class</th><th>Font</th><th>Size</th></tr></thead>
+        <tbody>
+          <tr><td><code>.display-1</code></td><td>Fraunces 600</td><td>40 to 64 px, fluid</td></tr>
+          <tr><td><code>.display-2</code></td><td>Fraunces 600</td><td>36 to 48 px, fluid</td></tr>
+          <tr><td><code>h1</code> / <code>h2</code> / <code>h3</code> / <code>h4</code></td><td>Fraunces 600</td><td>40 / 32 / 24 / 20 px, fluid on small screens</td></tr>
+          <tr><td><code>h5</code> / <code>h6</code></td><td>DM Sans 700</td><td>18 / 16 px</td></tr>
+          <tr><td><code>.lead</code></td><td>DM Sans 400</td><td>18 px</td></tr>
+          <tr><td><code>.eyebrow</code></td><td>DM Sans 600, uppercase</td><td>12 px</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- ==================================================== SPACING -->
+    <section class="doc-section" id="spacing">
+      <div class="section-head"><h2>Spacing, radius and shadows</h2></div>
+      <p>Spacing follows a 4 px base: <code>--spacing-2xs</code> (4) to <code>--spacing-4xl</code> (96). Corner radius: <code>--radius-sm</code> 6, <code>--radius-md</code> 10, <code>--radius-lg</code> 16, <code>--radius-xl</code> 24, <code>--radius-full</code> pill. Control heights: <code>--size-control-sm</code> 36, <code>--size-control-md</code> 44, <code>--size-control-lg</code> 52. Shadows: <code>--shadow-sm</code>, <code>--shadow-md</code>, <code>--shadow-lg</code>.</p>
+    </section>
+
+    <!-- ====================================================== BUILD -->
+    <section class="doc-section" id="build">
+      <div class="section-head"><h2>Rebuilding the CSS</h2></div>
+      <p>Edit the files in <code>assets/css/src/</code>, then compile them into <code>style.css</code>. You need <a href="https://nodejs.org" rel="noopener">Node.js</a> and nothing else:</p>
+<pre class="doc-snippet"><code>cd HTML
+node build.js</code></pre>
+      <p>To create the minified file:</p>
+<pre class="doc-snippet"><code>npx esbuild assets/css/style.css --minify --outfile=assets/css/style.min.css</code></pre>
+      <p>Prefer not to use Node? Edit <code>style.css</code> directly. It is plain, readable CSS. To add a new component file, add it to the <code>ORDER</code> list in <code>build.js</code>.</p>
+    </section>
+
+    <!-- ================================================== BOOTSTRAP -->
+    <section class="doc-section" id="bootstrap">
+      <div class="section-head"><h2>Bootstrap: CDN or local</h2></div>
+      <p>Pages load Bootstrap 5.3.8 from the jsDelivr CDN. To work offline or to host everything yourself, download the Bootstrap 5.3 release from <a href="https://getbootstrap.com" rel="noopener">getbootstrap.com</a>, copy <code>bootstrap.min.css</code> and <code>bootstrap.bundle.min.js</code> into <code>assets/vendor/bootstrap/</code>, and change the two CDN URLs in each page. The theme only relies on standard Bootstrap 5.3 classes and CSS variables, so any 5.3.x release works.</p>
+    </section>
+
+    <!-- ====================================================== ICONS -->
+    <section class="doc-section" id="icons">
+      <div class="section-head"><h2>Icons</h2></div>
+      <p>Icons are an inline SVG sprite injected by <code>assets/js/icons.js</code>. It works on a web server and when opening files directly from disk. Use an icon like this:</p>
+<pre class="doc-snippet"><code>&lt;svg class="icon" aria-hidden="true">&lt;use href="#i-search">&lt;/use>&lt;/svg>
+
+&lt;!-- filled variant for stars and hearts -->
+&lt;svg class="icon icon-fill" aria-hidden="true">&lt;use href="#i-star">&lt;/use>&lt;/svg></code></pre>
+      <p>Sizes: <code>.icon-sm</code> (16), <code>.icon-md</code> (20), <code>.icon-lg</code> (24). The default is 1.25em so icons scale with text. Color follows the text color.</p>
+      <p><strong>Included:</strong> plus, minus, arrow-right, arrow-left, arrow-up-right, chevron-down, chevron-right, search, close, check, check-circle, info, alert, heart, star, map-pin, bed, bath, area, home, phone, mail, user, sliders, share, upload, trash.</p>
+      <p><strong>Add your own:</strong> open <code>icons.js</code>, add a line to the <code>icons</code> object with a name and the SVG path content (24 x 24 grid, drawn as a 2 px stroke), then use <code>#i-yourname</code>.</p>
+    </section>
+
+    <!-- =============================================== REF: BUTTON -->
+    <section class="doc-section" id="ref-button">
+      <div class="section-head"><h2>Button</h2><p>Live examples: <a href="../components.html#buttons">components.html</a></p></div>
+      <table class="doc-table">
+        <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td><code>.btn .btn-primary</code></td><td>Main action. Use once per section.</td></tr>
+          <tr><td><code>.btn .btn-secondary</code></td><td>Supporting action, soft green.</td></tr>
+          <tr><td><code>.btn .btn-accent</code></td><td>Marketing call to action, brass.</td></tr>
+          <tr><td><code>.btn .btn-outline-primary</code></td><td>Lower emphasis, outlined.</td></tr>
+          <tr><td><code>.btn .btn-ghost</code></td><td>Lowest emphasis, text only.</td></tr>
+          <tr><td><code>.btn-sm</code> / <code>.btn-lg</code></td><td>36 px and 52 px height. Default is 44 px.</td></tr>
+          <tr><td><code>.btn-icon</code></td><td>Square, icon only. Always add <code>aria-label</code>.</td></tr>
+          <tr><td><code>.btn-pill</code></td><td>Fully rounded corners.</td></tr>
+          <tr><td><code>.is-loading</code></td><td>Shows a spinner and blocks clicks. Add <code>aria-busy="true"</code>.</td></tr>
+        </tbody>
+      </table>
+<pre class="doc-snippet"><code>&lt;button type="button" class="btn btn-primary btn-lg">
+  &lt;svg class="icon" aria-hidden="true">&lt;use href="#i-search">&lt;/use>&lt;/svg>Search properties
+&lt;/button></code></pre>
+    </section>
+
+    <!-- ================================================ REF: FORMS -->
+    <section class="doc-section" id="ref-forms">
+      <div class="section-head"><h2>Form controls</h2><p>Live examples: <a href="../components.html#forms">components.html</a></p></div>
+      <p>Use standard Bootstrap form markup. The theme restyles it, so existing Bootstrap knowledge applies.</p>
+      <table class="doc-table">
+        <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+        <tbody>
+          <tr><td><code>.form-control</code></td><td>Text input and textarea. Sizes <code>.form-control-sm</code> and <code>.form-control-lg</code>.</td></tr>
+          <tr><td><code>.form-select</code></td><td>Dropdown with a custom chevron. Sizes <code>.form-select-sm</code> and <code>.form-select-lg</code>.</td></tr>
+          <tr><td><code>.input-icon</code></td><td>Wrapper that puts an icon inside an input. Add <code>.icon-end</code> to the icon to place it on the right.</td></tr>
+          <tr><td><code>.input-group</code></td><td>Prefix or suffix text, for example currency.</td></tr>
+          <tr><td><code>.form-check</code></td><td>Checkbox and radio. Add <code>.form-switch</code> and <code>role="switch"</code> for a toggle.</td></tr>
+          <tr><td><code>.is-invalid</code> / <code>.is-valid</code></td><td>Validation states. Pair with <code>.invalid-feedback</code> or <code>.valid-feedback</code>.</td></tr>
+        </tbody>
+      </table>
+      <p class="mt-3">Always connect a <code>&lt;label&gt;</code> to its field with <code>for</code> and <code>id</code>, and link help or error text with <code>aria-describedby</code>.</p>
+    </section>
+
+    <!-- ================================================ REF: BADGE -->
+    <section class="doc-section" id="ref-badge">
+      <div class="section-head"><h2>Badge</h2><p>Live examples: <a href="../components.html#badges">components.html</a></p></div>
+      <table class="doc-table">
+        <thead><tr><th>Class</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td><code>.badge .badge-sale</code> <code>.badge-rent</code> <code>.badge-sold</code></td><td>Listing status on property cards.</td></tr>
+          <tr><td><code>.badge-featured</code> <code>.badge-new</code></td><td>Highlight labels.</td></tr>
+          <tr><td><code>.badge-success</code> <code>.badge-danger</code> <code>.badge-info</code> <code>.badge-neutral</code> <code>.badge-outline</code></td><td>Feedback and states.</td></tr>
+          <tr><td><code>.badge-pill</code> <code>.badge-lg</code> <code>.badge-dot</code></td><td>Shape, size and status dot modifiers.</td></tr>
+        </tbody>
+      </table>
+    </section>
+
+    <!-- =============================================== REF: AVATAR -->
+    <section class="doc-section" id="ref-avatar">
+      <div class="section-head"><h2>Avatar</h2><p>Live examples: <a href="../components.html#avatars">components.html</a></p></div>
+      <table class="doc-table">
+        <thead><tr><th>Class</th><th>Use</th></tr></thead>
+        <tbody>
+          <tr><td><code>.avatar</code></td><td>Base, 40 px. Put an <code>&lt;img&gt;</code> or one to two initials inside.</td></tr>
+          <tr><td><code>.avatar-xs</code> <code>-sm</code> <code>-lg</code> <code>-xl</code> <code>-2xl</code></td><td>24, 32, 56, 80 and 120 px.</td></tr>
+          <tr><td><code>.avatar-square</code></td><td>Rounded square instead of a circle.</td></tr>
+          <tr><td><code>.avatar-brand</code> <code>.avatar-accent</code></td><td>Colored initials.</td></tr>
+          <tr><td><code>.avatar-status</code> (+ <code>.is-offline</code>)</td><td>Presence dot.</td></tr>
+          <tr><td><code>.avatar-group</code> with <code>.avatar-more</code></td><td>Overlapping stack with a "+N" counter.</td></tr>
+        </tbody>
+      </table>
+      <p class="mt-3">The images in <code>assets/img/avatars/</code> are placeholder illustrations. Replace them with your agents' photos and keep a meaningful <code>alt</code> text.</p>
+    </section>
+
+    <!-- =============================================== REF: RATING -->
+    <section class="doc-section" id="ref-rating">
+      <div class="section-head"><h2>Rating</h2><p>Live examples: <a href="../components.html#rating">components.html</a></p></div>
+<pre class="doc-snippet"><code>&lt;span class="rating" style="--rating: 4.5" role="img" aria-label="Rated 4.5 out of 5">&lt;/span></code></pre>
+      <p>Set <code>--rating</code> to any value from 0 to 5. Sizes: <code>.rating-sm</code> (14 px stars), default (18 px), <code>.rating-lg</code> (24 px). <code>.rating-summary</code> lays out stars with a number and review count. <code>.rating-input</code> is an interactive five-star radio group, see the example for the exact markup.</p>
+    </section>
+
+    <!-- ============================================= REF: SKELETON -->
+    <section class="doc-section" id="ref-skeleton">
+      <div class="section-head"><h2>Skeleton</h2><p>Live examples: <a href="../components.html#skeleton">components.html</a></p></div>
+      <p>Blocks: <code>.skeleton-text</code> (with <code>.w-75</code>, <code>.w-50</code>, <code>.w-25</code>), <code>.skeleton-title</code>, <code>.skeleton-circle</code>, <code>.skeleton-image</code> (4:3), <code>.skeleton-button</code>. Combine them to mirror the layout that is loading. Put <code>aria-busy="true"</code> on the loading region and <code>aria-hidden="true"</code> on the placeholders. The shimmer animation is turned off for users who prefer reduced motion.</p>
+    </section>
+
+    <!-- ============================================ ACCESSIBILITY -->
+    <section class="doc-section" id="accessibility">
+      <div class="section-head"><h2>Accessibility</h2></div>
+      <ul>
+        <li>Every interactive element shows a clear 3 px focus ring when reached with the keyboard.</li>
+        <li>Text and control colors are chosen for readable contrast on the page and card backgrounds. Disabled controls are intentionally lower contrast, as the WCAG standard allows.</li>
+        <li>Icon-only buttons must have an <code>aria-label</code>. Decorative icons use <code>aria-hidden="true"</code>.</li>
+        <li>Animations (button spinner, skeleton shimmer, smooth scroll) are reduced for users with the "reduce motion" system setting.</li>
+        <li>Remember to run your final pages through a checker such as WAVE or Lighthouse, since content and images are yours.</li>
+      </ul>
+    </section>
+
+    <!-- ================================================== BROWSERS -->
+    <section class="doc-section" id="browsers">
+      <div class="section-head"><h2>Browser support</h2></div>
+      <p>Current versions of Chrome, Edge, Firefox and Safari (desktop and mobile). The theme uses CSS custom properties, <code>:focus-visible</code> and CSS masks, which all of these support. Internet Explorer is not supported, in line with Bootstrap 5.</p>
+    </section>
+
+    <!-- =================================================== CREDITS -->
+    <section class="doc-section" id="credits">
+      <div class="section-head"><h2>Credits and licenses</h2></div>
+      <table class="doc-table">
+        <thead><tr><th>Resource</th><th>License</th><th>Link</th></tr></thead>
+        <tbody>
+          <tr><td>Bootstrap 5.3</td><td>MIT</td><td><a href="https://getbootstrap.com" rel="noopener">getbootstrap.com</a></td></tr>
+          <tr><td>Fraunces (font)</td><td>SIL Open Font License 1.1</td><td><a href="https://fonts.google.com/specimen/Fraunces" rel="noopener">Google Fonts</a></td></tr>
+          <tr><td>DM Sans (font)</td><td>SIL Open Font License 1.1</td><td><a href="https://fonts.google.com/specimen/DM+Sans" rel="noopener">Google Fonts</a></td></tr>
+          <tr><td>Icons (<code>icons.js</code>)</td><td>Original artwork, included with the template</td><td>n/a</td></tr>
+          <tr><td>Avatar illustrations</td><td>Original artwork, included with the template</td><td>n/a</td></tr>
+        </tbody>
+      </table>
+      <p class="mt-3">No stock photos or third-party images are included in this release.</p>
+    </section>
+
+    <!-- ================================================= CHANGELOG -->
+    <section class="doc-section" id="changelog">
+      <div class="section-head"><h2>Changelog</h2></div>
+      <h3 class="h5">0.1.0: Foundation</h3>
+      <ul>
+        <li>Design tokens, base styles and Bootstrap 5.3 theme mapping.</li>
+        <li>Components: button, icon button, form controls (input, textarea, select, checkbox, radio, switch), badge, avatar, rating, skeleton loader.</li>
+        <li>Inline SVG icon sprite, showcase page and this documentation.</li>
+      </ul>
+      <h3 class="h5 mt-4">Planned</h3>
+      <ul>
+        <li>Layout components: header, mobile navigation, footer, breadcrumbs, pagination, modal.</li>
+        <li>Real estate components: property cards, gallery, search form, filters, agent card.</li>
+        <li>Section blocks and all pages (home, listings, property details, agents, blog and more).</li>
+      </ul>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+</body>
+</html>

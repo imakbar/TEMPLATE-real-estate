@@ -1,0 +1,129 @@
+/* ==========================================================================
+   DOCS PAGE STYLES: used only by components.html and documentation/.
+   Safe to delete from a production site.
+   ========================================================================== */
+
+.doc-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 1030;
+  background: rgba(247, 246, 240, 0.92);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--color-border-subtle);
+}
+.doc-topbar .container-xl { display: flex; align-items: center; justify-content: space-between; min-height: 64px; gap: 16px; }
+.doc-brand {
+  display: inline-flex; align-items: center; gap: 10px;
+  font-family: var(--font-heading); font-weight: 600; font-size: 1.125rem;
+  color: var(--color-text-brand); text-decoration: none;
+}
+.doc-brand-mark {
+  display: inline-grid; place-items: center; width: 32px; height: 32px;
+  border-radius: var(--radius-md); background: var(--color-bg-primary); color: var(--color-text-inverse);
+}
+.doc-brand-mark .icon { width: 18px; height: 18px; vertical-align: 0; }
+.doc-topnav { display: flex; gap: 4px; }
+.doc-topnav a {
+  padding: 8px 14px; border-radius: var(--radius-md);
+  font-size: 0.9375rem; font-weight: 600; text-decoration: none; color: var(--color-text-secondary);
+}
+.doc-topnav a:hover { background: var(--color-bg-surface); color: var(--color-text-brand); }
+.doc-topnav a[aria-current="page"] { background: var(--color-bg-surface); color: var(--color-text-brand); }
+
+.doc-layout { display: grid; grid-template-columns: 232px minmax(0, 1fr); gap: 56px; padding-block: 48px 96px; }
+.doc-sidebar { position: sticky; top: 96px; align-self: start; max-height: calc(100vh - 120px); overflow-y: auto; }
+.doc-sidebar h2 {
+  margin: 0 0 12px; font-family: var(--font-body); font-size: 0.75rem; font-weight: 600;
+  letter-spacing: 0.08em; text-transform: uppercase; color: var(--color-text-accent);
+}
+.doc-sidebar ul { list-style: none; margin: 0 0 28px; padding: 0; }
+.doc-sidebar a {
+  display: block; padding: 6px 12px; margin-left: -12px; border-radius: var(--radius-sm);
+  font-size: 0.9375rem; text-decoration: none; color: var(--color-text-secondary);
+}
+.doc-sidebar a:hover { background: var(--color-bg-surface); color: var(--color-text-brand); }
+
+.doc-main { min-width: 0; }
+.doc-hero { padding-bottom: 40px; border-bottom: 1px solid var(--color-border-default); margin-bottom: 56px; }
+.doc-hero p { max-width: 62ch; }
+
+.doc-section { padding-top: 8px; margin-bottom: 72px; scroll-margin-top: 88px; }
+.doc-section > .section-head { margin-bottom: 28px; }
+.doc-section > .section-head p { max-width: 70ch; margin: 8px 0 0; color: var(--color-text-secondary); }
+.doc-section h3.demo-title {
+  margin: 32px 0 12px; font-family: var(--font-body); font-size: 0.8125rem; font-weight: 700;
+  letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-secondary);
+}
+
+/* The rendered example */
+.demo {
+  padding: 32px;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+.demo + .demo-code { margin-bottom: 0; }
+.demo-code {
+  margin: 0;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border-subtle);
+  border-top: 0;
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+.demo-code > summary {
+  padding: 10px 20px; cursor: pointer; font-size: 0.8125rem; font-weight: 600; color: var(--color-text-link);
+  border-top: 1px solid var(--color-border-subtle); list-style: none;
+}
+.demo-code > summary::-webkit-details-marker { display: none; }
+.demo-code > summary::before { content: "</>"; margin-right: 8px; font-family: ui-monospace, monospace; color: var(--color-text-accent); }
+.demo-code[open] > summary { border-bottom: 1px solid var(--color-border-subtle); }
+.demo-code-body { position: relative; }
+.demo-code pre {
+  margin: 0; padding: 20px; max-height: 360px; overflow: auto;
+  background: var(--green-950); color: #DDE7E1;
+  font-size: 0.8125rem; line-height: 1.65; border-radius: 0 0 var(--radius-lg) var(--radius-lg);
+}
+.demo-copy {
+  position: absolute; top: 10px; right: 10px; z-index: 1;
+  padding: 4px 12px; font-size: 0.75rem; font-weight: 600; color: var(--color-text-inverse);
+  background: rgba(255, 255, 255, 0.12); border: 1px solid rgba(255, 255, 255, 0.2); border-radius: var(--radius-sm);
+}
+.demo-copy:hover { background: rgba(255, 255, 255, 0.22); }
+
+/* Demo layout helpers */
+.demo-row { display: flex; flex-wrap: wrap; align-items: center; gap: 16px; }
+.demo-stack { display: grid; gap: 24px; }
+.demo-stack > * { max-width: 440px; }
+.demo-grid { display: grid; gap: 24px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.demo-dark { background: var(--color-bg-inverse); border-color: var(--color-bg-inverse); }
+
+/* Documentation prose and code snippets */
+.doc-prose p, .doc-prose li { max-width: 75ch; }
+.doc-prose ul, .doc-prose ol { padding-left: 1.4rem; margin-bottom: 1rem; }
+.doc-prose li { margin-bottom: 0.4rem; }
+.doc-prose a { font-weight: 500; }
+.doc-snippet {
+  margin: 16px 0 20px; padding: 20px; overflow: auto;
+  background: var(--green-950); color: #DDE7E1;
+  font-size: 0.8125rem; line-height: 1.65; border-radius: var(--radius-lg);
+}
+.doc-prose .doc-snippet code { padding: 0; color: inherit; background: none; font-size: inherit; white-space: pre; border-radius: 0; }
+/* Class reference tables */
+.doc-table { width: 100%; margin-top: 16px; font-size: 0.9375rem; border-collapse: collapse; }
+.doc-table th, .doc-table td { padding: 12px 16px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--color-border-subtle); }
+.doc-table th { font-size: 0.75rem; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-secondary); background: var(--color-bg-subtle); }
+.doc-table code, .doc-prose code, p code, li code {
+  padding: 2px 6px; font-size: 0.85em; color: var(--green-700);
+  background: var(--color-bg-surface); border-radius: 4px;
+}
+
+@media (max-width: 991.98px) {
+  .doc-layout { grid-template-columns: 1fr; gap: 24px; padding-block: 24px 64px; }
+  .doc-sidebar { position: static; max-height: none; }
+  .doc-sidebar ul { display: flex; flex-wrap: wrap; gap: 4px; margin-bottom: 16px; }
+  .doc-sidebar a { margin-left: 0; background: var(--color-bg-surface); }
+  .doc-topnav { display: none; }
+  .doc-sidebar-future { display: none; }
+  .doc-table { display: block; overflow-x: auto; }
+  .demo { padding: 20px; }
+}
