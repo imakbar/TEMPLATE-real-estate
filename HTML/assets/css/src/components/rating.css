@@ -1,0 +1,65 @@
+/* ==========================================================================
+   COMPONENT · RATING (STARS)
+   Display:  <span class="rating" style="--rating: 4.5" role="img" aria-label="Rated 4.5 out of 5"></span>
+             Supports decimals. Sizes: .rating-sm  default  .rating-lg
+   Input:    .rating-input  (five radio buttons, see components.html)
+   ========================================================================== */
+
+.rating {
+  --rating: 0;
+  --star-size: 18px;
+  display: inline-block;
+  width: calc(var(--star-size) * 5);
+  height: var(--star-size);
+  vertical-align: middle;
+  background: linear-gradient(90deg,
+    var(--brass-500) calc(var(--rating) / 5 * 100%),
+    var(--sand-300) calc(var(--rating) / 5 * 100%));
+  -webkit-mask: var(--star-mask) repeat-x left center / var(--star-size) var(--star-size);
+          mask: var(--star-mask) repeat-x left center / var(--star-size) var(--star-size);
+  --star-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 2.6l2.9 5.9 6.5.9-4.7 4.6 1.1 6.4L12 17.4l-5.8 3 1.1-6.4L2.6 9.4l6.5-.9z'/%3E%3C/svg%3E");
+}
+.rating-sm { --star-size: 14px; }
+.rating-lg { --star-size: 24px; }
+
+/* Rating with the number and review count */
+.rating-summary {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  font-size: 0.875rem;
+  color: var(--color-text-secondary);
+}
+.rating-summary strong { color: var(--color-text-primary); font-weight: 700; }
+
+/* ---- Interactive input ---------------------------------------------------
+   Radios are written 5 → 1 in the markup and shown 1 → 5 with row-reverse. */
+.rating-input {
+  display: inline-flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  gap: 2px;
+}
+.rating-input > input {
+  position: absolute;
+  opacity: 0;
+  width: 1px;
+  height: 1px;
+}
+.rating-input > label {
+  display: inline-flex;
+  padding: 2px;
+  color: var(--sand-300);
+  cursor: pointer;
+  transition: color var(--transition-fast), transform var(--transition-fast);
+}
+.rating-input > label .icon { width: 28px; height: 28px; vertical-align: 0; }
+.rating-input > label:hover { transform: scale(1.1); }
+.rating-input > input:checked ~ label,
+.rating-input > label:hover,
+.rating-input > label:hover ~ label { color: var(--brass-500); }
+.rating-input > input:focus-visible + label {
+  outline: 3px solid var(--color-border-focus);
+  outline-offset: 2px;
+  border-radius: var(--radius-sm);
+}

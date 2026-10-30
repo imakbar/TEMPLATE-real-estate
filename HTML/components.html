@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Components | Real Estate Template</title>
+  <meta name="description" content="Phase 1 foundation components: buttons, forms, badges, avatars, rating and skeleton loaders.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN). Replace with a local copy if you prefer, see documentation. -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="assets/css/style.css" rel="stylesheet">
+  <link href="assets/css/docs.css" rel="stylesheet">
+</head>
+<body>
+
+<header class="doc-topbar">
+  <div class="container-xl">
+    <a class="doc-brand" href="components.html">
+      <span class="doc-brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>
+      Real Estate Template
+    </a>
+    <nav class="doc-topnav" aria-label="Primary">
+      <a href="components.html" aria-current="page">Components</a>
+      <a href="documentation/index.html">Documentation</a>
+    </nav>
+  </div>
+</header>
+
+<div class="container-xl doc-layout">
+
+  <aside class="doc-sidebar" aria-label="Components navigation">
+    <h2>Foundation UI</h2>
+    <ul>
+      <li><a href="#buttons">Buttons</a></li>
+      <li><a href="#forms">Form controls</a></li>
+      <li><a href="#badges">Badges</a></li>
+      <li><a href="#avatars">Avatars</a></li>
+      <li><a href="#rating">Rating</a></li>
+      <li><a href="#skeleton">Skeleton loader</a></li>
+    </ul>
+    <div class="doc-sidebar-future">
+      <h2>Coming next</h2>
+      <ul>
+        <li><span class="text-secondary small">Layout components</span></li>
+        <li><span class="text-secondary small">Property components</span></li>
+        <li><span class="text-secondary small">Sections and pages</span></li>
+      </ul>
+    </div>
+  </aside>
+
+  <main class="doc-main">
+
+    <div class="doc-hero">
+      <span class="eyebrow">Phase 1 · Foundation UI</span>
+      <h1 class="display-2 mt-2 mb-3">Components</h1>
+      <p class="lead mb-0">The small building blocks used on every page. Each example has a <strong>View code</strong> panel with the exact markup to copy.</p>
+    </div>
+
+    <!-- ===================================================== BUTTONS -->
+    <section class="doc-section" id="buttons">
+      <div class="section-head">
+        <h2>Buttons</h2>
+        <p>Primary is the one main action in a section. Secondary supports it. Accent is for marketing calls to action. Outline and ghost are for lower-emphasis actions.</p>
+      </div>
+
+      <h3 class="demo-title">Variants</h3>
+      <div class="demo demo-row">
+        <button type="button" class="btn btn-primary">Primary</button>
+        <button type="button" class="btn btn-secondary">Secondary</button>
+        <button type="button" class="btn btn-accent">Accent</button>
+        <button type="button" class="btn btn-outline-primary">Outline</button>
+        <button type="button" class="btn btn-ghost">Ghost</button>
+      </div>
+
+      <h3 class="demo-title">Sizes</h3>
+      <div class="demo demo-row">
+        <button type="button" class="btn btn-primary btn-sm">Small 36</button>
+        <button type="button" class="btn btn-primary">Medium 44</button>
+        <button type="button" class="btn btn-primary btn-lg">Large 52</button>
+      </div>
+
+      <h3 class="demo-title">With icons</h3>
+      <div class="demo demo-row">
+        <button type="button" class="btn btn-primary btn-lg"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>Search properties</button>
+        <button type="button" class="btn btn-accent"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>Submit property</button>
+        <button type="button" class="btn btn-secondary">Contact agent<svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></button>
+        <button type="button" class="btn btn-outline-primary"><svg class="icon" aria-hidden="true"><use href="#i-sliders"></use></svg>Filters</button>
+        <button type="button" class="btn btn-ghost btn-sm"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>Clear filters</button>
+      </div>
+
+      <h3 class="demo-title">Icon buttons <span class="text-secondary fw-normal text-lowercase">(always add an aria-label)</span></h3>
+      <div class="demo demo-row">
+        <button type="button" class="btn btn-primary btn-icon" aria-label="Search"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg></button>
+        <button type="button" class="btn btn-secondary btn-icon" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+        <button type="button" class="btn btn-outline-primary btn-icon" aria-label="Share"><svg class="icon" aria-hidden="true"><use href="#i-share"></use></svg></button>
+        <button type="button" class="btn btn-ghost btn-icon" aria-label="Close"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg></button>
+        <button type="button" class="btn btn-secondary btn-icon btn-pill" aria-label="Call agent"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></button>
+        <button type="button" class="btn btn-primary btn-icon btn-sm btn-pill" aria-label="Next"><svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></button>
+        <button type="button" class="btn btn-secondary btn-icon btn-lg" aria-label="Open map"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg></button>
+      </div>
+
+      <h3 class="demo-title">States</h3>
+      <div class="demo demo-row">
+        <button type="button" class="btn btn-primary" disabled>Disabled</button>
+        <button type="button" class="btn btn-secondary" disabled>Disabled</button>
+        <button type="button" class="btn btn-outline-primary" disabled>Disabled</button>
+        <button type="button" class="btn btn-ghost" disabled>Disabled</button>
+        <button type="button" class="btn btn-primary is-loading" aria-busy="true">Loading</button>
+        <button type="button" class="btn btn-secondary is-loading" aria-busy="true">Loading</button>
+        <a class="btn btn-primary" href="#buttons" role="button">Link styled as button</a>
+      </div>
+
+      <h3 class="demo-title">Full width</h3>
+      <div class="demo demo-stack">
+        <button type="button" class="btn btn-primary btn-lg w-100">Send enquiry</button>
+        <button type="button" class="btn btn-outline-primary w-100">Schedule a viewing</button>
+      </div>
+    </section>
+
+    <!-- ======================================================= FORMS -->
+    <section class="doc-section" id="forms">
+      <div class="section-head">
+        <h2>Form controls</h2>
+        <p>Standard Bootstrap form markup with the template styling. Controls are 44px tall by default, with 36px and 52px sizes.</p>
+      </div>
+
+      <h3 class="demo-title">Text input</h3>
+      <div class="demo demo-stack">
+        <div>
+          <label for="f-name" class="form-label">Full name</label>
+          <input type="text" class="form-control" id="f-name" placeholder="e.g. Sara Ahmed">
+        </div>
+        <div>
+          <label for="f-email" class="form-label">Email</label>
+          <input type="email" class="form-control" id="f-email" value="sara@example.com" aria-describedby="f-email-help">
+          <div id="f-email-help" class="form-text">We only use this to reply to your enquiry.</div>
+        </div>
+        <div>
+          <label for="f-disabled" class="form-label">Disabled</label>
+          <input type="text" class="form-control" id="f-disabled" value="Not editable" disabled>
+        </div>
+      </div>
+
+      <h3 class="demo-title">Sizes</h3>
+      <div class="demo demo-stack">
+        <input type="text" class="form-control form-control-sm" placeholder="Small 36" aria-label="Small input">
+        <input type="text" class="form-control" placeholder="Medium 44" aria-label="Medium input">
+        <input type="text" class="form-control form-control-lg" placeholder="Large 52" aria-label="Large input">
+      </div>
+
+      <h3 class="demo-title">With icon and input group</h3>
+      <div class="demo demo-stack">
+        <div class="input-icon">
+          <svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>
+          <input type="text" class="form-control" placeholder="City, area or postcode" aria-label="Location">
+        </div>
+        <div class="input-icon">
+          <svg class="icon icon-end" aria-hidden="true"><use href="#i-search"></use></svg>
+          <input type="search" class="form-control" placeholder="Search properties" aria-label="Search">
+        </div>
+        <div class="input-group">
+          <span class="input-group-text">$</span>
+          <input type="number" class="form-control" placeholder="Min price" aria-label="Minimum price">
+          <span class="input-group-text">to</span>
+          <input type="number" class="form-control" placeholder="Max price" aria-label="Maximum price">
+        </div>
+      </div>
+
+      <h3 class="demo-title">Textarea</h3>
+      <div class="demo demo-stack">
+        <div>
+          <label for="f-message" class="form-label">Message</label>
+          <textarea class="form-control" id="f-message" rows="4" placeholder="Hi, I would like to know more about this property."></textarea>
+        </div>
+      </div>
+
+      <h3 class="demo-title">Select</h3>
+      <div class="demo demo-stack">
+        <div>
+          <label for="f-type" class="form-label">Property type</label>
+          <select class="form-select" id="f-type">
+            <option selected>Any type</option>
+            <option>House</option>
+            <option>Apartment</option>
+            <option>Villa</option>
+            <option>Commercial</option>
+            <option>Land</option>
+          </select>
+        </div>
+        <select class="form-select form-select-sm" aria-label="Sort by">
+          <option selected>Sort: newest</option>
+          <option>Price: low to high</option>
+          <option>Price: high to low</option>
+        </select>
+      </div>
+
+      <h3 class="demo-title">Validation</h3>
+      <div class="demo demo-stack">
+        <div>
+          <label for="f-bad" class="form-label">Phone number</label>
+          <input type="tel" class="form-control is-invalid" id="f-bad" value="123" aria-describedby="f-bad-msg">
+          <div id="f-bad-msg" class="invalid-feedback">Enter a valid phone number.</div>
+        </div>
+        <div>
+          <label for="f-good" class="form-label">Email</label>
+          <input type="email" class="form-control is-valid" id="f-good" value="sara@example.com" aria-describedby="f-good-msg">
+          <div id="f-good-msg" class="valid-feedback">Looks good.</div>
+        </div>
+        <div>
+          <label for="f-bad-select" class="form-label">Budget</label>
+          <select class="form-select is-invalid" id="f-bad-select" aria-describedby="f-bad-select-msg">
+            <option selected>Choose a budget</option>
+            <option>Under $200k</option>
+          </select>
+          <div id="f-bad-select-msg" class="invalid-feedback">Select a budget range.</div>
+        </div>
+      </div>
+
+      <h3 class="demo-title">Checkbox, radio and switch</h3>
+      <div class="demo demo-grid">
+        <fieldset>
+          <legend class="form-label">Amenities</legend>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="c1" checked><label class="form-check-label" for="c1">Swimming pool</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="c2"><label class="form-check-label" for="c2">Garden</label></div>
+          <div class="form-check"><input class="form-check-input" type="checkbox" id="c3" disabled><label class="form-check-label" for="c3">Gym (unavailable)</label></div>
+        </fieldset>
+        <fieldset>
+          <legend class="form-label">Listing type</legend>
+          <div class="form-check"><input class="form-check-input" type="radio" name="r1" id="r1a" checked><label class="form-check-label" for="r1a">Buy</label></div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="r1" id="r1b"><label class="form-check-label" for="r1b">Rent</label></div>
+          <div class="form-check"><input class="form-check-input" type="radio" name="r1" id="r1c" disabled><label class="form-check-label" for="r1c">Sold (unavailable)</label></div>
+        </fieldset>
+        <fieldset>
+          <legend class="form-label">Preferences</legend>
+          <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="s1" checked><label class="form-check-label" for="s1">Email alerts</label></div>
+          <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="s2"><label class="form-check-label" for="s2">Price drop alerts</label></div>
+          <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="s3" disabled><label class="form-check-label" for="s3">Disabled</label></div>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- ====================================================== BADGES -->
+    <section class="doc-section" id="badges">
+      <div class="section-head">
+        <h2>Badges</h2>
+        <p>Short status labels. Listing badges sit on property cards; feedback badges show states in dashboards and forms.</p>
+      </div>
+
+      <h3 class="demo-title">Listing status</h3>
+      <div class="demo demo-row">
+        <span class="badge badge-sale">For Sale</span>
+        <span class="badge badge-rent">For Rent</span>
+        <span class="badge badge-sold">Sold</span>
+        <span class="badge badge-featured"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"></use></svg>Featured</span>
+        <span class="badge badge-new">New</span>
+      </div>
+
+      <h3 class="demo-title">Feedback</h3>
+      <div class="demo demo-row">
+        <span class="badge badge-success badge-dot">Active</span>
+        <span class="badge badge-danger badge-dot">Rejected</span>
+        <span class="badge badge-info badge-dot">Pending review</span>
+        <span class="badge badge-neutral">Draft</span>
+        <span class="badge badge-outline">Verified</span>
+      </div>
+
+      <h3 class="demo-title">Pill and large</h3>
+      <div class="demo demo-row">
+        <span class="badge badge-sale badge-pill">For Sale</span>
+        <span class="badge badge-rent badge-pill">For Rent</span>
+        <span class="badge badge-sale badge-lg">For Sale</span>
+        <span class="badge badge-featured badge-lg badge-pill"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"></use></svg>Featured</span>
+      </div>
+    </section>
+
+    <!-- ===================================================== AVATARS -->
+    <section class="doc-section" id="avatars">
+      <div class="section-head">
+        <h2>Avatars</h2>
+        <p>Photo or initials, six sizes. The sample images are original placeholder illustrations: replace them with real agent photos.</p>
+      </div>
+
+      <h3 class="demo-title">Sizes</h3>
+      <div class="demo demo-row">
+        <span class="avatar avatar-xs"><img src="assets/img/avatars/avatar-1.svg" alt="Agent portrait"></span>
+        <span class="avatar avatar-sm"><img src="assets/img/avatars/avatar-2.svg" alt="Agent portrait"></span>
+        <span class="avatar"><img src="assets/img/avatars/avatar-3.svg" alt="Agent portrait"></span>
+        <span class="avatar avatar-lg"><img src="assets/img/avatars/avatar-4.svg" alt="Agent portrait"></span>
+        <span class="avatar avatar-xl"><img src="assets/img/avatars/avatar-1.svg" alt="Agent portrait"></span>
+        <span class="avatar avatar-2xl"><img src="assets/img/avatars/avatar-2.svg" alt="Agent portrait"></span>
+      </div>
+
+      <h3 class="demo-title">Initials, shapes and presence</h3>
+      <div class="demo demo-row">
+        <span class="avatar" aria-label="Sara Ahmed">SA</span>
+        <span class="avatar avatar-brand" aria-label="Omar Khan">OK</span>
+        <span class="avatar avatar-accent avatar-lg" aria-label="Laila Noor">LN</span>
+        <span class="avatar avatar-lg avatar-square"><img src="assets/img/avatars/avatar-3.svg" alt="Agent portrait"></span>
+        <span class="avatar avatar-lg avatar-status"><img src="assets/img/avatars/avatar-4.svg" alt="Agent portrait, online"></span>
+        <span class="avatar avatar-lg avatar-status is-offline" aria-label="Offline">HM</span>
+      </div>
+
+      <h3 class="demo-title">Group</h3>
+      <div class="demo demo-row">
+        <div class="avatar-group">
+          <span class="avatar"><img src="assets/img/avatars/avatar-1.svg" alt="Team member"></span>
+          <span class="avatar"><img src="assets/img/avatars/avatar-2.svg" alt="Team member"></span>
+          <span class="avatar"><img src="assets/img/avatars/avatar-3.svg" alt="Team member"></span>
+          <span class="avatar avatar-more" aria-label="4 more">+4</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================= RATING -->
+    <section class="doc-section" id="rating">
+      <div class="section-head">
+        <h2>Rating</h2>
+        <p>Read-only stars take any decimal value through the <code>--rating</code> CSS variable. The interactive version is a group of radio buttons, so it works with the keyboard and in forms.</p>
+      </div>
+
+      <h3 class="demo-title">Display</h3>
+      <div class="demo demo-row">
+        <span class="rating rating-sm" style="--rating: 3" role="img" aria-label="Rated 3 out of 5"></span>
+        <span class="rating" style="--rating: 4.5" role="img" aria-label="Rated 4.5 out of 5"></span>
+        <span class="rating rating-lg" style="--rating: 5" role="img" aria-label="Rated 5 out of 5"></span>
+        <span class="rating-summary"><span class="rating rating-sm" style="--rating: 4.8" role="img" aria-label="Rated 4.8 out of 5"></span><strong>4.8</strong> (126 reviews)</span>
+      </div>
+
+      <h3 class="demo-title">Interactive</h3>
+      <div class="demo">
+        <fieldset>
+          <legend class="form-label">Rate this agent</legend>
+          <div class="rating-input">
+            <input type="radio" name="rate" id="rate5" value="5"><label for="rate5" title="5 stars"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"></use></svg><span class="visually-hidden">5 stars</span></label>
+            <input type="radio" name="rate" id="rate4" value="4" checked><label for="rate4" title="4 stars"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"></use></svg><span class="visually-hidden">4 stars</span></label>
+            <input type="radio" name="rate" id="rate3" value="3"><label for="rate3" title="3 stars"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"></use></svg><span class="visually-hidden">3 stars</span></label>
+            <input type="radio" name="rate" id="rate2" value="2"><label for="rate2" title="2 stars"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"></use></svg><span class="visually-hidden">2 stars</span></label>
+            <input type="radio" name="rate" id="rate1" value="1"><label for="rate1" title="1 star"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"></use></svg><span class="visually-hidden">1 star</span></label>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <!-- ===================================================== SKELETON -->
+    <section class="doc-section" id="skeleton">
+      <div class="section-head">
+        <h2>Skeleton loader</h2>
+        <p>Placeholder shapes shown while content loads. Mark the loading region with <code>aria-busy="true"</code> and hide the placeholder from screen readers.</p>
+      </div>
+
+      <h3 class="demo-title">Building blocks</h3>
+      <div class="demo demo-stack" aria-busy="true">
+        <div aria-hidden="true">
+          <div class="skeleton skeleton-title"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text w-75"></div>
+        </div>
+        <div class="d-flex align-items-center gap-3" aria-hidden="true">
+          <div class="skeleton skeleton-circle"></div>
+          <div class="flex-grow-1">
+            <div class="skeleton skeleton-text w-50"></div>
+            <div class="skeleton skeleton-text w-25"></div>
+          </div>
+          <div class="skeleton skeleton-button"></div>
+        </div>
+      </div>
+
+      <h3 class="demo-title">Card placeholder</h3>
+      <div class="demo" aria-busy="true">
+        <div class="demo-grid" aria-hidden="true">
+          <div>
+            <div class="skeleton skeleton-image mb-3"></div>
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text w-50"></div>
+          </div>
+          <div>
+            <div class="skeleton skeleton-image mb-3"></div>
+            <div class="skeleton skeleton-title"></div>
+            <div class="skeleton skeleton-text"></div>
+            <div class="skeleton skeleton-text w-50"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/docs.js"></script>
+</body>
+</html>

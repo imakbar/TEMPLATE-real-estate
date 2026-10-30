@@ -1,0 +1,174 @@
+/* ==========================================================================
+   COMPONENT · BUTTON
+   Variants:  .btn-primary  .btn-secondary  .btn-accent  .btn-outline-primary  .btn-ghost
+   Sizes:     .btn-sm (36)  default (44)  .btn-lg (52)
+   Modifiers: .btn-icon (square icon-only)  .btn-pill  .is-loading  .w-100
+   Built on Bootstrap's .btn so JS plugins and utilities keep working.
+   ========================================================================== */
+
+body .btn {
+  --bs-btn-padding-x: var(--spacing-lg);
+  --bs-btn-padding-y: 0;
+  --bs-btn-font-family: var(--font-body);
+  --bs-btn-font-size: 1rem;
+  --bs-btn-font-weight: 600;
+  --bs-btn-line-height: 1.25;
+  --bs-btn-border-width: 1.5px;
+  --bs-btn-border-radius: var(--radius-md);
+  --bs-btn-focus-box-shadow: none;
+  --bs-btn-box-shadow: none;
+  --bs-btn-active-shadow: none;
+  /* Flat by design: also neutralises gradients/bevels from Bootswatch-style themes */
+  background-image: none;
+  box-shadow: none;
+  text-shadow: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--spacing-xs);
+  min-height: var(--size-control-md);
+  letter-spacing: 0.005em;
+  white-space: nowrap;
+  transition: background-color var(--transition-fast), border-color var(--transition-fast),
+              color var(--transition-fast), transform var(--transition-fast);
+}
+body .btn:focus-visible {
+  outline: 3px solid var(--color-border-focus);
+  outline-offset: 2px;
+  box-shadow: none;
+}
+body .btn:active:not(:disabled):not(.disabled) { transform: translateY(1px); }
+body .btn .icon { width: var(--size-icon-md); height: var(--size-icon-md); vertical-align: 0; }
+
+/* ---- Sizes -------------------------------------------------------------- */
+body .btn-sm {
+  --bs-btn-padding-x: var(--spacing-md);
+  --bs-btn-font-size: 0.875rem;
+  --bs-btn-border-radius: var(--radius-md);
+  min-height: var(--size-control-sm);
+}
+body .btn-sm .icon { width: var(--size-icon-sm); height: var(--size-icon-sm); }
+body .btn-lg {
+  --bs-btn-padding-x: var(--spacing-xl);
+  --bs-btn-font-size: 1rem;
+  --bs-btn-border-radius: var(--radius-md);
+  min-height: var(--size-control-lg);
+}
+
+/* ---- Primary ------------------------------------------------------------ */
+body .btn-primary {
+  --bs-btn-color: var(--color-text-inverse);
+  --bs-btn-bg: var(--color-bg-primary);
+  --bs-btn-border-color: var(--color-bg-primary);
+  --bs-btn-hover-color: var(--color-text-inverse);
+  --bs-btn-hover-bg: var(--color-bg-primary-hover);
+  --bs-btn-hover-border-color: var(--color-bg-primary-hover);
+  --bs-btn-active-color: var(--color-text-inverse);
+  --bs-btn-active-bg: var(--color-bg-primary-pressed);
+  --bs-btn-active-border-color: var(--color-bg-primary-pressed);
+  --bs-btn-disabled-color: var(--color-text-disabled);
+  --bs-btn-disabled-bg: var(--color-bg-disabled);
+  --bs-btn-disabled-border-color: var(--color-bg-disabled);
+}
+
+/* ---- Secondary (soft green) -------------------------------------------- */
+body .btn-secondary {
+  --bs-btn-color: var(--color-text-brand);
+  --bs-btn-bg: var(--color-bg-surface);
+  --bs-btn-border-color: var(--color-bg-surface);
+  --bs-btn-hover-color: var(--color-text-brand);
+  --bs-btn-hover-bg: var(--color-bg-surface-hover);
+  --bs-btn-hover-border-color: var(--color-bg-surface-hover);
+  --bs-btn-active-color: var(--color-text-brand);
+  --bs-btn-active-bg: var(--color-bg-surface-pressed);
+  --bs-btn-active-border-color: var(--color-bg-surface-pressed);
+  --bs-btn-disabled-color: var(--color-text-disabled);
+  --bs-btn-disabled-bg: var(--color-bg-disabled);
+  --bs-btn-disabled-border-color: var(--color-bg-disabled);
+}
+
+/* ---- Accent (brass) for marketing CTAs --------------------------------- */
+body .btn-accent {
+  --bs-btn-color: var(--color-text-on-accent);
+  --bs-btn-bg: var(--color-bg-accent);
+  --bs-btn-border-color: var(--color-bg-accent);
+  --bs-btn-hover-color: var(--color-text-on-accent);
+  --bs-btn-hover-bg: var(--color-bg-accent-hover);
+  --bs-btn-hover-border-color: var(--color-bg-accent-hover);
+  --bs-btn-active-color: var(--color-text-on-accent);
+  --bs-btn-active-bg: var(--color-bg-accent-pressed);
+  --bs-btn-active-border-color: var(--color-bg-accent-pressed);
+  --bs-btn-disabled-color: var(--color-text-disabled);
+  --bs-btn-disabled-bg: var(--color-bg-disabled);
+  --bs-btn-disabled-border-color: var(--color-bg-disabled);
+}
+
+/* ---- Outline ------------------------------------------------------------ */
+body .btn-outline-primary {
+  --bs-btn-color: var(--color-text-brand);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: var(--color-border-brand);
+  --bs-btn-hover-color: var(--color-text-brand);
+  --bs-btn-hover-bg: var(--color-bg-surface);
+  --bs-btn-hover-border-color: var(--color-border-brand);
+  --bs-btn-active-color: var(--color-text-brand);
+  --bs-btn-active-bg: var(--color-bg-surface-hover);
+  --bs-btn-active-border-color: var(--color-border-brand);
+  --bs-btn-disabled-color: var(--color-text-disabled);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: var(--color-border-default);
+}
+
+/* ---- Ghost (text only) -------------------------------------------------- */
+body .btn-ghost {
+  --bs-btn-color: var(--color-text-brand);
+  --bs-btn-bg: transparent;
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: var(--color-text-brand);
+  --bs-btn-hover-bg: var(--color-bg-surface);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-color: var(--color-text-brand);
+  --bs-btn-active-bg: var(--color-bg-surface-hover);
+  --bs-btn-active-border-color: transparent;
+  --bs-btn-disabled-color: var(--color-text-disabled);
+  --bs-btn-disabled-bg: transparent;
+  --bs-btn-disabled-border-color: transparent;
+}
+
+/* ---- Modifiers ---------------------------------------------------------- */
+body .btn-pill { --bs-btn-border-radius: var(--radius-full); }
+
+/* Icon-only: a square the same height as the matching button size */
+body .btn-icon {
+  --bs-btn-padding-x: 0;
+  width: var(--size-control-md);
+  padding: 0;
+}
+body .btn-icon.btn-sm { width: var(--size-control-sm); }
+body .btn-icon.btn-lg { width: var(--size-control-lg); }
+body .btn-icon.btn-lg .icon { width: var(--size-icon-lg); height: var(--size-icon-lg); }
+
+/* Loading: keeps width, hides label, shows a spinner */
+body .btn.is-loading {
+  position: relative;
+  color: transparent !important;
+  pointer-events: none;
+}
+body .btn.is-loading > * { visibility: hidden; }
+body .btn.is-loading::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  width: 20px;
+  height: 20px;
+  border: 2.5px solid var(--btn-spinner, var(--color-text-inverse));
+  border-right-color: transparent;
+  border-radius: 50%;
+  animation: btn-spin 0.7s linear infinite;
+}
+body .btn-secondary.is-loading,
+body .btn-outline-primary.is-loading,
+body .btn-ghost.is-loading,
+body .btn-accent.is-loading { --btn-spinner: var(--color-text-brand); }
+@keyframes btn-spin { to { transform: rotate(360deg); } }
