@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Input | Real Estate Template</title>
+  <meta name="description" content="Single-line text fields: names, emails, search, prices and file uploads. 44 px tall by default, with 36 and 52 px sizes.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 1 · Foundation UI</span>
+    <h1 class="display-2 mt-2 mb-3">Input</h1>
+    <p class="lead mb-0">Single-line text fields: names, emails, search, prices and file uploads. 44 px tall by default, with 36 and 52 px sizes.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Text input</h3>
+    <div class="demo demo-stack">
+      <div>
+        <label for="f-name" class="form-label">Full name</label>
+        <input type="text" class="form-control" id="f-name" placeholder="e.g. Sara Ahmed">
+      </div>
+      <div>
+        <label for="f-email" class="form-label">Email</label>
+        <input type="email" class="form-control" id="f-email" value="sara@example.com" aria-describedby="f-email-help">
+        <div id="f-email-help" class="form-text">We only use this to reply to your enquiry.</div>
+      </div>
+      <div>
+        <label for="f-disabled" class="form-label">Disabled</label>
+        <input type="text" class="form-control" id="f-disabled" value="Not editable" disabled>
+      </div>
+      <div>
+        <label for="f-readonly" class="form-label">Read only</label>
+        <input type="text" class="form-control" id="f-readonly" value="Property ID: RE-20418" readonly>
+      </div>
+    </div>
+
+    <h3 class="demo-title">Sizes</h3>
+    <div class="demo demo-stack">
+      <input type="text" class="form-control form-control-sm" placeholder="Small 36" aria-label="Small input">
+      <input type="text" class="form-control" placeholder="Medium 44" aria-label="Medium input">
+      <input type="text" class="form-control form-control-lg" placeholder="Large 52" aria-label="Large input">
+    </div>
+
+    <h3 class="demo-title">With icon</h3>
+    <div class="demo demo-stack">
+      <div class="input-icon">
+        <svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>
+        <input type="text" class="form-control" placeholder="City, area or postcode" aria-label="Location">
+      </div>
+      <div class="input-icon">
+        <svg class="icon icon-end" aria-hidden="true"><use href="#i-search"></use></svg>
+        <input type="search" class="form-control" placeholder="Search properties" aria-label="Search">
+      </div>
+    </div>
+
+    <h3 class="demo-title">Input group</h3>
+    <div class="demo demo-stack">
+      <div class="input-group">
+        <span class="input-group-text">$</span>
+        <input type="number" class="form-control" placeholder="Min price" aria-label="Minimum price">
+        <span class="input-group-text">to</span>
+        <input type="number" class="form-control" placeholder="Max price" aria-label="Maximum price">
+      </div>
+      <div class="input-group">
+        <input type="number" class="form-control" placeholder="Area" aria-label="Area">
+        <span class="input-group-text">sq ft</span>
+      </div>
+    </div>
+
+    <h3 class="demo-title">Validation</h3>
+    <div class="demo demo-stack">
+      <div>
+        <label for="f-bad" class="form-label">Phone number</label>
+        <input type="tel" class="form-control is-invalid" id="f-bad" value="123" aria-describedby="f-bad-msg">
+        <div id="f-bad-msg" class="invalid-feedback">Enter a valid phone number.</div>
+      </div>
+      <div>
+        <label for="f-good" class="form-label">Email</label>
+        <input type="email" class="form-control is-valid" id="f-good" value="sara@example.com" aria-describedby="f-good-msg">
+        <div id="f-good-msg" class="valid-feedback">Looks good.</div>
+      </div>
+    </div>
+
+    <h3 class="demo-title">File upload</h3>
+    <div class="demo demo-stack">
+      <div>
+        <label for="f-file" class="form-label">Property photos</label>
+        <input type="file" class="form-control" id="f-file" multiple accept="image/*">
+        <div class="form-text">JPG or PNG, up to 5 MB each.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.form-control</code></td><td>Text input. Sizes <code>.form-control-sm</code> (36) and <code>.form-control-lg</code> (52), default 44 px.</td></tr>
+    <tr><td><code>.input-icon</code></td><td>Wrapper that puts an icon inside an input. Add <code>.icon-end</code> to the icon to place it on the right.</td></tr>
+    <tr><td><code>.input-group</code> + <code>.input-group-text</code></td><td>Prefix or suffix text such as a currency or unit.</td></tr>
+    <tr><td><code>.is-invalid</code> / <code>.is-valid</code></td><td>Validation states. Pair with <code>.invalid-feedback</code> or <code>.valid-feedback</code>.</td></tr>
+    <tr><td><code>.form-label</code> / <code>.form-text</code></td><td>Label above the field and help text below it.</td></tr>
+    </tbody>
+    </table>
+    <div class="api-note"><p>Always connect a <code>&lt;label&gt;</code> to its field with <code>for</code> and <code>id</code>, and link help or error text with <code>aria-describedby</code>. Without a visible label, use <code>aria-label</code>.</p></div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

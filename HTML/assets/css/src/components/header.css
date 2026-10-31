@@ -1,0 +1,89 @@
+/* ==========================================================================
+   HEADER + NAVIGATION + MOBILE NAVIGATION
+   .site-header > .site-topbar (optional) + .site-navbar
+   Variants: .is-transparent (over a hero)  .is-dark
+   Add data-sticky to the header to keep it at the top; site.js adds
+   .is-scrolled after the page moves.
+   ========================================================================== */
+.site-header { position: relative; z-index: 1030; background: var(--color-bg-page); border-bottom: 1px solid var(--color-border-subtle); transition: background-color var(--transition-fast), box-shadow var(--transition-fast); }
+.site-header[data-sticky] { position: sticky; top: 0; }
+.site-header.is-scrolled { box-shadow: var(--shadow-md); background: rgba(247, 246, 240, 0.96); backdrop-filter: blur(8px); }
+
+/* Top bar: contact details and social links */
+.site-topbar { background: var(--color-bg-inverse); color: rgba(247, 246, 240, 0.85); font-size: 0.8125rem; }
+.site-topbar .container { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-lg); min-height: 40px; flex-wrap: wrap; }
+.site-topbar ul { display: flex; align-items: center; gap: var(--spacing-lg); margin: 0; padding: 0; list-style: none; }
+.site-topbar a { display: inline-flex; align-items: center; gap: 6px; color: inherit; text-decoration: none; }
+.site-topbar a:hover { color: var(--white); text-decoration: underline; }
+.site-topbar .icon { width: 15px; height: 15px; vertical-align: 0; }
+
+.site-navbar .container { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-lg); min-height: 76px; }
+
+/* Logo: replace the mark with your own SVG or image */
+.site-logo { display: inline-flex; align-items: center; gap: 10px; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 600; letter-spacing: -0.01em; color: var(--color-text-brand); text-decoration: none; white-space: nowrap; }
+.site-logo:hover { color: var(--color-text-brand); }
+.site-logo-mark { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: var(--radius-md); background: var(--color-bg-primary); color: var(--color-text-inverse); }
+.site-logo-mark .icon { width: 20px; height: 20px; vertical-align: 0; }
+
+/* Main menu */
+.site-menu { display: flex; align-items: center; gap: var(--spacing-2xs); margin: 0 auto 0 var(--spacing-xl); padding: 0; list-style: none; }
+.site-menu > li > a, .site-menu > li > .dropdown-toggle {
+  display: inline-flex; align-items: center; gap: 4px; padding: 8px 14px; border: 0; border-radius: var(--radius-md); background: none;
+  font-size: 0.9375rem; font-weight: 600; color: var(--color-text-primary); text-decoration: none; cursor: pointer;
+}
+.site-menu > li > a:hover, .site-menu > li > .dropdown-toggle:hover, .site-menu .show > .dropdown-toggle { background: var(--color-bg-surface); color: var(--color-text-brand); }
+.site-menu > li > a[aria-current="page"], .site-menu > li > a.active { color: var(--color-text-brand); background: var(--color-bg-surface); }
+.site-menu .dropdown-toggle::after { display: none; }
+.site-menu .dropdown-toggle .icon { width: 16px; height: 16px; vertical-align: 0; transition: transform var(--transition-fast); }
+.site-menu .dropdown-toggle[aria-expanded="true"] .icon { transform: rotate(180deg); }
+.site-actions { display: flex; align-items: center; gap: var(--spacing-sm); }
+
+/* Dropdown (used by the menu and anywhere else) */
+body .dropdown-menu {
+  --bs-dropdown-padding-x: 8px; --bs-dropdown-padding-y: 8px; --bs-dropdown-min-width: 220px;
+  --bs-dropdown-border-color: var(--color-border-subtle); --bs-dropdown-border-radius: var(--radius-lg);
+  --bs-dropdown-box-shadow: var(--shadow-lg); --bs-dropdown-link-color: var(--color-text-primary);
+  --bs-dropdown-link-hover-bg: var(--color-bg-surface); --bs-dropdown-link-hover-color: var(--color-text-brand);
+  --bs-dropdown-link-active-bg: var(--color-bg-primary); --bs-dropdown-link-active-color: var(--color-text-inverse);
+  --bs-dropdown-item-padding-x: 14px; --bs-dropdown-item-padding-y: 10px; --bs-dropdown-divider-bg: var(--color-border-subtle);
+  font-size: 0.9375rem;
+}
+body .dropdown-item { border-radius: var(--radius-sm); font-weight: 500; }
+body .dropdown-item small { display: block; font-size: 0.8125rem; font-weight: 400; color: var(--color-text-secondary); }
+body .dropdown-item.active small { color: inherit; }
+
+/* Variant: transparent over a hero */
+.site-header.is-transparent { position: absolute; inset: 0 0 auto 0; background: transparent; border-color: rgba(255, 255, 255, 0.2); }
+.site-header.is-transparent[data-sticky] { position: fixed; }
+.is-transparent:not(.is-scrolled) .site-logo, .is-dark .site-logo { color: var(--white); }
+.is-transparent:not(.is-scrolled) .site-logo-mark { background: var(--color-bg-accent); color: var(--color-text-on-accent); }
+.is-transparent:not(.is-scrolled) .site-menu > li > a, .is-transparent:not(.is-scrolled) .site-menu > li > .dropdown-toggle,
+.is-dark .site-menu > li > a, .is-dark .site-menu > li > .dropdown-toggle { color: var(--white); }
+.is-transparent:not(.is-scrolled) .site-menu > li > a:hover, .is-transparent:not(.is-scrolled) .site-menu > li > .dropdown-toggle:hover,
+.is-dark .site-menu > li > a:hover, .is-dark .site-menu > li > .dropdown-toggle:hover { background: rgba(255, 255, 255, 0.14); color: var(--white); }
+.is-transparent:not(.is-scrolled) .btn-outline-primary { --bs-btn-color: var(--white); --bs-btn-border-color: rgba(255, 255, 255, 0.6); --bs-btn-hover-bg: var(--white); --bs-btn-hover-color: var(--green-900); --bs-btn-hover-border-color: var(--white); }
+/* Variant: dark */
+.site-header.is-dark { background: var(--color-bg-inverse); border-color: rgba(255, 255, 255, 0.12); }
+.is-dark .site-logo-mark { background: var(--color-bg-accent); color: var(--color-text-on-accent); }
+.is-dark .btn-outline-primary { --bs-btn-color: var(--white); --bs-btn-border-color: rgba(255, 255, 255, 0.6); --bs-btn-hover-bg: var(--white); --bs-btn-hover-color: var(--green-900); --bs-btn-hover-border-color: var(--white); }
+
+/* ---- Mobile navigation: an offcanvas panel ------------------------------------ */
+.mobile-nav.offcanvas { --bs-offcanvas-width: min(360px, 90vw); }
+.mobile-nav .offcanvas-header { padding: var(--spacing-md) var(--spacing-lg); border-bottom: 1px solid var(--color-border-subtle); }
+.mobile-nav .offcanvas-body { display: flex; flex-direction: column; padding: var(--spacing-sm) var(--spacing-lg) var(--spacing-lg); }
+.mobile-menu { margin: 0; padding: 0; list-style: none; }
+.mobile-menu > li { border-bottom: 1px solid var(--color-border-subtle); }
+.mobile-menu a, .mobile-menu button {
+  display: flex; align-items: center; justify-content: space-between; width: 100%; padding: 16px 0; border: 0; background: none;
+  font-size: 1.0625rem; font-weight: 600; color: var(--color-text-primary); text-align: left; text-decoration: none;
+}
+.mobile-menu a:hover, .mobile-menu button:hover { color: var(--color-text-brand); }
+.mobile-menu a[aria-current="page"] { color: var(--color-text-brand); }
+.mobile-menu a[aria-current="page"]::after { content: ""; width: 8px; height: 8px; border-radius: 50%; background: var(--color-bg-accent); }
+.mobile-menu button .icon { transition: transform var(--transition-fast); }
+.mobile-menu button[aria-expanded="true"] .icon { transform: rotate(180deg); }
+.mobile-submenu { margin: 0 0 var(--spacing-sm); padding: 0 0 0 var(--spacing-md); list-style: none; border-left: 2px solid var(--color-border-default); }
+.mobile-submenu a { padding: 10px 0; font-size: 0.9375rem; font-weight: 500; color: var(--color-text-secondary); }
+.mobile-nav-footer { margin-top: auto; padding-top: var(--spacing-xl); display: grid; gap: var(--spacing-sm); }
+.mobile-nav-contact { display: flex; flex-wrap: wrap; gap: var(--spacing-md); margin: 0 0 var(--spacing-sm); padding: 0; list-style: none; font-size: 0.875rem; color: var(--color-text-secondary); }
+.mobile-nav-contact a { display: inline-flex; align-items: center; gap: 6px; color: inherit; text-decoration: none; }

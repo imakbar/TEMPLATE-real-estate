@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Avatar | Real Estate Template</title>
+  <meta name="description" content="A photo or initials for agents, team members and users, in six sizes.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 1 · Foundation UI</span>
+    <h1 class="display-2 mt-2 mb-3">Avatar</h1>
+    <p class="lead mb-0">A photo or initials for agents, team members and users, in six sizes.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Sizes</h3>
+    <div class="demo demo-row">
+      <span class="avatar avatar-xs"><img src="../assets/img/avatars/avatar-1.svg" alt="Agent portrait"></span>
+      <span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-2.svg" alt="Agent portrait"></span>
+      <span class="avatar"><img src="../assets/img/avatars/avatar-3.svg" alt="Agent portrait"></span>
+      <span class="avatar avatar-lg"><img src="../assets/img/avatars/avatar-4.svg" alt="Agent portrait"></span>
+      <span class="avatar avatar-xl"><img src="../assets/img/avatars/avatar-1.svg" alt="Agent portrait"></span>
+      <span class="avatar avatar-2xl"><img src="../assets/img/avatars/avatar-2.svg" alt="Agent portrait"></span>
+    </div>
+
+    <h3 class="demo-title">Initials, shapes and presence</h3>
+    <div class="demo demo-row">
+      <span class="avatar" aria-label="Sara Ahmed">SA</span>
+      <span class="avatar avatar-brand" aria-label="Omar Khan">OK</span>
+      <span class="avatar avatar-accent avatar-lg" aria-label="Laila Noor">LN</span>
+      <span class="avatar avatar-lg avatar-square"><img src="../assets/img/avatars/avatar-3.svg" alt="Agent portrait"></span>
+      <span class="avatar avatar-lg avatar-status"><img src="../assets/img/avatars/avatar-4.svg" alt="Agent portrait, online"></span>
+      <span class="avatar avatar-lg avatar-status is-offline" aria-label="Offline">HM</span>
+    </div>
+
+    <h3 class="demo-title">Group</h3>
+    <div class="demo demo-row">
+      <div class="avatar-group">
+        <span class="avatar"><img src="../assets/img/avatars/avatar-1.svg" alt="Team member"></span>
+        <span class="avatar"><img src="../assets/img/avatars/avatar-2.svg" alt="Team member"></span>
+        <span class="avatar"><img src="../assets/img/avatars/avatar-3.svg" alt="Team member"></span>
+        <span class="avatar avatar-more" aria-label="4 more">+4</span>
+      </div>
+    </div>
+
+    <h3 class="demo-title">With name and role</h3>
+    <div class="demo">
+      <div class="d-flex align-items-center gap-3">
+        <span class="avatar avatar-lg"><img src="../assets/img/avatars/avatar-2.svg" alt=""></span>
+        <div>
+          <div class="fw-bold">Sara Ahmed</div>
+          <div class="small text-secondary">Senior agent</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Use</th></tr></thead>
+    <tbody>
+    <tr><td><code>.avatar</code></td><td>Base, 40 px. Put an <code>&lt;img&gt;</code> or one to two initials inside.</td></tr>
+    <tr><td><code>.avatar-xs</code> <code>-sm</code> <code>-lg</code> <code>-xl</code> <code>-2xl</code></td><td>24, 32, 56, 80 and 120 px.</td></tr>
+    <tr><td><code>.avatar-square</code></td><td>Rounded square instead of a circle.</td></tr>
+    <tr><td><code>.avatar-brand</code> <code>.avatar-accent</code></td><td>Colored initials.</td></tr>
+    <tr><td><code>.avatar-status</code> (+ <code>.is-offline</code>)</td><td>Presence dot.</td></tr>
+    <tr><td><code>.avatar-group</code> with <code>.avatar-more</code></td><td>Overlapping stack with a "+N" counter.</td></tr>
+    </tbody>
+    </table>
+    <div class="api-note"><p>The images in <code>assets/img/avatars/</code> are placeholder illustrations. Replace them with real agent photos and keep a meaningful <code>alt</code> text (or an empty one when the name is shown next to it).</p></div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

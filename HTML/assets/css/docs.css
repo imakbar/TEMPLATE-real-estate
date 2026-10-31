@@ -127,3 +127,63 @@
   .doc-table { display: block; overflow-x: auto; }
   .demo { padding: 20px; }
 }
+
+/* ==========================================================================
+   Showcase shell (components/ pages): navigation, pager, extra demo helpers
+   ========================================================================== */
+.doc-nav-toggle { display: none; margin-bottom: 12px; }
+.doc-nav h2 { margin-top: 4px; }
+.doc-nav-all {
+  display: block; margin: 0 0 20px -12px; padding: 8px 12px; border-radius: var(--radius-sm);
+  font-size: 0.9375rem; font-weight: 700; text-decoration: none; color: var(--color-text-brand);
+  background: var(--color-bg-surface);
+}
+.doc-nav a[aria-current="page"] { background: var(--color-bg-surface); color: var(--color-text-brand); font-weight: 700; }
+.doc-nav-soon { display: block; padding: 6px 0; font-size: 0.9375rem; color: var(--color-text-disabled); }
+.doc-nav li:last-child .doc-nav-soon { padding-bottom: 0; }
+
+.doc-pager { display: flex; justify-content: space-between; gap: 16px; margin-top: 72px; padding-top: 32px; border-top: 1px solid var(--color-border-default); }
+.doc-pager-link {
+  display: flex; flex-direction: column; gap: 2px; min-width: 200px; padding: 14px 20px;
+  border: 1px solid var(--color-border-default); border-radius: var(--radius-md); background: var(--color-bg-card);
+  text-decoration: none; color: var(--color-text-brand);
+}
+.doc-pager-link span { font-size: 0.75rem; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; color: var(--color-text-secondary); }
+.doc-pager-link:hover { border-color: var(--color-border-brand); background: var(--color-bg-surface); }
+.doc-pager-link.is-next { text-align: right; margin-left: auto; }
+
+/* Demo helpers */
+.demo-bleed { padding: 0; overflow: hidden; }
+.demo-page { background: var(--color-bg-page); }
+.demo-dark { color: var(--color-text-inverse); }
+.demo-stage { position: relative; overflow: hidden; border-radius: var(--radius-md); background: var(--color-bg-subtle); }
+.api-note { margin-top: 20px; padding: 14px 18px; border-left: 3px solid var(--color-bg-accent); background: var(--color-bg-accent-subtle); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-size: 0.9375rem; color: var(--color-text-primary); }
+.api-note p { margin: 0; max-width: none; }
+
+.hub-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); margin: 0; padding: 0; list-style: none; }
+.hub-card {
+  display: flex; flex-direction: column; gap: 4px; height: 100%; padding: 18px 20px;
+  border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); background: var(--color-bg-card);
+  text-decoration: none; color: var(--color-text-brand); transition: border-color var(--transition-fast), box-shadow var(--transition-fast);
+}
+.hub-card:hover { border-color: var(--color-border-brand); box-shadow: var(--shadow-md); }
+.hub-card strong { font-size: 1.0625rem; }
+.hub-card span { font-size: 0.875rem; color: var(--color-text-secondary); }
+.hub-card.is-soon { background: transparent; border-style: dashed; pointer-events: none; }
+.hub-card.is-soon strong { color: var(--color-text-secondary); font-weight: 600; }
+
+@media (max-width: 991.98px) {
+  .doc-nav-toggle { display: inline-flex; }
+  .doc-sidebar .doc-nav { display: none; }
+  .doc-sidebar.is-open .doc-nav { display: block; padding: 16px; border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); background: var(--color-bg-card); }
+  .doc-sidebar .doc-nav ul { display: block; margin-bottom: 16px; }
+  .doc-sidebar .doc-nav a { margin-left: 0; background: none; }
+  .doc-sidebar .doc-nav a[aria-current="page"], .doc-sidebar .doc-nav .doc-nav-all { background: var(--color-bg-surface); }
+  .doc-pager { flex-direction: column; }
+  .doc-pager-link, .doc-pager-link.is-next { min-width: 0; text-align: left; margin-left: 0; }
+}
+
+.demo-dark-bg { background: var(--color-bg-inverse); border-color: var(--color-bg-inverse); }
+.icon-button-photo { position: relative; max-width: 320px; border-radius: var(--radius-lg); overflow: hidden; }
+.icon-button-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
+.icon-button-photo-actions { position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; }

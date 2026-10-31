@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Textarea | Real Estate Template</title>
+  <meta name="description" content="Multi-line text for messages, descriptions and notes.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 1 · Foundation UI</span>
+    <h1 class="display-2 mt-2 mb-3">Textarea</h1>
+    <p class="lead mb-0">Multi-line text for messages, descriptions and notes.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Default</h3>
+    <div class="demo demo-stack">
+      <div>
+        <label for="t-message" class="form-label">Message</label>
+        <textarea class="form-control" id="t-message" rows="4" placeholder="Hi, I would like to know more about this property."></textarea>
+      </div>
+    </div>
+
+    <h3 class="demo-title">With character counter</h3>
+    <div class="demo demo-stack">
+      <div>
+        <label for="t-desc" class="form-label">Property description</label>
+        <textarea class="form-control" id="t-desc" rows="4" maxlength="300" data-counter="#t-desc-count" aria-describedby="t-desc-count"></textarea>
+        <div class="form-text text-end" id="t-desc-count">0 / 300</div>
+      </div>
+    </div>
+    <div class="api-note"><p>Add <code>data-counter="#id"</code> and <code>maxlength</code>. <code>assets/js/site.js</code> keeps the counter updated.</p></div>
+
+    <h3 class="demo-title">Validation and disabled</h3>
+    <div class="demo demo-stack">
+      <div>
+        <label for="t-bad" class="form-label">Message</label>
+        <textarea class="form-control is-invalid" id="t-bad" rows="3" aria-describedby="t-bad-msg"></textarea>
+        <div id="t-bad-msg" class="invalid-feedback">Please write a short message.</div>
+      </div>
+      <div>
+        <label for="t-off" class="form-label">Notes</label>
+        <textarea class="form-control" id="t-off" rows="3" disabled>Not editable</textarea>
+      </div>
+    </div>
+
+    <h3 class="demo-title">Resize options</h3>
+    <div class="demo demo-stack">
+      <textarea class="form-control" rows="3" placeholder="Resizes vertically (default)" aria-label="Vertical resize"></textarea>
+      <textarea class="form-control resize-none" rows="3" placeholder="Fixed size" aria-label="No resize"></textarea>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>textarea.form-control</code></td><td>Multi-line field. Minimum height 120 px, resizes vertically.</td></tr>
+    <tr><td><code>.resize-none</code></td><td>Turns the resize handle off.</td></tr>
+    <tr><td><code>data-counter="#id"</code></td><td>Live character counter, used with <code>maxlength</code>.</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>
