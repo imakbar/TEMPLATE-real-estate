@@ -187,3 +187,10 @@
 .icon-button-photo { position: relative; max-width: 320px; border-radius: var(--radius-lg); overflow: hidden; }
 .icon-button-photo img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: cover; }
 .icon-button-photo-actions { position: absolute; top: 12px; right: 12px; display: flex; gap: 8px; }
+
+.demo-stack-full { display: grid; gap: 16px; }
+.demo-box, .demo-box-light > .container { padding: 18px 20px; border: 1px dashed var(--color-border-strong); border-radius: var(--radius-md); background: var(--color-bg-surface); font-size: 0.875rem; color: var(--color-text-brand); }
+.header-stage { position: relative; min-height: 220px; background: linear-gradient(135deg, var(--green-900), var(--green-700)); }
+.header-stage .site-header { position: absolute; }
+.header-stage-copy { padding: 140px 24px 56px; color: rgba(247,246,240,.8); text-align: center; }
+.demo-bleed .site-header, .demo-bleed .site-footer { position: relative; z-index: 1; }

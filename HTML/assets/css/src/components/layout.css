@@ -107,7 +107,8 @@ body .pagination-sm .page-link { min-width: var(--size-control-sm); height: var(
 body .pagination-lg .page-link { min-width: var(--size-control-lg); height: var(--size-control-lg); font-size: 1rem; }
 .page-ellipsis .page-link { border-color: transparent; background: transparent; pointer-events: none; }
 /* Simple prev / next with a status line */
-.pagination-simple { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-md); }
+.pagination-simple { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--spacing-md); }
+@media (max-width: 575.98px) { .pagination-simple .pagination-summary { order: -1; flex: 0 0 100%; text-align: center; } .pagination-simple .btn { flex: 1; } }
 .pagination-summary { font-size: 0.9375rem; color: var(--color-text-secondary); }
 .pagination-summary strong { color: var(--color-text-primary); }
 .load-more { text-align: center; }

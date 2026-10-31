@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Modal and drawer | Real Estate Template</title>
+  <meta name="description" content="Dialogs and side panels for forms, confirmations, photos and filters.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 2 · Layout</span>
+    <h1 class="display-2 mt-2 mb-3">Modal and drawer</h1>
+    <p class="lead mb-0">Dialogs and side panels for forms, confirmations, photos and filters.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Basic modal</h3>
+    <div class="demo">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mBasic">Open modal</button>
+      <div class="modal fade" id="mBasic" tabindex="-1" aria-labelledby="mBasicLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div>
+                <h2 class="modal-title" id="mBasicLabel">Schedule a viewing</h2>
+                <p class="modal-subtitle">Pick a day and we will confirm by email.</p>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <label for="mDate" class="form-label">Preferred date</label>
+              <input type="date" class="form-control" id="mDate">
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-ghost" data-bs-dismiss="modal">Cancel</button>
+              <button type="button" class="btn btn-primary">Request viewing</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="demo-title">Confirm</h3>
+    <div class="demo">
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#mConfirm"><svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg> Delete listing</button>
+      <div class="modal fade modal-confirm" id="mConfirm" tabindex="-1" aria-labelledby="mConfirmLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-sm">
+          <div class="modal-content">
+            <div class="modal-body">
+              <span class="modal-icon"><svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg></span>
+              <h2 class="modal-title" id="mConfirmLabel">Delete this listing?</h2>
+              <p class="modal-subtitle">This cannot be undone.</p>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Keep it</button>
+              <button type="button" class="btn btn-primary">Delete</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="demo-title">Sign in</h3>
+    <div class="demo">
+      <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#mAuth"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg> Sign in</button>
+      <div class="modal fade modal-auth" id="mAuth" tabindex="-1" aria-labelledby="mAuthLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <div>
+                <h2 class="modal-title" id="mAuthLabel">Welcome back</h2>
+                <p class="modal-subtitle">Sign in to save homes and contact agents.</p>
+              </div>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <form class="modal-body" onsubmit="return false">
+              <div><label for="mAuthEmail" class="form-label">Email</label><input type="email" class="form-control" id="mAuthEmail"></div>
+              <div><label for="mAuthPass" class="form-label">Password</label><input type="password" class="form-control" id="mAuthPass"></div>
+              <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+              <div class="divider-text">or</div>
+              <button type="button" class="btn btn-outline-primary">Continue with email link</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="demo-title">Lightbox</h3>
+    <div class="demo">
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#mLight"><svg class="icon" aria-hidden="true"><use href="#i-image"></use></svg> View photo</button>
+      <div class="modal fade modal-lightbox" id="mLight" tabindex="-1" aria-label="Photo" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            <img src="../assets/img/properties/property-2.svg" alt="Modern villa with large windows">
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="demo-title">Side drawer (filters)</h3>
+    <div class="demo">
+      <button type="button" class="btn btn-outline-primary" data-bs-toggle="offcanvas" data-bs-target="#dFilters" aria-controls="dFilters"><svg class="icon" aria-hidden="true"><use href="#i-sliders"></use></svg> Filters</button>
+      <div class="offcanvas offcanvas-end offcanvas-filters" tabindex="-1" id="dFilters" aria-labelledby="dFiltersLabel">
+        <div class="offcanvas-header">
+          <h2 class="offcanvas-title" id="dFiltersLabel">Filters</h2>
+          <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <label for="dType" class="form-label">Property type</label>
+          <select class="form-select mb-3" id="dType"><option>Any type</option><option>House</option><option>Apartment</option></select>
+          <label for="dLoc" class="form-label">Location</label>
+          <input type="text" class="form-control" id="dLoc" placeholder="City or area">
+        </div>
+        <div class="offcanvas-footer">
+          <button type="button" class="btn btn-outline-primary">Clear</button>
+          <button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Show results</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.modal</code></td><td>Centered dialog. Sizes <code>.modal-sm</code>, <code>.modal-lg</code>. Needs <code>aria-labelledby</code> on a title.</td></tr>
+    <tr><td><code>.modal-confirm</code> + <code>.modal-icon</code></td><td>Short confirmation with an icon.</td></tr>
+    <tr><td><code>.modal-auth</code> + <code>.divider-text</code></td><td>Sign in form layout.</td></tr>
+    <tr><td><code>.modal-lightbox</code></td><td>Image only, on a dark backdrop.</td></tr>
+    <tr><td><code>.offcanvas.offcanvas-end</code> + <code>.offcanvas-footer</code></td><td>Side drawer with action buttons pinned at the bottom.</td></tr>
+    </tbody>
+    </table>
+    <div class="api-note"><p>All of these use Bootstrap's modal and offcanvas JavaScript, so focus trapping, the Escape key and screen reader support work with no extra code.</p></div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

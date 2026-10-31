@@ -1128,7 +1128,8 @@ body .pagination-sm .page-link { min-width: var(--size-control-sm); height: var(
 body .pagination-lg .page-link { min-width: var(--size-control-lg); height: var(--size-control-lg); font-size: 1rem; }
 .page-ellipsis .page-link { border-color: transparent; background: transparent; pointer-events: none; }
 /* Simple prev / next with a status line */
-.pagination-simple { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-md); }
+.pagination-simple { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--spacing-md); }
+@media (max-width: 575.98px) { .pagination-simple .pagination-summary { order: -1; flex: 0 0 100%; text-align: center; } .pagination-simple .btn { flex: 1; } }
 .pagination-summary { font-size: 0.9375rem; color: var(--color-text-secondary); }
 .pagination-summary strong { color: var(--color-text-primary); }
 .load-more { text-align: center; }
@@ -1225,6 +1226,10 @@ body .dropdown-item.active small { color: inherit; }
 .mobile-nav-footer { margin-top: auto; padding-top: var(--spacing-xl); display: grid; gap: var(--spacing-sm); }
 .mobile-nav-contact { display: flex; flex-wrap: wrap; gap: var(--spacing-md); margin: 0 0 var(--spacing-sm); padding: 0; list-style: none; font-size: 0.875rem; color: var(--color-text-secondary); }
 .mobile-nav-contact a { display: inline-flex; align-items: center; gap: 6px; color: inherit; text-decoration: none; }
+
+/* Active and ghost states on transparent / dark bars */
+.is-transparent:not(.is-scrolled) .site-menu > li > a[aria-current="page"], .is-dark .site-menu > li > a[aria-current="page"] { background: rgba(255, 255, 255, 0.16); color: var(--white); }
+.is-transparent:not(.is-scrolled) .site-actions .btn-ghost, .is-dark .site-actions .btn-ghost { --bs-btn-color: var(--white); --bs-btn-hover-color: var(--white); --bs-btn-hover-bg: rgba(255, 255, 255, 0.14); }
 
 /* ==========================================================================
    FOOTER · .site-footer (dark by default)  .site-footer.is-light
