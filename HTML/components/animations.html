@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Animations | Real Estate Template</title>
+  <meta name="description" content="Scroll reveals, hero entrance, stagger and parallax, controlled by data attributes (GSAP + ScrollTrigger).">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim-off');setTimeout(function(){if(!window.__animReady)document.documentElement.classList.add('anim-off')},4000)</script>
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 5 · Global</span>
+    <h1 class="display-2 mt-2 mb-3">Animations</h1>
+    <p class="lead mb-0">Scroll reveals, a hero entrance, stagger and parallax. Everything is switched on with data attributes. Delete the attribute and the effect is gone.</p>
+  </div>
+
+  <section class="doc-section doc-prose" id="setup">
+    <div class="section-head"><h2>Setup</h2></div>
+    <p>Add this to the page <code>&lt;head&gt;</code> (it adds the <code>js</code> class that lets content start hidden, and shows everything again if GSAP does not load or the visitor prefers reduced motion):</p>
+    <pre class="doc-snippet"><code>&lt;script&gt;document.documentElement.classList.add('js');if(window.matchMedia&amp;&amp;matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim-off');setTimeout(function(){if(!window.__animReady)document.documentElement.classList.add('anim-off')},4000)&lt;/script&gt;</code></pre>
+    <p>Load the scripts at the end of <code>&lt;body&gt;</code>, in this order:</p>
+    <pre class="doc-snippet"><code>&lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer&gt;&lt;/script&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer&gt;&lt;/script&gt;
+&lt;script src="assets/js/animations.js" defer&gt;&lt;/script&gt;</code></pre>
+  </section>
+
+  <section class="doc-section doc-prose" id="hero">
+    <div class="section-head"><h2>Hero entrance</h2></div>
+    <p>Put <code>data-hero</code> on the hero and <code>data-hero-item</code> on each part, in the order they should appear. An item with <code>data-hero-item="image"</code> always plays last. It plays once on page load (reload this page to see it again).</p>
+    <div class="demo p-0 overflow-hidden">
+      <div class="hero hero--center" data-hero>
+        <div class="hero-bg" data-hero-item="image"><img src="../assets/img/hero/hero-1.svg" alt=""></div>
+        <div class="container">
+          <div class="hero-content" style="padding-block: 64px">
+            <h2 class="hero-title" style="font-size: 2.25rem" data-hero-item>Find a home that feels like yours</h2>
+            <p class="hero-lead" data-hero-item>Browse verified listings and talk to local agents.</p>
+            <div class="hero-actions" data-hero-item><a class="btn btn-accent" href="#hero">Browse properties</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <pre class="doc-snippet"><code>&lt;div class="hero" data-hero&gt;
+  &lt;div class="hero-bg" data-hero-item="image"&gt;...&lt;/div&gt;
+  &lt;h1 data-hero-item&gt;Heading&lt;/h1&gt;
+  &lt;p data-hero-item&gt;Text&lt;/p&gt;
+  &lt;div data-hero-item&gt;Buttons&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+  </section>
+
+  <section class="doc-section doc-prose" id="effects">
+    <div class="section-head"><h2>Scroll effects</h2></div>
+    <p>Each effect plays once when the element reaches about 85% of the viewport height.</p>
+
+    <h3 class="demo-title">fade-up</h3>
+    <div class="demo">
+      <div class="p-4 border rounded-3 bg-white text-center" data-animate="fade-up"><strong>fade-up</strong><br><small class="text-secondary">Scroll to see it</small></div>
+    </div>
+    <p class="api-note"><code>&lt;div data-animate="fade-up"&gt;</code></p>
+    <h3 class="demo-title">fade-in</h3>
+    <div class="demo">
+      <div class="p-4 border rounded-3 bg-white text-center" data-animate="fade-in"><strong>fade-in</strong><br><small class="text-secondary">Scroll to see it</small></div>
+    </div>
+    <p class="api-note"><code>&lt;div data-animate="fade-in"&gt;</code></p>
+    <h3 class="demo-title">fade-down</h3>
+    <div class="demo">
+      <div class="p-4 border rounded-3 bg-white text-center" data-animate="fade-down"><strong>fade-down</strong><br><small class="text-secondary">Scroll to see it</small></div>
+    </div>
+    <p class="api-note"><code>&lt;div data-animate="fade-down"&gt;</code></p>
+    <h3 class="demo-title">slide-left</h3>
+    <div class="demo">
+      <div class="p-4 border rounded-3 bg-white text-center" data-animate="slide-left"><strong>slide-left</strong><br><small class="text-secondary">Scroll to see it</small></div>
+    </div>
+    <p class="api-note"><code>&lt;div data-animate="slide-left"&gt;</code></p>
+    <h3 class="demo-title">slide-right</h3>
+    <div class="demo">
+      <div class="p-4 border rounded-3 bg-white text-center" data-animate="slide-right"><strong>slide-right</strong><br><small class="text-secondary">Scroll to see it</small></div>
+    </div>
+    <p class="api-note"><code>&lt;div data-animate="slide-right"&gt;</code></p>
+    <h3 class="demo-title">zoom-in</h3>
+    <div class="demo">
+      <div class="p-4 border rounded-3 bg-white text-center" data-animate="zoom-in"><strong>zoom-in</strong><br><small class="text-secondary">Scroll to see it</small></div>
+    </div>
+    <p class="api-note"><code>&lt;div data-animate="zoom-in"&gt;</code></p>
+  </section>
+
+  <section class="doc-section doc-prose" id="timing">
+    <div class="section-head"><h2>Delay, duration and repeat</h2></div>
+    <h3 class="demo-title">Delay and duration</h3>
+    <div class="demo">
+      <div class="p-4 border rounded-3 bg-white text-center" data-animate="fade-up" data-animate-delay="0.4" data-animate-duration="1.4"><strong>Delay 0.4s, duration 1.4s</strong></div>
+    </div>
+    <p class="api-note"><code>&lt;div data-animate="fade-up" data-animate-delay="0.4" data-animate-duration="1.4"&gt;</code> Defaults: delay 0, duration 0.8 seconds.</p>
+    <h3 class="demo-title">Replay every time</h3>
+    <div class="demo">
+      <div class="p-4 border rounded-3 bg-white text-center" data-animate="zoom-in" data-animate-once="false"><strong>Scroll up and down past me</strong></div>
+    </div>
+    <p class="api-note"><code>&lt;div data-animate="zoom-in" data-animate-once="false"&gt;</code> By default an effect plays once.</p>
+  </section>
+
+  <section class="doc-section doc-prose" id="stagger">
+    <div class="section-head"><h2>Stagger</h2></div>
+    <p>Put <code>data-animate-stagger</code> on the parent. Its direct children animate one after another, using the effect set on the parent.</p>
+    <div class="demo">
+      <div class="row g-3" data-animate="fade-up" data-animate-stagger="0.15">
+        <div class="col-6 col-md-3"><div class="p-4 border rounded-3 bg-white text-center">One</div></div>
+        <div class="col-6 col-md-3"><div class="p-4 border rounded-3 bg-white text-center">Two</div></div>
+        <div class="col-6 col-md-3"><div class="p-4 border rounded-3 bg-white text-center">Three</div></div>
+        <div class="col-6 col-md-3"><div class="p-4 border rounded-3 bg-white text-center">Four</div></div>
+      </div>
+    </div>
+    <p class="api-note"><code>&lt;div class="row" data-animate="fade-up" data-animate-stagger="0.15"&gt;</code></p>
+  </section>
+
+  <section class="doc-section doc-prose" id="parallax">
+    <div class="section-head"><h2>Parallax</h2></div>
+    <p>Put <code>data-parallax</code> on an element. The number is the speed: higher moves more. Wrap it in a box with <code>overflow: hidden</code> and make it taller than the box so no gap shows. Use it on its own element, not together with <code>data-animate</code>.</p>
+    <div class="demo p-0 overflow-hidden">
+      <div class="position-relative overflow-hidden" style="height: 300px">
+        <img src="../assets/img/hero/about-1.svg" alt="" data-parallax="0.2" style="position: absolute; left: 0; top: -20%; width: 100%; height: 140%; object-fit: cover">
+      </div>
+    </div>
+    <p class="api-note"><code>&lt;img src="..." data-parallax="0.2"&gt;</code></p>
+  </section>
+
+  <section class="doc-section doc-prose" id="attributes">
+    <div class="section-head"><h2>Attributes</h2></div>
+    <table class="doc-table">
+    <thead><tr><th>Attribute</th><th>Where</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>data-animate</code></td><td>Any element</td><td><code>fade-up</code>, <code>fade-in</code>, <code>fade-down</code>, <code>slide-left</code>, <code>slide-right</code> or <code>zoom-in</code>.</td></tr>
+    <tr><td><code>data-animate-delay</code></td><td>Same element</td><td>Seconds to wait. Default 0.</td></tr>
+    <tr><td><code>data-animate-duration</code></td><td>Same element</td><td>Seconds. Default 0.8.</td></tr>
+    <tr><td><code>data-animate-stagger</code></td><td>Parent</td><td>Seconds between children. Children animate one by one.</td></tr>
+    <tr><td><code>data-animate-once</code></td><td>Same element</td><td><code>false</code> to replay on every scroll. Default plays once.</td></tr>
+    <tr><td><code>data-parallax</code></td><td>Any element</td><td>Speed factor, for example <code>0.2</code>.</td></tr>
+    <tr><td><code>data-hero</code></td><td>Hero section</td><td>Starts the entrance timeline on load.</td></tr>
+    <tr><td><code>data-hero-item</code></td><td>Hero child</td><td>Part of the timeline, in page order. <code>image</code> plays last.</td></tr>
+    </tbody>
+    </table>
+    <div class="api-note"><p>Only <code>transform</code> and <code>opacity</code> are animated. Animations are skipped for visitors who prefer reduced motion, and content stays visible if JavaScript or GSAP does not load.</p></div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer crossorigin="anonymous"></script>
+<script src="../assets/js/animations.js" defer></script>
+</body>
+</html>
