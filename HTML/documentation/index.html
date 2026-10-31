@@ -50,6 +50,7 @@
     <ul>
       <li><a href="#components">All components</a></li>
       <li><a href="#pages">Pages</a></li>
+      <li><a href="#scroll-fancy">Fancy scroll area</a></li>
       <li><a href="#using-components">Using a component</a></li>
       <li><a href="#js">JavaScript (site.js)</a></li>
     </ul>
@@ -263,6 +264,12 @@ node build.js</code></pre>
         <li><a href="../components/table.html">Table</a></li>
         <li><a href="../components/stepper.html">Stepper</a></li>
       </ul>
+    </section>
+
+    <section class="doc-section" id="scroll-fancy">
+      <div class="section-head"><h2>Fancy scroll area</h2><p>Add <code>.scroll-fancy</code> to any element that has a height or <code>max-height</code>. It gets a slim rounded green scrollbar that darkens on hover, and a soft fade at the top and bottom edges. It is pure CSS with no library. Used on the filters sidebar of <code>listing.html</code>.</p></div>
+<pre class="doc-snippet"><code>&lt;aside class="scroll-fancy" style="max-height: 480px">...&lt;/aside></code></pre>
+      <p>The edge fade needs a browser with scroll-driven animations (Chrome, Edge, Safari 26 and newer). Elsewhere the scrollbar still works without the fade. Firefox shows its own thin scrollbar in the theme colors.</p>
     </section>
 
     <!-- ===================================================== PAGES -->
