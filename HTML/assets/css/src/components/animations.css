@@ -1,0 +1,8 @@
+/* ==========================================================================
+   Animations
+   Elements are hidden only while JavaScript is running (html.js) and
+   animations are not switched off (html.anim-off). If JS or GSAP fails,
+   all content stays visible.
+   ========================================================================== */
+
+/* (hidden start states are added in the next step) */
