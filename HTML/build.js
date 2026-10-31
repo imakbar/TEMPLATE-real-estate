@@ -41,6 +41,7 @@ const ORDER = [
   'components/hero.css',
   'components/sections.css',
   'components/global.css',
+  'components/pages.css',
   'components/location-card.css',
 ];
 
