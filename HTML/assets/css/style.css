@@ -2256,6 +2256,21 @@ body .offcanvas-lg .filters-panel { border: 0; }
 .map-pin.is-active { z-index: 3; background: var(--charcoal-900, #252B28); color: var(--white); box-shadow: var(--shadow-lg); }
 .map-pin:focus-visible, .map-cluster:focus-visible, .map-ctrl:focus-visible, .map-popup-close:focus-visible { outline: none; box-shadow: var(--focus-ring); }
 
+/* Location-icon pin: <div class="map-view" data-map-marker="icon"> */
+.map-pin--icon {
+  --pin: var(--color-bg-primary);
+  width: 40px; height: 52px; padding: 0; border: 0; border-radius: 0; background: none; box-shadow: none; color: var(--white);
+  transform: translate(-50%, -100%); transform-origin: 50% 100%;
+  transition: scale var(--transition-fast);
+}
+.map-pin--icon::after { display: none; }
+.map-pin--icon:hover { background: none; scale: 1.1; --pin: var(--green-700); }
+.map-pin--icon.is-rent { background: none; color: var(--color-text-on-accent); --pin: var(--brass-500); }
+.map-pin--icon.is-rent:hover { background: none; --pin: var(--brass-400); }
+.map-pin--icon.is-active { background: none; box-shadow: none; scale: 1.18; --pin: var(--charcoal-900); color: var(--white); }
+.map-pin-shape { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; fill: var(--pin); stroke: var(--white); stroke-width: 3; paint-order: stroke; filter: drop-shadow(0 4px 6px rgba(23, 63, 53, 0.28)); }
+.map-pin--icon .icon { position: absolute; left: 50%; top: 11px; width: 18px; height: 18px; margin-left: -9px; vertical-align: 0; }
+
 /* Cluster */
 .map-cluster {
   position: absolute; z-index: 1; display: grid; place-items: center; width: 44px; height: 44px; transform: translate(-50%, -50%);
@@ -2264,6 +2279,28 @@ body .offcanvas-lg .filters-panel { border: 0; }
   box-shadow: 0 0 0 8px rgba(23, 63, 53, 0.18), var(--shadow-md); cursor: pointer;
 }
 .map-cluster:hover { background: var(--green-700); }
+
+/* Animations: pins drop from above, the card pops in. Switch off with data-map-animate="false". */
+.map-pin.is-hold, .map-cluster.is-hold { visibility: hidden; }
+@keyframes map-drop {
+  0%   { translate: 0 -90px; opacity: 0; animation-timing-function: cubic-bezier(0.5, 0, 0.9, 0.6); }
+  45%  { translate: 0 0; opacity: 1; animation-timing-function: cubic-bezier(0.2, 0.6, 0.4, 1); }
+  66%  { translate: 0 -16px; animation-timing-function: cubic-bezier(0.5, 0, 0.9, 0.6); }
+  82%  { translate: 0 0; animation-timing-function: cubic-bezier(0.2, 0.6, 0.4, 1); }
+  91%  { translate: 0 -5px; animation-timing-function: cubic-bezier(0.5, 0, 0.9, 0.6); }
+  100% { translate: 0 0; opacity: 1; }
+}
+.map-pin.is-drop, .map-cluster.is-drop { animation: map-drop 800ms both; }
+@keyframes map-pop {
+  from { opacity: 0; scale: 0.8; translate: 0 14px; }
+  to   { opacity: 1; scale: 1; translate: 0 0; }
+}
+.map-popup.is-animated.is-open { transform-origin: 50% 100%; animation: map-pop 280ms cubic-bezier(0.2, 0.9, 0.3, 1.15) both; }
+.map-popup.is-animated.is-open.is-below { transform-origin: 50% 0; animation-name: map-pop-below; }
+@keyframes map-pop-below {
+  from { opacity: 0; scale: 0.8; translate: 0 -14px; }
+  to   { opacity: 1; scale: 1; translate: 0 0; }
+}
 
 /* Popup card */
 .map-popup {
@@ -2327,4 +2364,12 @@ body .offcanvas-lg .filters-panel { border: 0; }
   .map-popup-close { top: 8px; right: 8px; background: var(--color-bg-card); color: var(--color-text-brand); }
   .map-notice { bottom: auto; top: var(--spacing-md); right: 64px; border-radius: var(--radius-md); }
 }
-@media (prefers-reduced-motion: reduce) { .map-pin, .map-ctrl { transition: none; } }
+@media (max-width: 575.98px) {
+  @keyframes map-pop-sheet { from { opacity: 0; translate: 0 32px; } to { opacity: 1; translate: 0 0; } }
+  .map-popup.is-animated.is-open, .map-popup.is-animated.is-open.is-below { animation: map-pop-sheet 260ms ease-out both; scale: 1; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .map-pin, .map-ctrl { transition: none; }
+  .map-pin.is-drop, .map-cluster.is-drop, .map-popup.is-animated.is-open { animation: none; }
+  .map-pin.is-hold, .map-cluster.is-hold { visibility: visible; }
+}
