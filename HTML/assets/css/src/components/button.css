@@ -2,7 +2,7 @@
    COMPONENT · BUTTON
    Variants:  .btn-primary  .btn-secondary  .btn-accent  .btn-outline-primary  .btn-ghost
    Sizes:     .btn-sm (36)  default (44)  .btn-lg (52)
-   Modifiers: .btn-icon (square icon-only)  .btn-pill  .is-loading  .w-100
+   Modifiers: .btn-pill (icon buttons: see icon-button.css)  .is-loading  .w-100
    Built on Bootstrap's .btn so JS plugins and utilities keep working.
    ========================================================================== */
 
@@ -138,16 +138,6 @@ body .btn-ghost {
 /* ---- Modifiers ---------------------------------------------------------- */
 body .btn-pill { --bs-btn-border-radius: var(--radius-full); }
 
-/* Icon-only: a square the same height as the matching button size */
-body .btn-icon {
-  --bs-btn-padding-x: 0;
-  width: var(--size-control-md);
-  padding: 0;
-}
-body .btn-icon.btn-sm { width: var(--size-control-sm); }
-body .btn-icon.btn-lg { width: var(--size-control-lg); }
-body .btn-icon.btn-lg .icon { width: var(--size-icon-lg); height: var(--size-icon-lg); }
-
 /* Loading: keeps width, hides label, shows a spinner */
 body .btn.is-loading {
   position: relative;
@@ -172,3 +162,26 @@ body .btn-outline-primary.is-loading,
 body .btn-ghost.is-loading,
 body .btn-accent.is-loading { --btn-spinner: var(--color-text-brand); }
 @keyframes btn-spin { to { transform: rotate(360deg); } }
+
+/* ---- On dark backgrounds -------------------------------------------------- */
+body .btn-light {
+  --bs-btn-color: var(--green-900);
+  --bs-btn-bg: var(--white);
+  --bs-btn-border-color: var(--white);
+  --bs-btn-hover-color: var(--green-900);
+  --bs-btn-hover-bg: var(--sand-100);
+  --bs-btn-hover-border-color: var(--sand-100);
+  --bs-btn-active-color: var(--green-900);
+  --bs-btn-active-bg: var(--sand-200);
+  --bs-btn-active-border-color: var(--sand-200);
+}
+body .btn-outline-light {
+  --bs-btn-color: var(--white);
+  --bs-btn-border-color: rgba(255, 255, 255, 0.6);
+  --bs-btn-hover-color: var(--green-900);
+  --bs-btn-hover-bg: var(--white);
+  --bs-btn-hover-border-color: var(--white);
+  --bs-btn-active-color: var(--green-900);
+  --bs-btn-active-bg: var(--sand-100);
+  --bs-btn-active-border-color: var(--sand-100);
+}

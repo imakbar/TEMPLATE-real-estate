@@ -1,0 +1,51 @@
+/* ==========================================================================
+   Icon button: .btn.btn-icon  .btn-favorite  .btn-overlay
+   Combine with any .btn variant. Always add an aria-label.
+   ========================================================================== */
+body .btn-icon {
+  --bs-btn-padding-x: 0;
+  width: var(--size-control-md);
+  padding: 0;
+}
+body .btn-icon.btn-sm { width: var(--size-control-sm); }
+body .btn-icon.btn-lg { width: var(--size-control-lg); }
+body .btn-icon.btn-lg .icon { width: var(--size-icon-lg); height: var(--size-icon-lg); }
+
+/* Favorite (heart) toggle: state lives in aria-pressed */
+body .btn-favorite {
+  --bs-btn-color: var(--color-text-secondary);
+  --bs-btn-bg: var(--color-bg-card);
+  --bs-btn-border-color: var(--color-border-default);
+  --bs-btn-hover-color: var(--red-600);
+  --bs-btn-hover-bg: var(--red-100);
+  --bs-btn-hover-border-color: var(--red-600);
+  --bs-btn-active-color: var(--red-600);
+  --bs-btn-active-bg: var(--red-100);
+  --bs-btn-active-border-color: var(--red-600);
+  --bs-btn-padding-x: 0;
+  width: var(--size-control-md);
+  padding: 0;
+}
+body .btn-favorite.btn-sm { width: var(--size-control-sm); }
+body .btn-favorite[aria-pressed="true"] {
+  --bs-btn-color: var(--red-600);
+  --bs-btn-border-color: var(--red-600);
+  --bs-btn-bg: var(--red-100);
+}
+body .btn-favorite[aria-pressed="true"] .icon { fill: currentColor; }
+
+/* Overlay: white glass button that stays readable on any photo */
+body .btn-overlay {
+  --bs-btn-color: var(--green-900);
+  --bs-btn-bg: rgba(255, 255, 255, 0.94);
+  --bs-btn-border-color: transparent;
+  --bs-btn-hover-color: var(--green-900);
+  --bs-btn-hover-bg: var(--white);
+  --bs-btn-hover-border-color: transparent;
+  --bs-btn-active-color: var(--green-900);
+  --bs-btn-active-bg: var(--white);
+  --bs-btn-active-border-color: transparent;
+  box-shadow: var(--shadow-sm);
+}
+body .btn-overlay.btn-favorite { --bs-btn-bg: rgba(255, 255, 255, 0.94); --bs-btn-border-color: transparent; }
+body .btn-overlay.btn-favorite[aria-pressed="true"] { --bs-btn-bg: var(--white); --bs-btn-color: var(--red-600); }

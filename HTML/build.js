@@ -22,11 +22,17 @@ const ORDER = [
   '00-tokens.css',
   '01-base.css',
   'components/button.css',
+  'components/icon-button.css',
   'components/forms.css',
   'components/badge.css',
   'components/avatar.css',
   'components/rating.css',
   'components/skeleton.css',
+  'components/tabs.css',
+  'components/layout.css',
+  'components/header.css',
+  'components/footer.css',
+  'components/overlays.css',
 ];
 
 const banner = `/*!

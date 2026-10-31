@@ -1,0 +1,54 @@
+/* ==========================================================================
+   MODAL + OFFCANVAS (drawer) + toast-ready surfaces. Bootstrap markup and JS.
+   Variants: .modal-confirm  .modal-auth  .modal-lightbox  .offcanvas-filters
+   ========================================================================== */
+body .modal {
+  --bs-modal-border-radius: var(--radius-xl);
+  --bs-modal-border-width: 0;
+  --bs-modal-box-shadow: var(--shadow-lg);
+  --bs-modal-padding: var(--spacing-lg);
+  --bs-modal-header-padding: var(--spacing-lg) var(--spacing-lg) var(--spacing-sm);
+  --bs-modal-header-border-width: 0;
+  --bs-modal-footer-border-width: 0;
+  --bs-modal-footer-gap: var(--spacing-sm);
+  --bs-modal-bg: var(--color-bg-card);
+  --bs-modal-color: var(--color-text-primary);
+}
+body .modal-title { font-family: var(--font-heading); font-size: 1.5rem; }
+body .modal-header .btn-close { margin: 0; align-self: flex-start; }
+body .modal-footer { padding: var(--spacing-sm) var(--spacing-lg) var(--spacing-lg); }
+body .modal-backdrop { --bs-backdrop-bg: var(--green-950); --bs-backdrop-opacity: 0.55; }
+body .btn-close:focus { box-shadow: var(--focus-ring); }
+.modal-subtitle { margin: var(--spacing-2xs) 0 0; font-size: 0.9375rem; color: var(--color-text-secondary); }
+
+/* Confirm: icon on top, centered text */
+.modal-confirm .modal-body { padding: var(--spacing-xl) var(--spacing-lg) var(--spacing-sm); text-align: center; }
+.modal-confirm .modal-footer { justify-content: center; }
+.modal-confirm .modal-footer .btn { flex: 1; }
+.modal-icon { display: inline-grid; place-items: center; width: 56px; height: 56px; margin-bottom: var(--spacing-md); border-radius: 50%; background: var(--color-bg-danger-subtle); color: var(--color-text-danger); }
+.modal-icon.is-success { background: var(--color-bg-success-subtle); color: var(--color-text-success); }
+.modal-icon .icon { width: 26px; height: 26px; vertical-align: 0; }
+
+/* Auth: sign in form with divider */
+.modal-auth .modal-body { display: grid; gap: var(--spacing-md); }
+.divider-text { display: flex; align-items: center; gap: var(--spacing-md); font-size: 0.8125rem; color: var(--color-text-secondary); }
+.divider-text::before, .divider-text::after { content: ""; flex: 1; height: 1px; background: var(--color-border-default); }
+
+/* Lightbox: dark, image only */
+.modal-lightbox .modal-content { background: transparent; box-shadow: none; }
+.modal-lightbox .btn-close { position: absolute; top: -44px; right: 0; filter: invert(1); opacity: 1; }
+.modal-lightbox img { width: 100%; height: auto; border-radius: var(--radius-lg); display: block; }
+
+/* Offcanvas: side drawer */
+body .offcanvas {
+  --bs-offcanvas-bg: var(--color-bg-card);
+  --bs-offcanvas-color: var(--color-text-primary);
+  --bs-offcanvas-border-width: 0;
+  --bs-offcanvas-box-shadow: var(--shadow-lg);
+  --bs-offcanvas-padding-x: var(--spacing-lg);
+  --bs-offcanvas-padding-y: var(--spacing-lg);
+}
+body .offcanvas-title { font-family: var(--font-heading); font-size: 1.375rem; }
+body .offcanvas-backdrop { --bs-backdrop-bg: var(--green-950); --bs-backdrop-opacity: 0.55; }
+.offcanvas-filters .offcanvas-footer, .offcanvas .offcanvas-footer { display: flex; gap: var(--spacing-sm); padding: var(--spacing-md) var(--spacing-lg); border-top: 1px solid var(--color-border-subtle); background: var(--color-bg-card); }
+.offcanvas .offcanvas-footer .btn { flex: 1; }

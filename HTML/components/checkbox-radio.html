@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkbox, radio, switch | Real Estate Template</title>
+  <meta name="description" content="Choose one or several options. Includes selectable cards and pill chips used by the search filters.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 1 · Foundation UI</span>
+    <h1 class="display-2 mt-2 mb-3">Checkbox, radio, switch</h1>
+    <p class="lead mb-0">Choose one or several options. Includes selectable cards and pill chips used by the search filters.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Checkbox</h3>
+    <div class="demo demo-stack">
+      <fieldset>
+        <legend class="form-label">Amenities</legend>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="c1" checked><label class="form-check-label" for="c1">Swimming pool</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="c2"><label class="form-check-label" for="c2">Garden</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="c3" data-indeterminate><label class="form-check-label" for="c3">All parking (some selected)</label></div>
+        <div class="form-check"><input class="form-check-input" type="checkbox" id="c4" disabled><label class="form-check-label" for="c4">Gym (unavailable)</label></div>
+      </fieldset>
+    </div>
+
+    <h3 class="demo-title">Radio</h3>
+    <div class="demo demo-stack">
+      <fieldset>
+        <legend class="form-label">Listing type</legend>
+        <div class="form-check"><input class="form-check-input" type="radio" name="r1" id="r1a" checked><label class="form-check-label" for="r1a">Buy</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="r1" id="r1b"><label class="form-check-label" for="r1b">Rent</label></div>
+        <div class="form-check"><input class="form-check-input" type="radio" name="r1" id="r1c" disabled><label class="form-check-label" for="r1c">Sold (unavailable)</label></div>
+      </fieldset>
+    </div>
+
+    <h3 class="demo-title">Inline</h3>
+    <div class="demo">
+      <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="i1" checked><label class="form-check-label" for="i1">House</label></div>
+      <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="i2"><label class="form-check-label" for="i2">Apartment</label></div>
+      <div class="form-check form-check-inline"><input class="form-check-input" type="checkbox" id="i3"><label class="form-check-label" for="i3">Villa</label></div>
+    </div>
+
+    <h3 class="demo-title">Switch</h3>
+    <div class="demo demo-stack">
+      <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="s1" checked><label class="form-check-label" for="s1">Email alerts</label></div>
+      <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="s2"><label class="form-check-label" for="s2">Price drop alerts</label></div>
+      <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="s3" disabled><label class="form-check-label" for="s3">Disabled</label></div>
+    </div>
+
+    <h3 class="demo-title">Validation</h3>
+    <div class="demo demo-stack">
+      <div class="form-check">
+        <input class="form-check-input is-invalid" type="checkbox" id="v1" aria-describedby="v1-msg">
+        <label class="form-check-label" for="v1">I agree to the terms and conditions</label>
+        <div id="v1-msg" class="invalid-feedback">You must agree before sending.</div>
+      </div>
+    </div>
+
+    <h3 class="demo-title">Selectable cards</h3>
+    <div class="demo">
+      <div class="check-card-group" role="radiogroup" aria-label="Property type">
+        <input type="radio" class="btn-check" name="ptype" id="pt1" checked>
+        <label class="check-card" for="pt1"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-home"></use></svg><span>House</span></label>
+        <input type="radio" class="btn-check" name="ptype" id="pt2">
+        <label class="check-card" for="pt2"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-building"></use></svg><span>Apartment</span></label>
+        <input type="radio" class="btn-check" name="ptype" id="pt3">
+        <label class="check-card" for="pt3"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-sofa"></use></svg><span>Villa</span></label>
+        <input type="radio" class="btn-check" name="ptype" id="pt4">
+        <label class="check-card" for="pt4"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-tag"></use></svg><span>Commercial</span></label>
+      </div>
+    </div>
+    <div class="api-note"><p>Use <code>type="radio"</code> for one choice or <code>type="checkbox"</code> for several. The input stays in the page (visually hidden), so keyboard and screen readers work.</p></div>
+
+    <h3 class="demo-title">Toggle chips</h3>
+    <div class="demo">
+      <div class="chip-group" role="group" aria-label="Bedrooms">
+        <input type="radio" class="btn-check" name="beds" id="b0" checked><label class="chip" for="b0">Any</label>
+        <input type="radio" class="btn-check" name="beds" id="b1"><label class="chip" for="b1">1</label>
+        <input type="radio" class="btn-check" name="beds" id="b2"><label class="chip" for="b2">2</label>
+        <input type="radio" class="btn-check" name="beds" id="b3"><label class="chip" for="b3">3</label>
+        <input type="radio" class="btn-check" name="beds" id="b4"><label class="chip" for="b4">4</label>
+        <input type="radio" class="btn-check" name="beds" id="b5"><label class="chip" for="b5">5+</label>
+      </div>
+    </div>
+    <div class="api-note"><p>Compact pill toggles for bedroom or bathroom counts and quick filters.</p></div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.form-check .form-check-input</code></td><td>Checkbox or radio. Add <code>.form-check-inline</code> to line items up.</td></tr>
+    <tr><td><code>.form-switch</code> + <code>role="switch"</code></td><td>On/off toggle.</td></tr>
+    <tr><td><code>data-indeterminate</code></td><td>Shows the mixed (dash) state on a checkbox. Set by <code>site.js</code>.</td></tr>
+    <tr><td><code>.check-card-group</code> + <code>.check-card</code></td><td>Large selectable card with an icon and label.</td></tr>
+    <tr><td><code>.chip-group</code> + <code>.chip</code></td><td>Pill toggle used with <code>.btn-check</code> inputs.</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

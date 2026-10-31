@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Header | Real Estate Template</title>
+  <meta name="description" content="The site header with logo, main menu with dropdown and actions. Includes top bar, transparent, dark and sticky options.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 2 · Layout</span>
+    <h1 class="display-2 mt-2 mb-3">Header</h1>
+    <p class="lead mb-0">The site header with logo, main menu with dropdown and actions. Includes top bar, transparent, dark and sticky options.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Default</h3>
+    <div class="demo demo-bleed">
+      <header class="site-header">
+        <div class="site-navbar">
+          <div class="container">
+            <a class="site-logo" href="#"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+            <ul class="site-menu d-none d-lg-flex">
+              <li><a href="#" aria-current="page">Home</a></li>
+              <li class="dropdown">
+                <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Properties <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Properties for sale</a></li>
+                  <li><a class="dropdown-item" href="#">Properties for rent</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Compare</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Agents</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="site-actions">
+              <a class="btn btn-ghost btn-icon d-none d-sm-inline-flex" href="#" aria-label="Sign in"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg></a>
+              <a class="btn btn-primary d-none d-md-inline-flex" href="#"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a>
+              <button type="button" class="btn btn-outline-primary btn-icon d-lg-none" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <div class="api-note"><p>From 992 px the menu shows in the bar. Below that a menu button opens the <a href="mobile-navigation.html">mobile navigation</a>.</p></div>
+
+    <h3 class="demo-title">With top bar</h3>
+    <div class="demo demo-bleed">
+      <header class="site-header">
+        <div class="site-topbar">
+          <div class="container">
+            <ul>
+              <li><a href="tel:+10000000000"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> +1 000 000 0000</a></li>
+              <li class="d-none d-sm-block"><a href="mailto:hello@example.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> hello@example.com</a></li>
+            </ul>
+            <ul>
+              <li><a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></a></li>
+              <li><a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a></li>
+              <li><a href="#" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="site-navbar">
+          <div class="container">
+            <a class="site-logo" href="#"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+            <ul class="site-menu d-none d-lg-flex">
+              <li><a href="#" aria-current="page">Home</a></li>
+              <li class="dropdown">
+                <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Properties <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Properties for sale</a></li>
+                  <li><a class="dropdown-item" href="#">Properties for rent</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Compare</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Agents</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="site-actions">
+              <a class="btn btn-ghost btn-icon d-none d-sm-inline-flex" href="#" aria-label="Sign in"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg></a>
+              <a class="btn btn-primary d-none d-md-inline-flex" href="#"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a>
+              <button type="button" class="btn btn-outline-primary btn-icon d-lg-none" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+
+    <h3 class="demo-title">Transparent over a hero</h3>
+    <div class="demo demo-bleed">
+      <div class="header-stage">
+        <header class="site-header is-transparent">
+          <div class="site-navbar">
+            <div class="container">
+              <a class="site-logo" href="#"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+              <ul class="site-menu d-none d-lg-flex">
+                <li><a href="#" aria-current="page">Home</a></li>
+                <li class="dropdown">
+                  <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Properties <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></button>
+                  <ul class="dropdown-menu">
+                    <li><a class="dropdown-item" href="#">Properties for sale</a></li>
+                    <li><a class="dropdown-item" href="#">Properties for rent</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="#">Compare</a></li>
+                  </ul>
+                </li>
+                <li><a href="#">Agents</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contact</a></li>
+              </ul>
+              <div class="site-actions">
+                <a class="btn btn-ghost btn-icon d-none d-sm-inline-flex" href="#" aria-label="Sign in"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg></a>
+                <a class="btn btn-primary d-none d-md-inline-flex" href="#"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a>
+                <button type="button" class="btn btn-outline-primary btn-icon d-lg-none" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></button>
+              </div>
+            </div>
+          </div>
+        </header>
+        <div class="header-stage-copy">Hero content goes here</div>
+      </div>
+    </div>
+    <div class="api-note"><p>Use on the home page. Add <code>data-sticky</code> and the header turns solid after scrolling.</p></div>
+
+    <h3 class="demo-title">Dark</h3>
+    <div class="demo demo-bleed">
+      <header class="site-header is-dark">
+        <div class="site-navbar">
+          <div class="container">
+            <a class="site-logo" href="#"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+            <ul class="site-menu d-none d-lg-flex">
+              <li><a href="#" aria-current="page">Home</a></li>
+              <li class="dropdown">
+                <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Properties <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></button>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#">Properties for sale</a></li>
+                  <li><a class="dropdown-item" href="#">Properties for rent</a></li>
+                  <li><hr class="dropdown-divider"></li>
+                  <li><a class="dropdown-item" href="#">Compare</a></li>
+                </ul>
+              </li>
+              <li><a href="#">Agents</a></li>
+              <li><a href="#">Blog</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="site-actions">
+              <a class="btn btn-ghost btn-icon d-none d-sm-inline-flex" href="#" aria-label="Sign in"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg></a>
+              <a class="btn btn-primary d-none d-md-inline-flex" href="#"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a>
+              <button type="button" class="btn btn-outline-primary btn-icon d-lg-none" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></button>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class / attribute</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.site-header</code></td><td>Wrapper. Holds the optional top bar and the navbar.</td></tr>
+    <tr><td><code>.is-transparent</code> / <code>.is-dark</code></td><td>Variants for use over a hero image or on a dark bar.</td></tr>
+    <tr><td><code>data-sticky</code></td><td>Keeps the header at the top. <code>site.js</code> adds <code>.is-scrolled</code> for the shadow.</td></tr>
+    <tr><td><code>.site-topbar</code></td><td>Slim strip for phone, email and social links.</td></tr>
+    <tr><td><code>.site-logo</code> + <code>.site-logo-mark</code></td><td>Text logo. Swap for your own SVG or image.</td></tr>
+    <tr><td><code>.site-menu</code></td><td>Desktop menu. Dropdowns use Bootstrap's dropdown JS.</td></tr>
+    <tr><td><code>.site-actions</code></td><td>Buttons on the right.</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

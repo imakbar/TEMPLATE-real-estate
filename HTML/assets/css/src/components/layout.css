@@ -1,0 +1,117 @@
+/* ==========================================================================
+   LAYOUT · container, sections, section heading, breadcrumbs, page banner,
+   pagination. These are the building blocks every page is made of.
+   ========================================================================== */
+
+/* ---- Container ------------------------------------------------------------ */
+:root { --container-max: 1240px; --container-narrow: 820px; --container-wide: 1440px; --container-gutter: 24px; --section-space: 96px; }
+body .container {
+  max-width: var(--container-max);
+  padding-inline: var(--container-gutter);
+}
+body .container.container-narrow { max-width: var(--container-narrow); }
+body .container.container-wide { max-width: var(--container-wide); }
+@media (max-width: 575.98px) { :root { --container-gutter: 16px; --section-space: 64px; } }
+
+/* ---- Section: vertical rhythm between page blocks ------------------------------ */
+.section { padding-block: var(--section-space); }
+.section-sm { padding-block: calc(var(--section-space) * 0.6); }
+.section-lg { padding-block: calc(var(--section-space) * 1.4); }
+.section-surface { background: var(--color-bg-surface); }
+.section-subtle { background: var(--color-bg-subtle); }
+.section-brand { background: var(--color-bg-primary); color: var(--color-text-inverse); }
+.section-brand h1, .section-brand h2, .section-brand h3, .section-brand h4 { color: var(--color-text-inverse); }
+.section-brand .eyebrow { color: var(--brass-300); }
+.section-brand .section-heading p { color: rgba(247, 246, 240, 0.78); }
+
+/* ---- Section heading --------------------------------------------------------- */
+.section-heading { max-width: 640px; margin-bottom: var(--spacing-3xl); }
+.section-heading .eyebrow { display: block; margin-bottom: var(--spacing-sm); }
+.section-heading h2 { margin: 0 0 var(--spacing-md); }
+.section-heading p { margin: 0; font-size: 1.0625rem; color: var(--color-text-secondary); }
+.section-heading.is-center { margin-inline: auto; text-align: center; }
+.section-heading.has-line h2::after {
+  content: ""; display: block; width: 56px; height: 3px; margin-top: var(--spacing-md);
+  border-radius: 2px; background: var(--color-bg-accent);
+}
+.section-heading.is-center.has-line h2::after { margin-inline: auto; }
+/* Split: heading on the left, action link or button on the right */
+.section-heading.is-split { max-width: none; display: flex; align-items: flex-end; justify-content: space-between; gap: var(--spacing-xl); flex-wrap: wrap; }
+.section-heading.is-split > div { max-width: 640px; }
+
+/* ---- Breadcrumbs ----------------------------------------------------------------- */
+body .breadcrumb {
+  --bs-breadcrumb-divider: "/";
+  --bs-breadcrumb-divider-color: var(--color-text-disabled);
+  --bs-breadcrumb-item-active-color: var(--color-text-secondary);
+  --bs-breadcrumb-margin-bottom: 0;
+  --bs-breadcrumb-item-padding-x: 0.5rem;
+  font-size: 0.875rem;
+  flex-wrap: wrap;
+}
+body .breadcrumb-item a { color: var(--color-text-link); text-decoration: none; font-weight: 500; }
+body .breadcrumb-item a:hover { color: var(--color-text-brand); text-decoration: underline; }
+.breadcrumb-chevron .breadcrumb-item + .breadcrumb-item::before {
+  content: ""; width: 14px; height: 14px; margin-top: 3px; background: currentColor; opacity: .5;
+  -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+          mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='black' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M9 6l6 6-6 6'/%3E%3C/svg%3E") center / contain no-repeat;
+  padding: 0;
+}
+
+/* ---- Page banner: title strip on inner pages ----------------------------------------- */
+.page-banner { padding-block: var(--spacing-3xl) var(--spacing-2xl); background: var(--color-bg-surface); border-bottom: 1px solid var(--color-border-subtle); }
+.page-banner h1 { margin: var(--spacing-md) 0 var(--spacing-sm); font-size: clamp(2rem, 4vw, 3rem); }
+.page-banner p { margin: 0; max-width: 60ch; color: var(--color-text-secondary); }
+.page-banner.is-dark { background: var(--color-bg-primary); border: 0; color: var(--color-text-inverse); }
+.page-banner.is-dark h1 { color: var(--color-text-inverse); }
+.page-banner.is-dark p, .page-banner.is-dark .breadcrumb-item.active { color: rgba(247, 246, 240, 0.78); }
+.page-banner.is-dark .breadcrumb-item a { color: var(--brass-300); }
+.page-banner.is-dark .breadcrumb { --bs-breadcrumb-divider-color: rgba(247, 246, 240, 0.4); }
+
+/* ---- Pagination ------------------------------------------------------------------------ */
+body .pagination {
+  --bs-pagination-padding-x: 0;
+  --bs-pagination-padding-y: 0;
+  --bs-pagination-font-size: 0.9375rem;
+  --bs-pagination-color: var(--color-text-primary);
+  --bs-pagination-bg: var(--color-bg-card);
+  --bs-pagination-border-width: 1px;
+  --bs-pagination-border-color: var(--color-border-default);
+  --bs-pagination-border-radius: var(--radius-md);
+  --bs-pagination-hover-color: var(--color-text-brand);
+  --bs-pagination-hover-bg: var(--color-bg-surface);
+  --bs-pagination-hover-border-color: var(--color-border-brand);
+  --bs-pagination-focus-color: var(--color-text-brand);
+  --bs-pagination-focus-bg: var(--color-bg-surface);
+  --bs-pagination-focus-box-shadow: var(--focus-ring);
+  --bs-pagination-active-color: var(--color-text-inverse);
+  --bs-pagination-active-bg: var(--color-bg-primary);
+  --bs-pagination-active-border-color: var(--color-bg-primary);
+  --bs-pagination-disabled-color: var(--color-text-disabled);
+  --bs-pagination-disabled-bg: var(--color-bg-disabled);
+  --bs-pagination-disabled-border-color: var(--color-border-subtle);
+  gap: var(--spacing-xs);
+  flex-wrap: wrap;
+}
+body .page-link {
+  display: inline-flex; align-items: center; justify-content: center; gap: var(--spacing-xs);
+  min-width: var(--size-control-md); height: var(--size-control-md); padding-inline: var(--spacing-md);
+  border-radius: var(--radius-md); font-weight: 600; text-decoration: none; box-shadow: none;
+}
+body .page-item:not(:first-child) .page-link { margin-left: 0; }
+body .page-item:first-child .page-link, body .page-item:last-child .page-link,
+body .page-item:not(:first-child) .page-link, body .page-item:not(:last-child) .page-link { border-radius: var(--radius-md); }
+body .page-item.active .page-link { box-shadow: none; }
+body .page-link:focus-visible { box-shadow: var(--focus-ring); }
+body .pagination-sm .page-link { min-width: var(--size-control-sm); height: var(--size-control-sm); padding-inline: var(--spacing-sm); font-size: 0.875rem; }
+body .pagination-lg .page-link { min-width: var(--size-control-lg); height: var(--size-control-lg); font-size: 1rem; }
+.page-ellipsis .page-link { border-color: transparent; background: transparent; pointer-events: none; }
+/* Simple prev / next with a status line */
+.pagination-simple { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--spacing-md); }
+@media (max-width: 575.98px) { .pagination-simple .pagination-summary { order: -1; flex: 0 0 100%; text-align: center; } .pagination-simple .btn { flex: 1; } }
+.pagination-summary { font-size: 0.9375rem; color: var(--color-text-secondary); }
+.pagination-summary strong { color: var(--color-text-primary); }
+.load-more { text-align: center; }
+.load-more p { margin: 0 0 var(--spacing-md); font-size: 0.9375rem; color: var(--color-text-secondary); }
+.load-more .progress { height: 4px; max-width: 220px; margin: 0 auto var(--spacing-lg); background: var(--color-bg-surface); }
+.load-more .progress-bar { background: var(--color-bg-primary); }

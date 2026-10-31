@@ -195,3 +195,49 @@ body .form-switch .form-check-input:checked {
   background-position: right center;
 }
 body .form-switch .form-check-label { line-height: 24px; }
+
+/* ---- File input ----------------------------------------------------------- */
+body .form-control[type="file"] { padding: 0 var(--spacing-md) 0 0; line-height: calc(var(--size-control-md) - 2px); }
+body .form-control[type="file"]::file-selector-button {
+  height: calc(var(--size-control-md) - 2px);
+  margin: 0 var(--spacing-md) 0 0;
+  padding: 0 var(--spacing-lg);
+  border: 0;
+  border-right: 1px solid var(--color-border-default);
+  border-radius: 0;
+  background: var(--color-bg-surface);
+  color: var(--color-text-brand);
+  font-weight: 600;
+  cursor: pointer;
+}
+body .form-control[type="file"]:hover::file-selector-button { background: var(--color-bg-surface-hover); }
+
+body .resize-none { resize: none; }
+
+/* ---- Selectable card (radio/checkbox with icon) ----------------------------- */
+.check-card-group { display: grid; gap: var(--spacing-md); grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); }
+.check-card {
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: var(--spacing-sm);
+  padding: var(--spacing-lg) var(--spacing-md);
+  border: 1px solid var(--color-border-default); border-radius: var(--radius-lg);
+  background: var(--color-bg-card); color: var(--color-text-secondary);
+  font-weight: 600; font-size: 0.9375rem; text-align: center; cursor: pointer;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+}
+.check-card:hover { border-color: var(--color-border-brand); color: var(--color-text-brand); }
+.btn-check:checked + .check-card { border-color: var(--color-border-brand); background: var(--color-bg-surface); color: var(--color-text-brand); box-shadow: inset 0 0 0 1px var(--color-border-brand); }
+.btn-check:focus-visible + .check-card, .btn-check:focus-visible + .chip { box-shadow: var(--focus-ring); }
+.btn-check:disabled + .check-card, .btn-check:disabled + .chip { opacity: .5; cursor: not-allowed; }
+
+/* ---- Toggle chip (pill) ------------------------------------------------------ */
+.chip-group { display: flex; flex-wrap: wrap; gap: var(--spacing-sm); }
+.chip {
+  display: inline-flex; align-items: center; gap: var(--spacing-xs);
+  height: var(--size-control-sm); padding: 0 var(--spacing-lg);
+  border: 1px solid var(--color-border-default); border-radius: var(--radius-full);
+  background: var(--color-bg-card); color: var(--color-text-primary);
+  font-size: 0.875rem; font-weight: 600; cursor: pointer; user-select: none;
+  transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast);
+}
+.chip:hover { border-color: var(--color-border-brand); }
+.btn-check:checked + .chip { background: var(--color-bg-primary); border-color: var(--color-bg-primary); color: var(--color-text-inverse); }
