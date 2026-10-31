@@ -72,6 +72,10 @@ Before `</body>`:
 - Whole site: remove the three script tags. Content is never hidden without the script running.
 - Visitors who prefer reduced motion see no animation automatically.
 
+## Property map
+
+`HTML/components/property-map.html` shows the property map. Add your Google Maps API key in `data-map-key` on the `.map-view` element (Maps JavaScript API, restrict the key to your domain). Without a key a demo map is shown.
+
 ## Credits and licenses
 
-Bootstrap 5.3 (MIT), GSAP and ScrollTrigger 3.12.5 (free "Standard No Charge" license, loaded from a CDN, not bundled), Fraunces and DM Sans (SIL Open Font License 1.1). Icons and avatar illustrations are original artwork. See the documentation for details.
+Google Maps JavaScript API (loaded with your own key, not bundled), Bootstrap 5.3 (MIT), GSAP and ScrollTrigger 3.12.5 (free "Standard No Charge" license, loaded from a CDN, not bundled), Fraunces and DM Sans (SIL Open Font License 1.1). Icons and avatar illustrations are original artwork. See the documentation for details.

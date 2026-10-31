@@ -35,7 +35,7 @@
     { title: 'Phase 5 · Global', items: [
       ['accordion', 'Accordion'], ['alert-toast', 'Alert and toast'], ['empty-state', 'Empty state'],
       ['back-to-top', 'Back to top'], ['table', 'Table'], ['stepper', 'Stepper'],
-      ['animations', 'Animations']
+      ['animations', 'Animations'], ['property-map', 'Property map']
     ]}
   ];
 
