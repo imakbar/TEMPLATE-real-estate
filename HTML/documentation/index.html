@@ -17,12 +17,12 @@
 
 <header class="doc-topbar">
   <div class="container-xl">
-    <a class="doc-brand" href="../components.html">
+    <a class="doc-brand" href="../components/index.html">
       <span class="doc-brand-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>
       Real Estate Template
     </a>
     <nav class="doc-topnav" aria-label="Primary">
-      <a href="../components.html">Components</a>
+      <a href="../components/index.html">Components</a>
       <a href="index.html" aria-current="page">Documentation</a>
     </nav>
   </div>
@@ -48,12 +48,9 @@
     </ul>
     <h2>Components</h2>
     <ul>
-      <li><a href="#ref-button">Button</a></li>
-      <li><a href="#ref-forms">Form controls</a></li>
-      <li><a href="#ref-badge">Badge</a></li>
-      <li><a href="#ref-avatar">Avatar</a></li>
-      <li><a href="#ref-rating">Rating</a></li>
-      <li><a href="#ref-skeleton">Skeleton</a></li>
+      <li><a href="#components">All components</a></li>
+      <li><a href="#using-components">Using a component</a></li>
+      <li><a href="#js">JavaScript (site.js)</a></li>
     </ul>
     <h2>More</h2>
     <ul>
@@ -88,7 +85,7 @@
     <section class="doc-section" id="quick-start">
       <div class="section-head"><h2>Quick start</h2></div>
       <ol>
-        <li>Unzip the package and open <code>HTML/components.html</code> in any modern browser. Nothing needs installing.</li>
+        <li>Unzip the package and open <code>HTML/components/index.html</code> in any modern browser. Nothing needs installing.</li>
         <li>Copy the markup of any component from its <strong>View code</strong> panel into your own page.</li>
         <li>Use this head and script setup on every page:</li>
       </ol>
@@ -107,10 +104,10 @@
     <section class="doc-section" id="structure">
       <div class="section-head"><h2>File structure</h2></div>
 <pre class="doc-snippet"><code>HTML/
-├── components.html          Component showcase (open this first)
-├── build.js                 Rebuilds style.css from the source files (Node, no dependencies)
+├── components/              One page per component (start at index.html)
 ├── documentation/
 │   └── index.html           This guide
+├── build.js                 Rebuilds style.css from the source files (Node, no dependencies)
 └── assets/
     ├── css/
     │   ├── style.css        Compiled theme (readable)
@@ -119,12 +116,14 @@
     │   └── src/             Edit these, then run build.js
     │       ├── 00-tokens.css       Design tokens (colors, spacing, radius, fonts, shadows)
     │       ├── 01-base.css         Bootstrap variable mapping, typography, links, focus
-    │       └── components/         One file per component
+    │       └── components/         One CSS file per component group
     ├── js/
-    │   ├── icons.js         Inline SVG icon sprite
+    │   ├── icons.js         Inline SVG icon sprite (80+ icons)
+    │   ├── site.js          Small behaviors used by the components
+    │   ├── docs-shell.js    Sidebar and navigation of the showcase (safe to delete)
     │   └── docs.js          "View code" panels (showcase only, safe to delete)
-    └── img/
-        └── avatars/         Placeholder avatar illustrations</code></pre>
+    └── img/                 Original placeholder illustrations
+        ├── avatars/  agents/  properties/  locations/  floorplans/</code></pre>
     </section>
 
     <!-- ===================================================== COLORS -->
@@ -200,88 +199,74 @@ node build.js</code></pre>
       <p><strong>Add your own:</strong> open <code>icons.js</code>, add a line to the <code>icons</code> object with a name and the SVG path content (24 x 24 grid, drawn as a 2 px stroke), then use <code>#i-yourname</code>.</p>
     </section>
 
-    <!-- =============================================== REF: BUTTON -->
-    <section class="doc-section" id="ref-button">
-      <div class="section-head"><h2>Button</h2><p>Live examples: <a href="../components.html#buttons">components.html</a></p></div>
+    <!-- ================================================ COMPONENTS -->
+    <section class="doc-section" id="components">
+      <div class="section-head"><h2>Components</h2><p>Every component has its own page in <code>HTML/components/</code> with live examples, a "View code" panel for each one, and a table of its classes. Open <a href="../components/index.html">the component library</a> to browse all of them.</p></div>
+      <h3 class="h5 mt-4">Phase 1 · Foundation UI</h3>
+      <ul>
+        <li><a href="../components/button.html">Button</a></li>
+        <li><a href="../components/icon-button.html">Icon button</a></li>
+        <li><a href="../components/input.html">Input</a></li>
+        <li><a href="../components/textarea.html">Textarea</a></li>
+        <li><a href="../components/select.html">Select</a></li>
+        <li><a href="../components/checkbox-radio.html">Checkbox, radio, switch</a></li>
+        <li><a href="../components/badge.html">Badge</a></li>
+        <li><a href="../components/avatar.html">Avatar</a></li>
+        <li><a href="../components/rating.html">Rating</a></li>
+        <li><a href="../components/skeleton.html">Skeleton loader</a></li>
+      </ul>
+      <h3 class="h5 mt-4">Phase 2 · Layout</h3>
+      <ul>
+        <li><a href="../components/container.html">Container and sections</a></li>
+        <li><a href="../components/header.html">Header</a></li>
+        <li><a href="../components/mobile-navigation.html">Mobile navigation</a></li>
+        <li><a href="../components/footer.html">Footer</a></li>
+        <li><a href="../components/section-heading.html">Section heading</a></li>
+        <li><a href="../components/breadcrumbs.html">Breadcrumbs</a></li>
+        <li><a href="../components/pagination.html">Pagination</a></li>
+        <li><a href="../components/modal-drawer.html">Modal and drawer</a></li>
+      </ul>
+      <h3 class="h5 mt-4">Phase 3 · Real estate</h3>
+      <ul>
+        <li><a href="../components/property-card.html">Property card (grid)</a></li>
+        <li><a href="../components/property-card-list.html">Property card (list)</a></li>
+        <li><a href="../components/property-gallery.html">Property gallery</a></li>
+        <li><a href="../components/property-search-form.html">Property search form</a></li>
+        <li><a href="../components/advanced-filters.html">Advanced filters</a></li>
+        <li><a href="../components/property-specifications.html">Property specifications</a></li>
+        <li><a href="../components/amenities-list.html">Amenities list</a></li>
+        <li><a href="../components/floor-plan-card.html">Floor plan card</a></li>
+        <li><a href="../components/agent-card.html">Agent card</a></li>
+        <li><a href="../components/location-card.html">Location card</a></li>
+      </ul>
+    </section>
+
+    <section class="doc-section" id="using-components">
+      <div class="section-head"><h2>Using a component</h2></div>
+      <ol>
+        <li>Open the component page and find the example you want.</li>
+        <li>Click <strong>View code</strong> under the example and copy the HTML.</li>
+        <li>Paste it into your page. Every page needs the Bootstrap CSS, <code>style.css</code>, the Bootstrap JS bundle, and <code>icons.js</code> (for icons). Add <code>site.js</code> for the small behaviors listed below.</li>
+        <li>Replace the sample text and the images in <code>assets/img/</code>.</li>
+      </ol>
+      <p>To add a page like the ones in <code>components/</code> for your own component, copy any file there, edit the content inside <code>&lt;main class="doc-main"&gt;</code> and add a line to the list at the top of <code>assets/js/docs-shell.js</code>. The showcase files are not needed on a real site.</p>
+    </section>
+
+    <section class="doc-section" id="js">
+      <div class="section-head"><h2>JavaScript (site.js)</h2><p>Small, dependency-free helpers. Each one only runs if its attribute is on the page. Everything else (dropdowns, modals, drawers, tabs, carousel, collapse) is Bootstrap's own JavaScript.</p></div>
       <table class="doc-table">
-        <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+        <thead><tr><th>Attribute</th><th>What it does</th></tr></thead>
         <tbody>
-          <tr><td><code>.btn .btn-primary</code></td><td>Main action. Use once per section.</td></tr>
-          <tr><td><code>.btn .btn-secondary</code></td><td>Supporting action, soft green.</td></tr>
-          <tr><td><code>.btn .btn-accent</code></td><td>Marketing call to action, brass.</td></tr>
-          <tr><td><code>.btn .btn-outline-primary</code></td><td>Lower emphasis, outlined.</td></tr>
-          <tr><td><code>.btn .btn-ghost</code></td><td>Lowest emphasis, text only.</td></tr>
-          <tr><td><code>.btn-sm</code> / <code>.btn-lg</code></td><td>36 px and 52 px height. Default is 44 px.</td></tr>
-          <tr><td><code>.btn-icon</code></td><td>Square, icon only. Always add <code>aria-label</code>.</td></tr>
-          <tr><td><code>.btn-pill</code></td><td>Fully rounded corners.</td></tr>
-          <tr><td><code>.is-loading</code></td><td>Shows a spinner and blocks clicks. Add <code>aria-busy="true"</code>.</td></tr>
+          <tr><td><code>data-sticky</code> on <code>.site-header</code></td><td>Adds <code>.is-scrolled</code> when the page is scrolled.</td></tr>
+          <tr><td><code>.btn-favorite</code></td><td>Toggles <code>aria-pressed</code> and the label on click.</td></tr>
+          <tr><td><code>data-gallery</code>, <code>data-thumb</code></td><td>Thumbnail strip that swaps the main photo.</td></tr>
+          <tr><td><code>data-gallery-index</code></td><td>Opens the lightbox carousel at a given slide.</td></tr>
+          <tr><td><code>data-counter="#id"</code> on a textarea</td><td>Live character counter.</td></tr>
+          <tr><td><code>data-indeterminate</code> on a checkbox</td><td>Shows the mixed state.</td></tr>
+          <tr><td><code>data-view-toggle</code>, <code>data-view</code></td><td>Grid and list switch buttons.</td></tr>
+          <tr><td><code>data-output="#id"</code> on a range</td><td>Shows the slider value in another element.</td></tr>
         </tbody>
       </table>
-<pre class="doc-snippet"><code>&lt;button type="button" class="btn btn-primary btn-lg">
-  &lt;svg class="icon" aria-hidden="true">&lt;use href="#i-search">&lt;/use>&lt;/svg>Search properties
-&lt;/button></code></pre>
-    </section>
-
-    <!-- ================================================ REF: FORMS -->
-    <section class="doc-section" id="ref-forms">
-      <div class="section-head"><h2>Form controls</h2><p>Live examples: <a href="../components.html#forms">components.html</a></p></div>
-      <p>Use standard Bootstrap form markup. The theme restyles it, so existing Bootstrap knowledge applies.</p>
-      <table class="doc-table">
-        <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
-        <tbody>
-          <tr><td><code>.form-control</code></td><td>Text input and textarea. Sizes <code>.form-control-sm</code> and <code>.form-control-lg</code>.</td></tr>
-          <tr><td><code>.form-select</code></td><td>Dropdown with a custom chevron. Sizes <code>.form-select-sm</code> and <code>.form-select-lg</code>.</td></tr>
-          <tr><td><code>.input-icon</code></td><td>Wrapper that puts an icon inside an input. Add <code>.icon-end</code> to the icon to place it on the right.</td></tr>
-          <tr><td><code>.input-group</code></td><td>Prefix or suffix text, for example currency.</td></tr>
-          <tr><td><code>.form-check</code></td><td>Checkbox and radio. Add <code>.form-switch</code> and <code>role="switch"</code> for a toggle.</td></tr>
-          <tr><td><code>.is-invalid</code> / <code>.is-valid</code></td><td>Validation states. Pair with <code>.invalid-feedback</code> or <code>.valid-feedback</code>.</td></tr>
-        </tbody>
-      </table>
-      <p class="mt-3">Always connect a <code>&lt;label&gt;</code> to its field with <code>for</code> and <code>id</code>, and link help or error text with <code>aria-describedby</code>.</p>
-    </section>
-
-    <!-- ================================================ REF: BADGE -->
-    <section class="doc-section" id="ref-badge">
-      <div class="section-head"><h2>Badge</h2><p>Live examples: <a href="../components.html#badges">components.html</a></p></div>
-      <table class="doc-table">
-        <thead><tr><th>Class</th><th>Use</th></tr></thead>
-        <tbody>
-          <tr><td><code>.badge .badge-sale</code> <code>.badge-rent</code> <code>.badge-sold</code></td><td>Listing status on property cards.</td></tr>
-          <tr><td><code>.badge-featured</code> <code>.badge-new</code></td><td>Highlight labels.</td></tr>
-          <tr><td><code>.badge-success</code> <code>.badge-danger</code> <code>.badge-info</code> <code>.badge-neutral</code> <code>.badge-outline</code></td><td>Feedback and states.</td></tr>
-          <tr><td><code>.badge-pill</code> <code>.badge-lg</code> <code>.badge-dot</code></td><td>Shape, size and status dot modifiers.</td></tr>
-        </tbody>
-      </table>
-    </section>
-
-    <!-- =============================================== REF: AVATAR -->
-    <section class="doc-section" id="ref-avatar">
-      <div class="section-head"><h2>Avatar</h2><p>Live examples: <a href="../components.html#avatars">components.html</a></p></div>
-      <table class="doc-table">
-        <thead><tr><th>Class</th><th>Use</th></tr></thead>
-        <tbody>
-          <tr><td><code>.avatar</code></td><td>Base, 40 px. Put an <code>&lt;img&gt;</code> or one to two initials inside.</td></tr>
-          <tr><td><code>.avatar-xs</code> <code>-sm</code> <code>-lg</code> <code>-xl</code> <code>-2xl</code></td><td>24, 32, 56, 80 and 120 px.</td></tr>
-          <tr><td><code>.avatar-square</code></td><td>Rounded square instead of a circle.</td></tr>
-          <tr><td><code>.avatar-brand</code> <code>.avatar-accent</code></td><td>Colored initials.</td></tr>
-          <tr><td><code>.avatar-status</code> (+ <code>.is-offline</code>)</td><td>Presence dot.</td></tr>
-          <tr><td><code>.avatar-group</code> with <code>.avatar-more</code></td><td>Overlapping stack with a "+N" counter.</td></tr>
-        </tbody>
-      </table>
-      <p class="mt-3">The images in <code>assets/img/avatars/</code> are placeholder illustrations. Replace them with your agents' photos and keep a meaningful <code>alt</code> text.</p>
-    </section>
-
-    <!-- =============================================== REF: RATING -->
-    <section class="doc-section" id="ref-rating">
-      <div class="section-head"><h2>Rating</h2><p>Live examples: <a href="../components.html#rating">components.html</a></p></div>
-<pre class="doc-snippet"><code>&lt;span class="rating" style="--rating: 4.5" role="img" aria-label="Rated 4.5 out of 5">&lt;/span></code></pre>
-      <p>Set <code>--rating</code> to any value from 0 to 5. Sizes: <code>.rating-sm</code> (14 px stars), default (18 px), <code>.rating-lg</code> (24 px). <code>.rating-summary</code> lays out stars with a number and review count. <code>.rating-input</code> is an interactive five-star radio group, see the example for the exact markup.</p>
-    </section>
-
-    <!-- ============================================= REF: SKELETON -->
-    <section class="doc-section" id="ref-skeleton">
-      <div class="section-head"><h2>Skeleton</h2><p>Live examples: <a href="../components.html#skeleton">components.html</a></p></div>
-      <p>Blocks: <code>.skeleton-text</code> (with <code>.w-75</code>, <code>.w-50</code>, <code>.w-25</code>), <code>.skeleton-title</code>, <code>.skeleton-circle</code>, <code>.skeleton-image</code> (4:3), <code>.skeleton-button</code>. Combine them to mirror the layout that is loading. Put <code>aria-busy="true"</code> on the loading region and <code>aria-hidden="true"</code> on the placeholders. The shimmer animation is turned off for users who prefer reduced motion.</p>
     </section>
 
     <!-- ============================================ ACCESSIBILITY -->
@@ -321,7 +306,14 @@ node build.js</code></pre>
     <!-- ================================================= CHANGELOG -->
     <section class="doc-section" id="changelog">
       <div class="section-head"><h2>Changelog</h2></div>
-      <h3 class="h5">0.1.0: Foundation</h3>
+      <h3 class="h5">0.2.0: Layout and real estate components</h3>
+      <ul>
+        <li>One HTML page per component in <code>components/</code>, with a hub page and shared navigation.</li>
+        <li>Layout: container and sections, header, mobile navigation, footer, section heading, breadcrumbs and page banner, pagination, modal and drawer, tabs.</li>
+        <li>Real estate: property card (grid and list), gallery with lightbox, search form, advanced filters, specifications, amenities, floor plan card, agent card, location card.</li>
+        <li>Icon sprite grown to 80+ icons, original SVG illustrations, <code>site.js</code>.</li>
+      </ul>
+      <h3 class="h5 mt-4">0.1.0: Foundation</h3>
       <ul>
         <li>Design tokens, base styles and Bootstrap 5.3 theme mapping.</li>
         <li>Components: button, icon button, form controls (input, textarea, select, checkbox, radio, switch), badge, avatar, rating, skeleton loader.</li>
@@ -329,9 +321,7 @@ node build.js</code></pre>
       </ul>
       <h3 class="h5 mt-4">Planned</h3>
       <ul>
-        <li>Layout components: header, mobile navigation, footer, breadcrumbs, pagination, modal.</li>
-        <li>Real estate components: property cards, gallery, search form, filters, agent card.</li>
-        <li>Section blocks and all pages (home, listings, property details, agents, blog and more).</li>
+        <li>Section blocks (hero, featured properties, testimonials, blog, call to action, newsletter) and all pages (home, listings, property details, agents, blog and more).</li>
       </ul>
     </section>
 

@@ -42,6 +42,15 @@
       });
     });
 
+    /* 3b. Lightbox: [data-gallery-index] on a photo jumps the carousel inside the modal */
+    document.querySelectorAll('[data-gallery-index]').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        var modal = document.querySelector(btn.getAttribute('data-bs-target'));
+        var car = modal && modal.querySelector('.carousel');
+        if (car && window.bootstrap) window.bootstrap.Carousel.getOrCreateInstance(car, { ride: false }).to(Number(btn.getAttribute('data-gallery-index')));
+      });
+    });
+
     /* 4. Textarea character counter: data-counter="#id" ------------------ */
     document.querySelectorAll('textarea[data-counter]').forEach(function (ta) {
       var out = document.querySelector(ta.getAttribute('data-counter'));

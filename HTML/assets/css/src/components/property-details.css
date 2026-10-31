@@ -1,0 +1,54 @@
+/* ==========================================================================
+   PROPERTY DETAILS BUILDING BLOCKS
+   .property-specs (key facts)   .spec-table (details list)
+   .amenities (feature list)     .floor-plan (plan card)
+   ========================================================================== */
+
+/* ---- Key facts: icon, value, label ---------------------------------------------- */
+.property-specs { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: var(--spacing-md); margin: 0; padding: 0; list-style: none; }
+.property-specs li { display: flex; align-items: center; gap: var(--spacing-md); }
+.spec-icon { flex: none; display: inline-grid; place-items: center; width: 48px; height: 48px; border-radius: var(--radius-md); background: var(--color-bg-surface); color: var(--color-text-brand); }
+.spec-icon .icon { width: 24px; height: 24px; vertical-align: 0; }
+.spec-value { display: block; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; line-height: 1.2; color: var(--color-text-brand); }
+.spec-label { display: block; font-size: 0.8125rem; color: var(--color-text-secondary); }
+/* Boxed: each fact in its own card */
+.property-specs--boxed li { flex-direction: column; align-items: flex-start; padding: var(--spacing-lg); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); background: var(--color-bg-card); gap: var(--spacing-sm); }
+/* Bar: one strip, with dividers */
+.property-specs--bar { gap: 0; padding: var(--spacing-md) 0; border-block: 1px solid var(--color-border-default); }
+.property-specs--bar li { padding: 0 var(--spacing-lg); border-left: 1px solid var(--color-border-default); }
+.property-specs--bar li:first-child { padding-left: 0; border-left: 0; }
+.property-specs--bar .spec-icon { width: 40px; height: 40px; background: none; }
+
+/* ---- Details list: label and value rows ---------------------------------------------- */
+.spec-table { margin: 0; display: grid; grid-template-columns: 1fr 1fr; column-gap: var(--spacing-2xl); }
+.spec-table > div { display: flex; justify-content: space-between; gap: var(--spacing-md); padding: 14px 0; border-bottom: 1px solid var(--color-border-subtle); }
+.spec-table dt { font-weight: 500; color: var(--color-text-secondary); }
+.spec-table dd { margin: 0; font-weight: 600; text-align: right; color: var(--color-text-primary); }
+@media (max-width: 767.98px) { .spec-table { grid-template-columns: 1fr; } .property-specs--bar { gap: var(--spacing-md); } .property-specs--bar li { border-left: 0; padding: 0; } }
+
+/* ---- Amenities ----------------------------------------------------------------------------- */
+.amenities { display: grid; grid-template-columns: repeat(auto-fill, minmax(190px, 1fr)); gap: var(--spacing-md) var(--spacing-lg); margin: 0; padding: 0; list-style: none; }
+.amenities li { display: flex; align-items: center; gap: 10px; font-weight: 500; color: var(--color-text-primary); }
+.amenities .icon { flex: none; width: 22px; height: 22px; vertical-align: 0; color: var(--color-text-brand); }
+.amenities li.is-unavailable { color: var(--color-text-disabled); text-decoration: line-through; }
+.amenities li.is-unavailable .icon { color: var(--color-text-disabled); }
+/* Check variant: green tick, text only */
+.amenities--check .icon { width: 18px; height: 18px; padding: 2px; border-radius: 50%; background: var(--color-bg-surface); color: var(--color-text-success); stroke-width: 3; }
+/* Tiles variant: icon above label */
+.amenities--tiles { grid-template-columns: repeat(auto-fill, minmax(130px, 1fr)); }
+.amenities--tiles li { flex-direction: column; justify-content: center; gap: var(--spacing-sm); padding: var(--spacing-lg) var(--spacing-sm); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); background: var(--color-bg-card); font-size: 0.9375rem; text-align: center; transition: border-color var(--transition-fast), background-color var(--transition-fast); }
+.amenities--tiles li:hover { border-color: var(--color-border-brand); background: var(--color-bg-surface); }
+.amenities--tiles .icon { width: 28px; height: 28px; }
+
+/* ---- Floor plan card ---------------------------------------------------------------------------- */
+.floor-plan { background: var(--color-bg-card); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); overflow: hidden; }
+.floor-plan-head { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--spacing-md); padding: var(--spacing-lg) var(--spacing-lg) 0; }
+.floor-plan-head h3 { margin: 0; font-family: var(--font-body); font-size: 1.0625rem; font-weight: 700; }
+.floor-plan-body { padding: var(--spacing-lg); }
+.floor-plan-image { display: block; width: 100%; border: 1px solid var(--color-border-subtle); border-radius: var(--radius-md); background: var(--white); }
+.floor-plan-meta { display: flex; flex-wrap: wrap; gap: var(--spacing-xs) var(--spacing-lg); margin: var(--spacing-lg) 0 0; padding: 0; list-style: none; font-size: 0.9375rem; font-weight: 600; }
+.floor-plan-meta li { display: inline-flex; align-items: center; gap: 8px; }
+.floor-plan-meta .icon { width: 18px; height: 18px; vertical-align: 0; color: var(--color-text-secondary); }
+.floor-plan-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--spacing-md); padding: var(--spacing-md) var(--spacing-lg); border-top: 1px solid var(--color-border-subtle); background: var(--color-bg-page); }
+.floor-plan-price { font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; color: var(--color-text-brand); }
+.floor-plan .tab-content { padding-top: var(--spacing-lg); }

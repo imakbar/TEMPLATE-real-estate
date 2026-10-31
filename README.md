@@ -2,7 +2,7 @@
 
 A modern HTML template for real estate agencies, built on Bootstrap 5.3 with a Forest Green theme.
 
-> **Status: in development (v0.1.0, foundation).** The design tokens, base styles and Phase 1 components are done. Layout components, real estate components, section blocks and pages are being added step by step.
+> **Status: in development (v0.2.0).** Design tokens, Phase 1 foundation, Phase 2 layout and Phase 3 real estate components are done. Section blocks and the full pages are being added step by step.
 
 ## What is inside
 
@@ -10,7 +10,7 @@ All template files live in the [`HTML/`](HTML) folder.
 
 | Path | What it is |
 | --- | --- |
-| [`HTML/components.html`](HTML/components.html) | Component showcase with copy-ready code. Open this first. |
+| [`HTML/components/index.html`](HTML/components/index.html) | Component library: one page per component with live examples and copy-ready code. Open this first. |
 | [`HTML/documentation/index.html`](HTML/documentation/index.html) | Full documentation: setup, customization, component reference, credits. |
 | `HTML/assets/css/style.css` | Compiled theme. `style.min.css` is the minified version for production. |
 | `HTML/assets/css/src/` | CSS source: design tokens, base, one file per component. |
@@ -18,7 +18,7 @@ All template files live in the [`HTML/`](HTML) folder.
 
 ## Quick start
 
-1. Open `HTML/components.html` in a browser. No installation needed.
+1. Open `HTML/components/index.html` in a browser. No installation needed.
 2. Read `HTML/documentation/index.html` for setup and customization.
 
 To change the design, edit the variables in `HTML/assets/css/src/00-tokens.css`, then run:
