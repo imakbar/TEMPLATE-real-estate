@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Pricing | YourBrand</title>
+  <meta name="description" content="Plans for private sellers, agents and agencies.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="assets/css/style.min.css" rel="stylesheet">
+</head>
+<body>
+
+<a class="visually-hidden-focusable" href="#main">Skip to content</a>
+
+<header class="site-header" data-sticky>
+  <div class="site-navbar">
+    <div class="container">
+      <a class="site-logo" href="index.html"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+      <ul class="site-menu d-none d-lg-flex">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Properties <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="listing.html">All properties</a></li>
+            <li><a class="dropdown-item" href="property-details.html">Property details</a></li>
+            <li><a class="dropdown-item" href="compare.html">Compare</a></li>
+            <li><a class="dropdown-item" href="wishlist.html">Wishlist</a></li>
+          </ul>
+        </li>
+        <li><a href="agents.html">Agents</a></li>
+        <li class="dropdown">
+          <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Pages <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="about.html">About us</a></li>
+            <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="login.html">Sign in</a></li>
+            <li><a class="dropdown-item" href="register.html">Create account</a></li>
+            <li><a class="dropdown-item" href="404.html">404 page</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="site-actions">
+        <a class="btn btn-ghost btn-icon d-none d-sm-inline-flex" href="wishlist.html" aria-label="Wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></a>
+        <a class="btn btn-ghost btn-icon d-none d-sm-inline-flex" href="login.html" aria-label="Sign in"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg></a>
+        <a class="btn btn-primary d-none d-md-inline-flex" href="add-property.html"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a>
+        <button type="button" class="btn btn-outline-primary btn-icon d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="offcanvas offcanvas-start mobile-nav" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+  <div class="offcanvas-header">
+    <a class="site-logo" href="index.html" id="mobileNavLabel"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+    <button type="button" class="btn btn-ghost btn-icon" data-bs-dismiss="offcanvas" aria-label="Close menu"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="mobile-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="listing.html">Properties</a></li>
+      <li><a href="agents.html">Agents</a></li>
+      <li>
+        <button type="button" data-bs-toggle="collapse" data-bs-target="#mmPages" aria-expanded="false" aria-controls="mmPages">Pages <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></button>
+        <div class="collapse" id="mmPages">
+          <ul class="mobile-submenu">
+            <li><a href="about.html">About us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="faq.html">FAQ</a></li>
+            <li><a href="compare.html">Compare</a></li><li><a href="wishlist.html">Wishlist</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <ul class="mobile-nav-contact">
+        <li><a href="tel:+10000000000"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> +1 000 000 0000</a></li>
+        <li><a href="mailto:hello@example.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> hello@example.com</a></li>
+      </ul>
+      <a class="btn btn-primary" href="add-property.html"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a>
+      <a class="btn btn-outline-primary" href="login.html">Sign in</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+  <section class="page-banner">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-chevron">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">Pricing</li>
+        </ol>
+      </nav>
+      <h1>Pricing</h1>
+      <p>Simple plans for every kind of seller.</p>
+    </div>
+  </section>
+  <section class="section">
+    <div class="container">
+      <div class="billing-toggle" data-billing>
+        <div class="segmented" role="radiogroup" aria-label="Billing period"><input type="radio" class="btn-check" name="bill" id="bill0" value="monthly" checked><label class="segmented-item" for="bill0">Monthly</label><input type="radio" class="btn-check" name="bill" id="bill1" value="yearly"><label class="segmented-item" for="bill1">Yearly</label></div>
+        <span class="badge badge-success">Save 17%</span>
+      </div>
+      <div class="row g-4 justify-content-center">
+        <div class="col-md-6 col-lg-4"><div class="pricing-card">
+    
+          <h2 class="pricing-name">Starter</h2><p class="pricing-desc">For private sellers and landlords.</p>
+          <div class="pricing-price">$<span data-monthly="0" data-yearly="0">0</span> <small data-period>/ month</small></div>
+          <ul class="pricing-features">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>1 active listing</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>5 photos per listing</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Contact form</li>
+          <li class="is-off"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>Featured placement</li>
+          <li class="is-off"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>Priority support</li>
+          </ul>
+          <a class="btn btn-outline-primary btn-lg" href="register.html">Start free</a>
+        </div></div>
+        <div class="col-md-6 col-lg-4"><div class="pricing-card is-popular">
+          <span class="badge badge-featured">Most popular</span>
+          <h2 class="pricing-name">Professional</h2><p class="pricing-desc">For agents who list often.</p>
+          <div class="pricing-price">$<span data-monthly="29" data-yearly="290">29</span> <small data-period>/ month</small></div>
+          <ul class="pricing-features">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>25 active listings</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>30 photos per listing</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Contact form and alerts</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Featured placement</li>
+          <li class="is-off"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg>Priority support</li>
+          </ul>
+          <a class="btn btn-primary btn-lg" href="register.html">Choose Professional</a>
+        </div></div>
+        <div class="col-md-6 col-lg-4"><div class="pricing-card">
+    
+          <h2 class="pricing-name">Agency</h2><p class="pricing-desc">For teams and larger agencies.</p>
+          <div class="pricing-price">$<span data-monthly="79" data-yearly="790">79</span> <small data-period>/ month</small></div>
+          <ul class="pricing-features">
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Unlimited listings</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Unlimited photos</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Team accounts</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Featured placement</li>
+          <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Priority support</li>
+          </ul>
+          <a class="btn btn-outline-primary btn-lg" href="register.html">Choose Agency</a>
+        </div></div>
+      </div>
+    </div>
+  </section>
+  <section class="section section-surface container-narrow">
+    <div class="container">
+      <div class="section-heading is-center"><span class="eyebrow">Questions</span><h2>Pricing FAQ</h2></div><div class="accordion" id="priceFaq">
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pf0" aria-expanded="false" aria-controls="pf0">Can I change plans later?</button></h3><div id="pf0" class="accordion-collapse collapse" data-bs-parent="#priceFaq"><div class="accordion-body">Yes. You can upgrade or downgrade at any time and we will adjust the next invoice.</div></div></div>
+        <div class="accordion-item"><h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pf1" aria-expanded="false" aria-controls="pf1">Is there a free trial?</button></h3><div id="pf1" class="accordion-collapse collapse" data-bs-parent="#priceFaq"><div class="accordion-body">The Starter plan is free forever. Paid plans can be cancelled in the first 14 days for a full refund.</div></div></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-main">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 footer-brand">
+          <a class="site-logo" href="index.html"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+          <p>Short line about your agency. Helping people find a place to call home.</p>
+          <ul class="footer-social">
+            <li><a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></a></li><li><a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a></li>
+            <li><a href="#" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a></li><li><a href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"></use></svg></a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h2 class="footer-title">Explore</h2>
+          <ul class="footer-links"><li><a href="listing.html">Properties</a></li><li><a href="agents.html">Agents</a></li><li><a href="compare.html">Compare</a></li><li><a href="blog.html">Blog</a></li></ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h2 class="footer-title">Company</h2>
+          <ul class="footer-links"><li><a href="about.html">About us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h2 class="footer-title">Contact</h2>
+          <ul class="footer-contact">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg><span>120 Example Street, Your City</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><a href="tel:+10000000000">+1 000 000 0000</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg><a href="mailto:hello@example.com">hello@example.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; 2026 YourBrand. All rights reserved.</span>
+      <ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<button type="button" class="btn btn-primary btn-icon btn-pill back-to-top" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

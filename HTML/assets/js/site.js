@@ -149,6 +149,20 @@
       }
     });
 
+    /* 13. Billing toggle: radios inside [data-billing] swap [data-monthly] / [data-yearly] text */
+    document.querySelectorAll('[data-billing]').forEach(function (g) {
+      var scope = document;
+      function apply() {
+        var yearly = g.querySelector('input[value="yearly"]').checked;
+        scope.querySelectorAll('[data-monthly]').forEach(function (el) {
+          el.textContent = yearly ? el.getAttribute('data-yearly') : el.getAttribute('data-monthly');
+        });
+        scope.querySelectorAll('[data-period]').forEach(function (el) { el.textContent = yearly ? '/ year' : '/ month'; });
+      }
+      g.addEventListener('change', apply);
+      apply();
+    });
+
     /* 7. Range slider output: <input type=range data-output="#id"> ------- */
     document.querySelectorAll('input[type="range"][data-output]').forEach(function (r) {
       var out = document.querySelector(r.getAttribute('data-output'));
