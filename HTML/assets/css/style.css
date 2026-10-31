@@ -2208,7 +2208,8 @@ body .offcanvas-lg .filters-panel { border: 0; }
    all content stays visible. GSAP sets opacity and transform only.
    ========================================================================== */
 .js:not(.anim-off) [data-animate]:not([data-animate-stagger]),
-.js:not(.anim-off) [data-animate-stagger] > * { opacity: 0; }
+.js:not(.anim-off) [data-animate-stagger] > *,
+.js:not(.anim-off) [data-hero-item] { opacity: 0; }
 
 /* Pause CSS transitions while GSAP animates the element */
 .is-animating { transition: none !important; }

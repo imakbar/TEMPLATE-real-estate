@@ -123,8 +123,33 @@
     });
   }
 
+  /* ---------- Hero: [data-hero] with [data-hero-item] children ----------
+     Items play in page order (heading, text, buttons...). An item marked
+     data-hero-item="image" always plays last. Plays once, on load. */
+  function initHero() {
+    gsap.utils.toArray('[data-hero]').forEach(function (hero) {
+      var items = gsap.utils.toArray(hero.querySelectorAll('[data-hero-item]'));
+      if (!items.length) return;
+      var text = items.filter(function (el) { return el.getAttribute('data-hero-item') !== 'image'; });
+      var images = items.filter(function (el) { return el.getAttribute('data-hero-item') === 'image'; });
+
+      var tl = gsap.timeline({
+        defaults: { ease: DEFAULTS.ease, duration: DEFAULTS.duration },
+        onComplete: function () { finish(items); }
+      });
+      mark(items, true);
+      text.forEach(function (el, i) {
+        tl.fromTo(el, { opacity: 0, y: 30 }, { opacity: 1, y: 0 }, i === 0 ? 0.1 : '-=0.55');
+      });
+      images.forEach(function (el) {
+        tl.fromTo(el, { opacity: 0, scale: 1.08 }, { opacity: 1, scale: 1, duration: 1.2 }, '-=0.4');
+      });
+    });
+  }
+
   gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', function () {
     root.classList.remove('anim-off');
+    initHero();
     initReveals();
     initParallax();
   });
