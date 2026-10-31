@@ -40,6 +40,7 @@ const ORDER = [
   'components/agent-card.css',
   'components/hero.css',
   'components/sections.css',
+  'components/global.css',
   'components/location-card.css',
 ];
 

@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Alert and toast | Real Estate Template</title>
+  <meta name="description" content="Messages for success, errors and tips, inline or as a temporary notification.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 5 · Global</span>
+    <h1 class="display-2 mt-2 mb-3">Alert and toast</h1>
+    <p class="lead mb-0">Messages for success, errors and tips, inline or as a temporary notification.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Alerts</h3>
+    <div class="demo demo-stack-full">
+      <div class="alert alert-success" role="alert"><svg class="icon" aria-hidden="true"><use href="#i-check-circle"></use></svg><div><h4 class="alert-heading">Message sent</h4>An agent will reply within one working day.</div></div>
+      <div class="alert alert-danger" role="alert"><svg class="icon" aria-hidden="true"><use href="#i-alert"></use></svg><div><h4 class="alert-heading">Something went wrong</h4>Check the highlighted fields and try again.</div></div>
+      <div class="alert alert-info" role="alert"><svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg><div><h4 class="alert-heading">Viewing times</h4>Viewings are available Monday to Saturday.</div></div>
+      <div class="alert alert-warning" role="alert"><svg class="icon" aria-hidden="true"><use href="#i-alert"></use></svg><div><h4 class="alert-heading">Price changed</h4>The price of this property was reduced by 5%.</div></div>
+    </div>
+
+    <h3 class="demo-title">Toasts</h3>
+    <div class="demo">
+      <div class="demo-row">
+        <button type="button" class="btn btn-primary" data-toast="#tS">Saved to favorites</button>
+        <button type="button" class="btn btn-outline-primary" data-toast="#tD">Show error</button>
+      </div>
+      <div class="toast-container position-fixed bottom-0 end-0 p-3">
+        <div class="toast toast-success" id="tS" role="status" aria-live="polite" aria-atomic="true" data-bs-delay="4000">
+          <div class="toast-body"><div class="toast-body-row"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg><div class="flex-grow-1"><span class="toast-title">Saved to favorites</span><span class="toast-text">Find it later in your wishlist.</span></div><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button></div></div>
+        </div>
+        <div class="toast toast-danger" id="tD" role="status" aria-live="polite" aria-atomic="true" data-bs-delay="4000">
+          <div class="toast-body"><div class="toast-body-row"><svg class="icon" aria-hidden="true"><use href="#i-alert"></use></svg><div class="flex-grow-1"><span class="toast-title">Could not send</span><span class="toast-text">Please try again in a moment.</span></div><button type="button" class="btn-close" data-bs-dismiss="toast" aria-label="Close"></button></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="api-note"><p>Add <code>data-toast="#id"</code> to a button. Toasts appear in the bottom corner and close after a few seconds.</p></div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.alert .alert-success</code> <code>-danger</code> <code>-info</code> <code>-warning</code></td><td>Inline messages. Add <code>role="alert"</code>.</td></tr>
+    <tr><td><code>.toast</code> + <code>.toast-success</code> / <code>-danger</code> / <code>-warning</code></td><td>Short notification in a <code>.toast-container</code>.</td></tr>
+    <tr><td><code>data-toast</code></td><td>Opens a toast from a button (<code>site.js</code>).</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

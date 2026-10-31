@@ -31,6 +31,10 @@
       ['why-choose-us', 'Why choose us'], ['agent-showcase', 'Agent showcase'],
       ['testimonials', 'Testimonials'], ['blog-cards', 'Blog cards'],
       ['cta-banner', 'CTA banner'], ['newsletter', 'Newsletter']
+    ]},
+    { title: 'Phase 5 · Global', items: [
+      ['accordion', 'Accordion'], ['alert-toast', 'Alert and toast'], ['empty-state', 'Empty state'],
+      ['back-to-top', 'Back to top'], ['table', 'Table'], ['stepper', 'Stepper']
     ]}
   ];
 

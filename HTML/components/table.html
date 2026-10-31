@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Table | Real Estate Template</title>
+  <meta name="description" content="Data tables for the user dashboard: my properties, enquiries and compare lists.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 5 · Global</span>
+    <h1 class="display-2 mt-2 mb-3">Table</h1>
+    <p class="lead mb-0">Data tables for the user dashboard: my properties, enquiries and compare lists.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Example</h2>
+    </div>
+
+    <h3 class="demo-title">Table with media and actions</h3>
+    <div class="demo">
+      <div class="table-card">
+        <div class="table-responsive">
+          <table class="table table-hover">
+            <thead><tr><th scope="col">Property</th><th scope="col">Price</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+            <tbody>
+            <tr>
+              <td><div class="table-media"><img src="../assets/img/properties/property-1.svg" alt=""><div><strong>Family house with garden</strong><span>24 Maple Avenue</span></div></div></td>
+              <td>$485,000</td><td><span class="badge badge-success badge-dot">Active</span></td>
+              <td class="text-end"><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Edit Family house with garden"><svg class="icon" aria-hidden="true"><use href="#i-edit"></use></svg></button><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Delete Family house with garden"><svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg></button></td>
+            </tr>
+            <tr>
+              <td><div class="table-media"><img src="../assets/img/properties/property-2.svg" alt=""><div><strong>Modern villa with pool</strong><span>8 Lakeview Road</span></div></div></td>
+              <td>$2,800/mo</td><td><span class="badge badge-info badge-dot">Pending</span></td>
+              <td class="text-end"><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Edit Modern villa with pool"><svg class="icon" aria-hidden="true"><use href="#i-edit"></use></svg></button><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Delete Modern villa with pool"><svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg></button></td>
+            </tr>
+            <tr>
+              <td><div class="table-media"><img src="../assets/img/properties/property-3.svg" alt=""><div><strong>Bright two-bedroom apartment</strong><span>Tower 3, Harbor Bay</span></div></div></td>
+              <td>$312,000</td><td><span class="badge badge-neutral badge-dot">Draft</span></td>
+              <td class="text-end"><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Edit Bright two-bedroom apartment"><svg class="icon" aria-hidden="true"><use href="#i-edit"></use></svg></button><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Delete Bright two-bedroom apartment"><svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg></button></td>
+            </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.table .table-hover</code></td><td>Light table with a tinted header.</td></tr>
+    <tr><td><code>.table-card</code></td><td>Rounded border around a table. Wrap the table in <code>.table-responsive</code> for small screens.</td></tr>
+    <tr><td><code>.table-media</code></td><td>Thumbnail with a title and a second line.</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

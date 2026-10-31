@@ -79,6 +79,26 @@
       });
     });
 
+    /* 8. Toasts: <button data-toast="#id"> shows a Bootstrap toast */
+    document.querySelectorAll('[data-toast]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = document.querySelector(b.getAttribute('data-toast'));
+        if (t && window.bootstrap) window.bootstrap.Toast.getOrCreateInstance(t).show();
+      });
+    });
+
+    /* 9. Back to top button: .back-to-top */
+    var top = document.querySelector('.back-to-top');
+    if (top) {
+      var show = function () { top.classList.toggle('is-visible', window.scrollY > 400); };
+      show();
+      window.addEventListener('scroll', show, { passive: true });
+      top.addEventListener('click', function () {
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      });
+    }
+
     /* 7. Range slider output: <input type=range data-output="#id"> ------- */
     document.querySelectorAll('input[type="range"][data-output]').forEach(function (r) {
       var out = document.querySelector(r.getAttribute('data-output'));
