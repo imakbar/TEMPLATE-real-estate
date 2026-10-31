@@ -1,0 +1,19 @@
+/* ==========================================================================
+   Animations
+   Elements are hidden only while JavaScript is running (html.js) and
+   animations are not switched off (html.anim-off). If JS or GSAP fails,
+   all content stays visible. GSAP sets opacity and transform only.
+   ========================================================================== */
+.js:not(.anim-off) [data-animate]:not([data-animate-stagger]),
+.js:not(.anim-off) [data-animate-stagger] > *,
+.js:not(.anim-off) [data-hero-item] { opacity: 0; }
+
+/* Pause CSS transitions while GSAP animates the element */
+.is-animating { transition: none !important; }
+
+/* Parallax elements move with the scroll: tell the browser */
+[data-parallax] { will-change: transform; }
+
+@media (prefers-reduced-motion: reduce) {
+  [data-parallax] { will-change: auto; }
+}

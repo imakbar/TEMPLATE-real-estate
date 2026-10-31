@@ -35,6 +35,43 @@ node build.js
 - **Fonts:** Fraunces (headings) and DM Sans (body), both open source (SIL OFL).
 - **Tokens:** CSS variable names match the variables in the Figma UI Kit.
 
+## Animations
+
+Scroll reveals, a hero entrance and parallax use GSAP 3.12.5 and ScrollTrigger (loaded from a CDN, pinned to that version). All animation code is in `HTML/assets/js/animations.js`. You switch effects on with data attributes only. Live examples: `HTML/components/animations.html`.
+
+**1. Load the scripts** only on pages that animate. In `<head>`:
+
+```html
+<script>document.documentElement.classList.add('js');if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim-off');setTimeout(function(){if(!window.__animReady)document.documentElement.classList.add('anim-off')},4000)</script>
+```
+
+Before `</body>`:
+
+```html
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer></script>
+<script src="assets/js/animations.js" defer></script>
+```
+
+**2. Attributes**
+
+| Attribute | Use |
+|---|---|
+| `data-animate="fade-up"` | `fade-up`, `fade-in`, `fade-down`, `slide-left`, `slide-right`, `zoom-in` |
+| `data-animate-delay="0.2"` | Delay in seconds (default 0) |
+| `data-animate-duration="0.8"` | Duration in seconds (default 0.8) |
+| `data-animate-stagger="0.1"` | On a parent: direct children animate one after another |
+| `data-animate-once="false"` | Replay every time (default: plays once) |
+| `data-parallax="0.2"` | Parallax speed (use on its own element) |
+| `data-hero` / `data-hero-item` | Hero entrance on load; items play in page order, `data-hero-item="image"` plays last |
+
+**3. How to disable animations**
+
+- One element: delete its `data-animate` (or other) attribute.
+- One page: remove the three script tags and the `<head>` snippet.
+- Whole site: remove the three script tags. Content is never hidden without the script running.
+- Visitors who prefer reduced motion see no animation automatically.
+
 ## Credits and licenses
 
-Bootstrap 5.3 (MIT), Fraunces and DM Sans (SIL Open Font License 1.1). Icons and avatar illustrations are original artwork. See the documentation for details.
+Bootstrap 5.3 (MIT), GSAP and ScrollTrigger 3.12.5 (free "Standard No Charge" license, loaded from a CDN, not bundled), Fraunces and DM Sans (SIL Open Font License 1.1). Icons and avatar illustrations are original artwork. See the documentation for details.

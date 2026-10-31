@@ -43,6 +43,7 @@ const ORDER = [
   'components/global.css',
   'components/pages.css',
   'components/location-card.css',
+  'components/animations.css',
 ];
 
 const banner = `/*!
