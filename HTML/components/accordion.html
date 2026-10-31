@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Accordion | Real Estate Template</title>
+  <meta name="description" content="Expandable questions and answers for the FAQ and the property pages.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 5 · Global</span>
+    <h1 class="display-2 mt-2 mb-3">Accordion</h1>
+    <p class="lead mb-0">Expandable questions and answers for the FAQ and the property pages.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">One open at a time</h3>
+    <div class="demo">
+      <div class="accordion" id="acA">
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#acA0" aria-expanded="true" aria-controls="acA0">How do I book a viewing?</button></h3>
+          <div id="acA0" class="accordion-collapse collapse show" data-bs-parent="#acA"><div class="accordion-body">Open the property page and use the contact form, or call the agent. Most viewings can be booked within two days.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acA1" aria-expanded="false" aria-controls="acA1">Are the listings verified?</button></h3>
+          <div id="acA1" class="accordion-collapse collapse" data-bs-parent="#acA"><div class="accordion-body">Yes. Every listing is checked by our team before it is published.</div></div>
+        </div>
+        <div class="accordion-item">
+          <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acA2" aria-expanded="false" aria-controls="acA2">What fees do I pay?</button></h3>
+          <div id="acA2" class="accordion-collapse collapse" data-bs-parent="#acA"><div class="accordion-body">Buying and renting fees are shown on each listing. There are no hidden charges.</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="api-note"><p><code>data-bs-parent</code> closes the other items. Remove it to let several stay open.</p></div>
+
+    <h3 class="demo-title">FAQ section</h3>
+    <div class="demo demo-bleed">
+      <section class="section section-surface">
+        <div class="container container-narrow">
+          <div class="section-heading is-center"><span class="eyebrow">FAQ</span><h2>Questions we hear often</h2></div>
+          <div class="accordion" id="acB">
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acB0" aria-expanded="false" aria-controls="acB0">How do I book a viewing?</button></h3>
+              <div id="acB0" class="accordion-collapse collapse" data-bs-parent="#acB"><div class="accordion-body">Open the property page and use the contact form, or call the agent. Most viewings can be booked within two days.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acB1" aria-expanded="false" aria-controls="acB1">Are the listings verified?</button></h3>
+              <div id="acB1" class="accordion-collapse collapse" data-bs-parent="#acB"><div class="accordion-body">Yes. Every listing is checked by our team before it is published.</div></div>
+            </div>
+            <div class="accordion-item">
+              <h3 class="accordion-header"><button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#acB2" aria-expanded="false" aria-controls="acB2">What fees do I pay?</button></h3>
+              <div id="acB2" class="accordion-collapse collapse" data-bs-parent="#acB"><div class="accordion-body">Buying and renting fees are shown on each listing. There are no hidden charges.</div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.accordion</code></td><td>Stack of separate cards. Built on Bootstrap's accordion and collapse JavaScript.</td></tr>
+    <tr><td><code>.accordion-button</code> / <code>.accordion-body</code></td><td>Question and answer. Set <code>aria-expanded</code> and <code>aria-controls</code> correctly.</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

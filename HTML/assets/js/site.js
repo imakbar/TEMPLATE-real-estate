@@ -79,6 +79,76 @@
       });
     });
 
+    /* 8. Toasts: <button data-toast="#id"> shows a Bootstrap toast */
+    document.querySelectorAll('[data-toast]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var t = document.querySelector(b.getAttribute('data-toast'));
+        if (t && window.bootstrap) window.bootstrap.Toast.getOrCreateInstance(t).show();
+      });
+    });
+
+    /* 9. Back to top button: .back-to-top */
+    var top = document.querySelector('.back-to-top');
+    if (top) {
+      var show = function () { top.classList.toggle('is-visible', window.scrollY > 400); };
+      show();
+      window.addEventListener('scroll', show, { passive: true });
+      top.addEventListener('click', function () {
+        var reduce = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+        window.scrollTo({ top: 0, behavior: reduce ? 'auto' : 'smooth' });
+      });
+    }
+
+    /* 10. Show / hide password: <button data-toggle-password="#id"> */
+    document.querySelectorAll('[data-toggle-password]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = document.querySelector(b.getAttribute('data-toggle-password'));
+        if (!f) return;
+        var show = f.type === 'password';
+        f.type = show ? 'text' : 'password';
+        b.setAttribute('aria-pressed', show ? 'true' : 'false');
+        b.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+      });
+    });
+
+    /* 11. Multi-step form: [data-steps] with .stepper, [data-step-panel], [data-step-next], [data-step-prev] */
+    document.querySelectorAll('[data-steps]').forEach(function (root) {
+      var panels = root.querySelectorAll('[data-step-panel]');
+      var items = root.querySelectorAll('.stepper li');
+      var cur = 0;
+      function go(n) {
+        cur = Math.max(0, Math.min(panels.length - 1, n));
+        panels.forEach(function (p, i) { p.hidden = i !== cur; });
+        items.forEach(function (li, i) {
+          li.classList.toggle('is-done', i < cur);
+          li.classList.toggle('is-active', i === cur);
+          if (i === cur) li.setAttribute('aria-current', 'step'); else li.removeAttribute('aria-current');
+        });
+        var h = panels[cur].querySelector('h2'); if (h) { h.setAttribute('tabindex', '-1'); h.focus({ preventScroll: false }); }
+      }
+      root.addEventListener('click', function (e) {
+        if (e.target.closest('[data-step-next]')) go(cur + 1);
+        else if (e.target.closest('[data-step-prev]')) go(cur - 1);
+      });
+      go(0);
+    });
+
+    /* 12. Removable items: [data-remove] inside [data-removable]; shows [data-empty] when none are left */
+    document.addEventListener('click', function (e) {
+      var b = e.target.closest('[data-remove]');
+      if (!b) return;
+      var item = b.closest('[data-removable]');
+      if (!item) return;
+      var list = item.parentElement;
+      item.remove();
+      var root = document.querySelector('[data-removable-root]');
+      if (root && !root.querySelector('[data-removable]')) {
+        var empty = document.querySelector('[data-empty]');
+        if (empty) empty.hidden = false;
+        root.hidden = true;
+      }
+    });
+
     /* 7. Range slider output: <input type=range data-output="#id"> ------- */
     document.querySelectorAll('input[type="range"][data-output]').forEach(function (r) {
       var out = document.querySelector(r.getAttribute('data-output'));

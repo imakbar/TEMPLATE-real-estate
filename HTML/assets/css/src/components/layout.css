@@ -11,7 +11,7 @@ body .container {
 }
 body .container.container-narrow { max-width: var(--container-narrow); }
 body .container.container-wide { max-width: var(--container-wide); }
-@media (max-width: 575.98px) { :root { --container-gutter: 16px; --section-space: 64px; } }
+@media (max-width: 575.98px) { :root { --section-space: 64px; } }
 
 /* ---- Section: vertical rhythm between page blocks ------------------------------ */
 .section { padding-block: var(--section-space); }
