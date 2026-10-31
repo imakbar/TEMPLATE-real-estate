@@ -35,6 +35,8 @@ const ORDER = [
   'components/overlays.css',
   'components/property-card.css',
   'components/property-gallery.css',
+  'components/search.css',
+  'components/property-details.css',
   'components/agent-card.css',
   'components/location-card.css',
 ];

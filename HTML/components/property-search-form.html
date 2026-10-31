@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Property search form | Real Estate Template</title>
+  <meta name="description" content="The main search on the home page: Buy or Rent switch, location, type, bedrooms and price. Includes a sidebar version and a simple search bar.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 3 · Real estate</span>
+    <h1 class="display-2 mt-2 mb-3">Property search form</h1>
+    <p class="lead mb-0">The main search on the home page: Buy or Rent switch, location, type, bedrooms and price. Includes a sidebar version and a simple search bar.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Hero search (inline)</h3>
+    <div class="demo demo-page">
+      <form class="search-card search-card--inline" onsubmit="return false">
+        <div class="search-card-head">
+          <div class="segmented" role="radiogroup" aria-label="Listing type">
+            <input type="radio" class="btn-check" name="s1" id="s10" checked><label class="segmented-item" for="s10">Buy</label>
+            <input type="radio" class="btn-check" name="s1" id="s11"><label class="segmented-item" for="s11">Rent</label>
+            <input type="radio" class="btn-check" name="s1" id="s12"><label class="segmented-item" for="s12">Sold</label>
+          </div>
+          <button type="button" class="search-link" data-bs-toggle="offcanvas" data-bs-target="#sFilters"><svg class="icon" aria-hidden="true"><use href="#i-sliders"></use></svg> More filters</button>
+        </div>
+        <div class="search-fields">
+          <div class="search-field">
+            <label for="s1Loc">Location</label>
+            <div class="input-icon"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg><input type="text" class="form-control" id="s1Loc" placeholder="City, area or postcode"></div>
+          </div>
+          <div class="search-field">
+            <label for="s1Type">Type</label>
+            <select class="form-select" id="s1Type"><option>Any type</option><option>House</option><option>Apartment</option><option>Villa</option><option>Commercial</option></select>
+          </div>
+          <div class="search-field">
+            <label for="s1Beds">Bedrooms</label>
+            <select class="form-select" id="s1Beds"><option>Any</option><option>1+</option><option>2+</option><option>3+</option><option>4+</option></select>
+          </div>
+          <div class="search-field">
+            <label for="s1Price">Max price</label>
+            <select class="form-select" id="s1Price"><option>No limit</option><option>$250,000</option><option>$500,000</option><option>$1,000,000</option></select>
+          </div>
+          <div class="search-actions"><button type="submit" class="btn btn-primary btn-lg"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg> Search</button></div>
+        </div>
+      </form>
+
+      <div class="offcanvas offcanvas-end offcanvas-filters" tabindex="-1" id="sFilters" aria-labelledby="sFiltersLabel">
+        <div class="offcanvas-header"><h2 class="offcanvas-title" id="sFiltersLabel">More filters</h2><button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button></div>
+        <div class="offcanvas-body"><p class="text-secondary">See <a href="advanced-filters.html">Advanced filters</a> for the full panel to place here.</p></div>
+        <div class="offcanvas-footer"><button type="button" class="btn btn-primary" data-bs-dismiss="offcanvas">Close</button></div>
+      </div>
+    </div>
+    <div class="api-note"><p>Fields sit in one row from 992 px and stack on smaller screens. Put it over the hero image with <code>margin-top: -48px</code> or inside a <code>.container</code>.</p></div>
+
+    <h3 class="demo-title">Sidebar search</h3>
+    <div class="demo demo-page">
+      <div class="row"><div class="col-sm-8 col-md-6 col-lg-4">
+        <form class="search-card" onsubmit="return false">
+          <h3 class="search-card-title mb-3">Find your home</h3>
+          <div class="search-fields">
+            <div class="segmented is-block" role="radiogroup" aria-label="Listing type">
+              <input type="radio" class="btn-check" name="s2" id="s20" checked><label class="segmented-item" for="s20">Buy</label>
+              <input type="radio" class="btn-check" name="s2" id="s21"><label class="segmented-item" for="s21">Rent</label>
+            </div>
+            <div class="search-field">
+              <label for="s2Loc">Location</label>
+              <div class="input-icon"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg><input type="text" class="form-control" id="s2Loc" placeholder="City, area or postcode"></div>
+            </div>
+            <div class="search-field">
+              <label for="s2Type">Type</label>
+              <select class="form-select" id="s2Type"><option>Any type</option><option>House</option><option>Apartment</option><option>Villa</option><option>Commercial</option></select>
+            </div>
+            <div class="search-field">
+              <label for="s2Beds">Bedrooms</label>
+              <select class="form-select" id="s2Beds"><option>Any</option><option>1+</option><option>2+</option><option>3+</option><option>4+</option></select>
+            </div>
+            <div class="search-field">
+              <label for="s2Price">Max price</label>
+              <select class="form-select" id="s2Price"><option>No limit</option><option>$250,000</option><option>$500,000</option><option>$1,000,000</option></select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-lg w-100"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg> Search</button>
+          </div>
+        </form>
+      </div></div>
+    </div>
+
+    <h3 class="demo-title">Search bar</h3>
+    <div class="demo demo-page">
+      <div style="max-width: 640px">
+        <form class="search-bar" role="search" onsubmit="return false">
+          <svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg>
+          <input type="search" placeholder="Search by city, area or property ID" aria-label="Search properties">
+          <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+      </div>
+    </div>
+    <div class="api-note"><p>The simplest option for a small hero or a header.</p></div>
+
+    <h3 class="demo-title">Segmented control</h3>
+    <div class="demo">
+      <div class="segmented" role="radiogroup" aria-label="Listing type">
+        <input type="radio" class="btn-check" name="s3" id="s30" checked><label class="segmented-item" for="s30">Buy</label>
+        <input type="radio" class="btn-check" name="s3" id="s31"><label class="segmented-item" for="s31">Rent</label>
+        <input type="radio" class="btn-check" name="s3" id="s32"><label class="segmented-item" for="s32">Sold</label>
+      </div>
+    </div>
+    <div class="api-note"><p>Also useful for any two to four way switch, such as monthly and yearly pricing.</p></div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.search-card</code> (+ <code>.search-card--inline</code>)</td><td>Card with the search fields. Inline puts them in one row on desktop.</td></tr>
+    <tr><td><code>.search-fields</code> / <code>.search-field</code></td><td>Grid of fields. Each field has a small uppercase label.</td></tr>
+    <tr><td><code>.search-actions</code></td><td>Holds the search button.</td></tr>
+    <tr><td><code>.search-bar</code></td><td>Single rounded bar with icon, input and button.</td></tr>
+    <tr><td><code>.segmented</code> + <code>.segmented-item</code></td><td>Radio buttons styled as a switch. Add <code>.is-block</code> for full width.</td></tr>
+    <tr><td><code>.search-link</code></td><td>Text button for "More filters".</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

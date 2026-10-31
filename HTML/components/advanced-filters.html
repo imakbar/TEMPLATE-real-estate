@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Advanced filters | Real Estate Template</title>
+  <meta name="description" content="A full filter panel for the listing page: type, price slider, bedrooms, bathrooms, area and amenities, plus the row of active filters.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 3 · Real estate</span>
+    <h1 class="display-2 mt-2 mb-3">Advanced filters</h1>
+    <p class="lead mb-0">A full filter panel for the listing page: type, price slider, bedrooms, bathrooms, area and amenities, plus the row of active filters.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Filters panel (sidebar)</h3>
+    <div class="demo demo-page">
+      <div style="max-width: 360px">
+        <div class="filters-panel">
+          <div class="filters-panel-head"><h3>Filters</h3><button type="button" class="search-link">Clear all</button></div>
+          <div class="filter-group">
+            <span class="filter-group-title">Property type</span>
+            <div class="check-card-group" role="radiogroup" aria-label="Property type">
+              <input type="radio" class="btn-check" name="fpt" id="fpt0" checked><label class="check-card" for="fpt0"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-home"></use></svg><span>House</span></label>
+              <input type="radio" class="btn-check" name="fpt" id="fpt1"><label class="check-card" for="fpt1"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-building"></use></svg><span>Apartment</span></label>
+              <input type="radio" class="btn-check" name="fpt" id="fpt2"><label class="check-card" for="fpt2"><svg class="icon icon-lg" aria-hidden="true"><use href="#i-sofa"></use></svg><span>Villa</span></label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-group-title">Price range</span>
+            <div class="range-output mb-1"><span>$0</span><strong id="fPriceOut">$500,000</strong></div>
+            <input type="range" class="form-range" min="0" max="2000000" step="50000" value="500000" data-output="#fPriceOut" data-prefix="$" aria-label="Maximum price">
+          </div>
+          <div class="filter-group">
+            <span class="filter-group-title">Bedrooms</span>
+            <div class="chip-group" role="radiogroup" aria-label="fb">
+              <input type="radio" class="btn-check" name="fb" id="fb0" checked><label class="chip" for="fb0">Any</label>
+              <input type="radio" class="btn-check" name="fb" id="fb1"><label class="chip" for="fb1">1</label>
+              <input type="radio" class="btn-check" name="fb" id="fb2"><label class="chip" for="fb2">2</label>
+              <input type="radio" class="btn-check" name="fb" id="fb3"><label class="chip" for="fb3">3</label>
+              <input type="radio" class="btn-check" name="fb" id="fb4"><label class="chip" for="fb4">4</label>
+              <input type="radio" class="btn-check" name="fb" id="fb5"><label class="chip" for="fb5">5+</label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-group-title">Bathrooms</span>
+            <div class="chip-group" role="radiogroup" aria-label="fba">
+              <input type="radio" class="btn-check" name="fba" id="fba0" checked><label class="chip" for="fba0">Any</label>
+              <input type="radio" class="btn-check" name="fba" id="fba1"><label class="chip" for="fba1">1</label>
+              <input type="radio" class="btn-check" name="fba" id="fba2"><label class="chip" for="fba2">2</label>
+              <input type="radio" class="btn-check" name="fba" id="fba3"><label class="chip" for="fba3">3+</label>
+            </div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-group-title">Area (sq ft)</span>
+            <div class="input-group"><input type="number" class="form-control" placeholder="Min" aria-label="Minimum area"><span class="input-group-text">to</span><input type="number" class="form-control" placeholder="Max" aria-label="Maximum area"></div>
+          </div>
+          <div class="filter-group">
+            <span class="filter-group-title">Amenities</span>
+            <div class="filter-options">
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="fa1" checked><label class="form-check-label" for="fa1">Swimming pool</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="fa2"><label class="form-check-label" for="fa2">Garden</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="fa3"><label class="form-check-label" for="fa3">Parking</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="fa4"><label class="form-check-label" for="fa4">Gym</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="fa5"><label class="form-check-label" for="fa5">Air conditioning</label></div>
+              <div class="form-check"><input class="form-check-input" type="checkbox" id="fa6"><label class="form-check-label" for="fa6">Pets allowed</label></div>
+            </div>
+          </div>
+          <div class="filters-panel-foot">
+            <button type="button" class="btn btn-outline-primary">Reset</button>
+            <button type="button" class="btn btn-primary">Show 148 results</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="api-note"><p>Put it in a <code>col-lg-3</code> next to the results. On small screens move the same markup inside an <a href="modal-drawer.html">offcanvas drawer</a> and open it with a Filters button.</p></div>
+
+    <h3 class="demo-title">Results bar with active filters</h3>
+    <div class="demo">
+      <div class="results-bar">
+        <p class="results-bar-count mb-0"><strong>148</strong> properties found</p>
+        <div class="d-flex align-items-center gap-2">
+          <label for="sortBy" class="visually-hidden">Sort by</label>
+          <select class="form-select form-select-sm" id="sortBy" style="width: auto"><option>Newest first</option><option>Price: low to high</option><option>Price: high to low</option></select>
+        </div>
+      </div>
+      <div class="filter-chips mt-3" aria-label="Active filters">
+        <span class="filter-chip">House <button type="button" aria-label="Remove House filter"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg></button></span>
+        <span class="filter-chip">Up to $500,000 <button type="button" aria-label="Remove price filter"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg></button></span>
+        <span class="filter-chip">3+ beds <button type="button" aria-label="Remove bedrooms filter"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg></button></span>
+        <button type="button" class="search-link ms-2">Clear all</button>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.filters-panel</code></td><td>Card holding all filter groups. Parts: <code>-head</code>, <code>.filter-group</code>, <code>-foot</code>.</td></tr>
+    <tr><td><code>.filter-group-title</code></td><td>Small uppercase title of each group.</td></tr>
+    <tr><td><code>.chip-group</code> + <code>.chip</code></td><td>Pill choices for bedrooms and bathrooms.</td></tr>
+    <tr><td><code>.check-card-group</code></td><td>Large icon choices for property type.</td></tr>
+    <tr><td><code>.form-range</code> + <code>data-output</code></td><td>Price slider. <code>site.js</code> writes the value into the element named in <code>data-output</code>.</td></tr>
+    <tr><td><code>.filter-options</code></td><td>Two-column checkbox list.</td></tr>
+    <tr><td><code>.filter-chip</code></td><td>Removable tag for an active filter.</td></tr>
+    <tr><td><code>.results-bar</code></td><td>Result count and sort field.</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

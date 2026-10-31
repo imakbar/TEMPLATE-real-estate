@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Amenities list | Real Estate Template</title>
+  <meta name="description" content="Features of a property such as pool, parking or air conditioning, as an icon list, a check list or tiles.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 3 · Real estate</span>
+    <h1 class="display-2 mt-2 mb-3">Amenities list</h1>
+    <p class="lead mb-0">Features of a property such as pool, parking or air conditioning, as an icon list, a check list or tiles.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Icon list</h3>
+    <div class="demo">
+      <ul class="amenities">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-waves"></use></svg>Swimming pool</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-tree"></use></svg>Garden</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-car"></use></svg>Parking</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-dumbbell"></use></svg>Gym</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake"></use></svg>Air conditioning</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-wifi"></use></svg>High-speed internet</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg>24/7 security</li>
+        <li class="is-unavailable"><svg class="icon" aria-hidden="true"><use href="#i-paw"></use></svg>Pets allowed</li>
+        <li class="is-unavailable"><svg class="icon" aria-hidden="true"><use href="#i-elevator"></use></svg>Elevator</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-flame"></use></svg>Fireplace</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-laundry"></use></svg>Laundry room</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-tv"></use></svg>Smart TV</li>
+      </ul>
+    </div>
+    <div class="api-note"><p>Add <code>class="is-unavailable"</code> to a list item to cross it out.</p></div>
+
+    <h3 class="demo-title">Check list</h3>
+    <div class="demo">
+      <ul class="amenities amenities--check">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Swimming pool</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Garden</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Parking</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Gym</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Air conditioning</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>High-speed internet</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>24/7 security</li>
+        <li class="is-unavailable"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Pets allowed</li>
+        <li class="is-unavailable"><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Elevator</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Fireplace</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Laundry room</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-check"></use></svg>Smart TV</li>
+      </ul>
+    </div>
+
+    <h3 class="demo-title">Tiles</h3>
+    <div class="demo">
+      <ul class="amenities amenities--tiles">
+        <li><svg class="icon" aria-hidden="true"><use href="#i-waves"></use></svg>Swimming pool</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-tree"></use></svg>Garden</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-car"></use></svg>Parking</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-dumbbell"></use></svg>Gym</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-snowflake"></use></svg>Air conditioning</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-wifi"></use></svg>High-speed internet</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg>24/7 security</li>
+        <li><svg class="icon" aria-hidden="true"><use href="#i-paw"></use></svg>Pets allowed</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.amenities</code></td><td>Responsive grid of features with icons.</td></tr>
+    <tr><td><code>.amenities--check</code></td><td>Green tick before each item. Use the <code>check</code> icon.</td></tr>
+    <tr><td><code>.amenities--tiles</code></td><td>Icon above the label in a bordered tile.</td></tr>
+    <tr><td><code>li.is-unavailable</code></td><td>Grey and crossed out.</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>
