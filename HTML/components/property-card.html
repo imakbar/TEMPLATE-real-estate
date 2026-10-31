@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Property card (grid) | Real Estate Template</title>
+  <meta name="description" content="The main listing card: photo, status badges, price, title, address, key facts and agent.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 3 · Real estate</span>
+    <h1 class="display-2 mt-2 mb-3">Property card (grid)</h1>
+    <p class="lead mb-0">The main listing card: photo, status badges, price, title, address, key facts and agent.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Default</h3>
+    <div class="demo">
+      <div class="row"><div class="col-md-8 col-lg-6">
+        <article class="property-card">
+          <div class="property-card-media">
+            <img src="../assets/img/properties/property-1.svg" alt="Family house with garden">
+            <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+            <div class="property-card-actions">
+              <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+            </div>
+            <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 12</span>
+          </div>
+          <div class="property-card-body">
+            <div class="property-card-price">$485,000<small></small></div>
+            <h3 class="property-card-title"><a class="stretched-link" href="#">Family house with garden</a></h3>
+            <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>24 Maple Avenue, Northfield</p>
+            <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>4 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>3 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>2,450 sq ft</li></ul>
+          </div>
+          <div class="property-card-footer">
+            <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-1.svg" alt=""></span>Sara Ahmed</span>
+            <span>2 days ago</span>
+          </div>
+        </article>
+      </div></div>
+    </div>
+
+    <h3 class="demo-title">Grid of cards</h3>
+    <div class="demo">
+      <div class="row g-4">
+        <div class="col-md-6 col-xl-4">
+          <article class="property-card">
+            <div class="property-card-media">
+              <img src="../assets/img/properties/property-2.svg" alt="Modern villa with pool">
+              <div class="property-card-badges"><span class="badge badge-rent">For Rent</span></div>
+              <div class="property-card-actions">
+                <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+              </div>
+              <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 24</span>
+            </div>
+            <div class="property-card-body">
+              <div class="property-card-price">$2,800<small>/mo</small></div>
+              <h3 class="property-card-title"><a class="stretched-link" href="#">Modern villa with pool</a></h3>
+              <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>8 Lakeview Road, Lakeside</p>
+              <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>5 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>4 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>3,900 sq ft</li></ul>
+            </div>
+            <div class="property-card-footer">
+              <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-2.svg" alt=""></span>Sara Ahmed</span>
+              <span>2 days ago</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <article class="property-card">
+            <div class="property-card-media">
+              <img src="../assets/img/properties/property-3.svg" alt="Bright two-bedroom apartment">
+              <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+              <div class="property-card-actions">
+                <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+              </div>
+              <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 9</span>
+            </div>
+            <div class="property-card-body">
+              <div class="property-card-price">$312,000<small></small></div>
+              <h3 class="property-card-title"><a class="stretched-link" href="#">Bright two-bedroom apartment</a></h3>
+              <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>Tower 3, Harbor Bay</p>
+              <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>2 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>2 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>1,120 sq ft</li></ul>
+            </div>
+            <div class="property-card-footer">
+              <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-3.svg" alt=""></span>Sara Ahmed</span>
+              <span>2 days ago</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6 col-xl-4">
+          <article class="property-card">
+            <div class="property-card-media">
+              <img src="../assets/img/properties/property-4.svg" alt="Townhouse near the park">
+              <div class="property-card-badges"><span class="badge badge-rent">For Rent</span></div>
+              <div class="property-card-actions">
+                <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+              </div>
+              <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 15</span>
+            </div>
+            <div class="property-card-body">
+              <div class="property-card-price">$1,950<small>/mo</small></div>
+              <h3 class="property-card-title"><a class="stretched-link" href="#">Townhouse near the park</a></h3>
+              <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>17 Garden Row, Southgate</p>
+              <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>3 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>2 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>1,780 sq ft</li></ul>
+            </div>
+            <div class="property-card-footer">
+              <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-4.svg" alt=""></span>Sara Ahmed</span>
+              <span>2 days ago</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="demo-title">Featured and sold</h3>
+    <div class="demo">
+      <div class="row g-4">
+        <div class="col-md-6">
+          <article class="property-card is-featured">
+            <div class="property-card-media">
+              <img src="../assets/img/properties/property-2.svg" alt="Modern villa with pool">
+              <div class="property-card-badges"><span class="badge badge-rent">For Rent</span><span class="badge badge-featured"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"></use></svg> Featured</span></div>
+              <div class="property-card-actions">
+                <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+              </div>
+              <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 24</span>
+            </div>
+            <div class="property-card-body">
+              <div class="property-card-price">$2,800<small>/mo</small></div>
+              <h3 class="property-card-title"><a class="stretched-link" href="#">Modern villa with pool</a></h3>
+              <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>8 Lakeview Road, Lakeside</p>
+              <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>5 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>4 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>3,900 sq ft</li></ul>
+            </div>
+            <div class="property-card-footer">
+              <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-2.svg" alt=""></span>Sara Ahmed</span>
+              <span>2 days ago</span>
+            </div>
+          </article>
+        </div>
+        <div class="col-md-6">
+          <article class="property-card is-sold">
+            <div class="property-card-media">
+              <img src="../assets/img/properties/property-5.svg" alt="Quiet cottage with orchard">
+              <div class="property-card-badges"><span class="badge badge-sold">Sold</span></div>
+              <div class="property-card-actions">
+                <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+              </div>
+              <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 8</span>
+            </div>
+            <div class="property-card-body">
+              <div class="property-card-price">$268,500<small></small></div>
+              <h3 class="property-card-title"><a class="stretched-link" href="#">Quiet cottage with orchard</a></h3>
+              <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>3 Orchard Lane, Westfield</p>
+              <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>2 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>1 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>980 sq ft</li></ul>
+            </div>
+            <div class="property-card-footer">
+              <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-1.svg" alt=""></span>Sara Ahmed</span>
+              <span>2 days ago</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="demo-title">Compact (no agent footer)</h3>
+    <div class="demo">
+      <div class="row g-4">
+        <div class="col-sm-6 col-lg-4">
+          <article class="property-card property-card--compact">
+            <div class="property-card-media">
+              <img src="../assets/img/properties/property-3.svg" alt="Bright two-bedroom apartment">
+              <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+              <div class="property-card-actions">
+                <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+              </div>
+              <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 9</span>
+            </div>
+            <div class="property-card-body">
+              <div class="property-card-price">$312,000<small></small></div>
+              <h3 class="property-card-title"><a class="stretched-link" href="#">Bright two-bedroom apartment</a></h3>
+              <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>Tower 3, Harbor Bay</p>
+              <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>2 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>2 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>1,120 sq ft</li></ul>
+            </div>
+          </article>
+        </div>
+        <div class="col-sm-6 col-lg-4">
+          <article class="property-card property-card--compact">
+            <div class="property-card-media">
+              <img src="../assets/img/properties/property-6.svg" alt="Corner office building">
+              <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+              <div class="property-card-actions">
+                <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+              </div>
+              <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 18</span>
+            </div>
+            <div class="property-card-body">
+              <div class="property-card-price">$1,250,000<small></small></div>
+              <h3 class="property-card-title"><a class="stretched-link" href="#">Corner office building</a></h3>
+              <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>90 Market Street, Central</p>
+              <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>2 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>6,400 sq ft</li></ul>
+            </div>
+          </article>
+        </div>
+      </div>
+    </div>
+    <div class="api-note"><p>Use for sidebars and the "similar properties" row.</p></div>
+
+    <h3 class="demo-title">Loading placeholder</h3>
+    <div class="demo">
+      <div class="property-card" aria-hidden="true" style="max-width: 380px">
+        <div class="skeleton skeleton-image" style="border-radius: 0"></div>
+        <div class="property-card-body">
+          <div class="skeleton skeleton-title"></div>
+          <div class="skeleton skeleton-text"></div>
+          <div class="skeleton skeleton-text w-50"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.property-card</code></td><td>Card wrapper. Add <code>.is-featured</code>, <code>.is-sold</code> or <code>.property-card--compact</code>.</td></tr>
+    <tr><td><code>.property-card-media</code></td><td>Photo area. Holds the badges, the favorite button and the photo count.</td></tr>
+    <tr><td><code>.property-card-badges</code> / <code>.property-card-actions</code> / <code>.property-card-photos</code></td><td>Overlays placed on the photo.</td></tr>
+    <tr><td><code>.property-card-price</code> + <code>small</code></td><td>Price in the heading font. Use <code>small</code> for "/mo".</td></tr>
+    <tr><td><code>.property-card-title a.stretched-link</code></td><td>Makes the whole card clickable with one link, which is best for accessibility.</td></tr>
+    <tr><td><code>.property-card-address</code></td><td>Address with a pin icon.</td></tr>
+    <tr><td><code>.property-card-specs</code></td><td>Beds, baths and area, each with an icon.</td></tr>
+    <tr><td><code>.property-card-footer</code></td><td>Agent and date.</td></tr>
+    </tbody>
+    </table>
+    <div class="api-note"><p>Photos are 4:3. The favorite button is wired up by <code>site.js</code>: it toggles <code>aria-pressed</code>. Replace the sample SVG photos in <code>assets/img/properties/</code> with real images (at least 800 &times; 600 px).</p></div>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

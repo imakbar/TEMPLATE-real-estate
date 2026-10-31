@@ -33,6 +33,10 @@ const ORDER = [
   'components/header.css',
   'components/footer.css',
   'components/overlays.css',
+  'components/property-card.css',
+  'components/property-gallery.css',
+  'components/agent-card.css',
+  'components/location-card.css',
 ];
 
 const banner = `/*!

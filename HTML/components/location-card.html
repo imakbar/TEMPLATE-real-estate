@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Location card | Real Estate Template</title>
+  <meta name="description" content="An image tile for a city or neighbourhood with the number of listings.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 3 · Real estate</span>
+    <h1 class="display-2 mt-2 mb-3">Location card</h1>
+    <p class="lead mb-0">An image tile for a city or neighbourhood with the number of listings.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Tall cards</h3>
+    <div class="demo">
+      <div class="row g-4">
+        <div class="col-6 col-lg-3">
+          <a class="location-card" href="#">
+            <img src="../assets/img/locations/location-1.svg" alt="">
+            <div class="location-card-body">
+              <div><h3 class="location-card-name">Northfield</h3><span class="location-card-count">48 properties</span></div>
+              <span class="location-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></span>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a class="location-card" href="#">
+            <img src="../assets/img/locations/location-2.svg" alt="">
+            <div class="location-card-body">
+              <div><h3 class="location-card-name">Lakeside</h3><span class="location-card-count">36 properties</span></div>
+              <span class="location-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></span>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a class="location-card" href="#">
+            <img src="../assets/img/locations/location-3.svg" alt="">
+            <div class="location-card-body">
+              <div><h3 class="location-card-name">Harbor Bay</h3><span class="location-card-count">62 properties</span></div>
+              <span class="location-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></span>
+            </div>
+          </a>
+        </div>
+        <div class="col-6 col-lg-3">
+          <a class="location-card" href="#">
+            <img src="../assets/img/locations/location-4.svg" alt="">
+            <div class="location-card-body">
+              <div><h3 class="location-card-name">Southgate</h3><span class="location-card-count">27 properties</span></div>
+              <span class="location-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <h3 class="demo-title">Wide and square</h3>
+    <div class="demo">
+      <div class="row g-4">
+        <div class="col-lg-8">
+          <a class="location-card is-wide" href="#">
+            <img src="../assets/img/locations/location-6.svg" alt="">
+            <div class="location-card-body">
+              <div><h3 class="location-card-name">Central</h3><span class="location-card-count">84 properties</span></div>
+              <span class="location-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></span>
+            </div>
+          </a>
+        </div>
+        <div class="col-lg-4">
+          <a class="location-card is-square" href="#">
+            <img src="../assets/img/locations/location-5.svg" alt="">
+            <div class="location-card-body">
+              <div><h3 class="location-card-name">Westfield</h3><span class="location-card-count">19 properties</span></div>
+              <span class="location-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up-right"></use></svg></span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="api-note"><p>Mix wide and square tiles for a bento-style "popular locations" section.</p></div>
+
+    <h3 class="demo-title">Row</h3>
+    <div class="demo">
+      <div class="row g-3">
+        <div class="col-md-6 col-lg-4">
+          <a class="location-card location-card--row" href="#">
+            <img src="../assets/img/locations/location-1.svg" alt="">
+            <div><h3 class="location-card-name">Northfield</h3><span class="location-card-count">48 properties</span></div>
+            <span class="location-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="location-card location-card--row" href="#">
+            <img src="../assets/img/locations/location-2.svg" alt="">
+            <div><h3 class="location-card-name">Lakeside</h3><span class="location-card-count">36 properties</span></div>
+            <span class="location-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></span>
+          </a>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <a class="location-card location-card--row" href="#">
+            <img src="../assets/img/locations/location-3.svg" alt="">
+            <div><h3 class="location-card-name">Harbor Bay</h3><span class="location-card-count">62 properties</span></div>
+            <span class="location-card-arrow"><svg class="icon" aria-hidden="true"><use href="#i-chevron-right"></use></svg></span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.location-card</code></td><td>Whole tile is one link. Default ratio 4:5.</td></tr>
+    <tr><td><code>.is-wide</code> / <code>.is-square</code></td><td>2:1 and 1:1 ratios.</td></tr>
+    <tr><td><code>.location-card--row</code></td><td>Small thumbnail with text, for lists.</td></tr>
+    <tr><td><code>.location-card-name</code> / <code>-count</code> / <code>-arrow</code></td><td>Place name, number of listings and the arrow button.</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

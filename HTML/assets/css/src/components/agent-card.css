@@ -1,0 +1,34 @@
+/* ==========================================================================
+   AGENT CARD · vertical (default), .agent-card--horizontal, .agent-contact
+   ========================================================================== */
+.agent-card { position: relative; display: flex; flex-direction: column; height: 100%; background: var(--color-bg-card); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); overflow: hidden; transition: box-shadow var(--transition-fast); }
+.agent-card:hover { box-shadow: var(--shadow-lg); }
+.agent-card-photo { position: relative; background: var(--color-bg-surface); overflow: hidden; }
+.agent-card-photo img { display: block; width: 100%; aspect-ratio: 4 / 5; object-fit: cover; transition: transform 400ms ease; }
+.agent-card:hover .agent-card-photo img { transform: scale(1.04); }
+.agent-card-photo .badge { position: absolute; top: var(--spacing-sm); left: var(--spacing-sm); }
+.agent-card-body { display: flex; flex-direction: column; flex: 1; padding: var(--spacing-lg); }
+.agent-card-name { margin: 0; font-family: var(--font-heading); font-size: 1.25rem; font-weight: 600; }
+.agent-card-name a { color: var(--color-text-brand); text-decoration: none; }
+.agent-card-role { margin: 2px 0 var(--spacing-sm); font-size: 0.875rem; color: var(--color-text-secondary); }
+.agent-card-stats { display: flex; gap: var(--spacing-lg); margin: var(--spacing-md) 0 0; padding: var(--spacing-md) 0 0; border-top: 1px solid var(--color-border-subtle); list-style: none; }
+.agent-card-stats li { display: flex; flex-direction: column; font-size: 0.75rem; letter-spacing: 0.04em; text-transform: uppercase; color: var(--color-text-secondary); }
+.agent-card-stats strong { font-family: var(--font-heading); font-size: 1.25rem; letter-spacing: 0; text-transform: none; color: var(--color-text-brand); }
+.agent-card-actions { display: flex; gap: var(--spacing-sm); margin-top: auto; padding-top: var(--spacing-lg); }
+.agent-card-actions .btn:first-child { flex: 1; }
+.agent-card-social { display: flex; gap: var(--spacing-xs); margin: var(--spacing-md) 0 0; padding: 0; list-style: none; }
+.agent-card-social a { display: inline-grid; place-items: center; width: 36px; height: 36px; border-radius: 50%; border: 1px solid var(--color-border-default); color: var(--color-text-brand); transition: background-color var(--transition-fast); }
+.agent-card-social a:hover { background: var(--color-bg-surface); }
+.agent-card-social .icon { width: 16px; height: 16px; vertical-align: 0; }
+
+.agent-card--horizontal { flex-direction: row; height: auto; }
+.agent-card--horizontal .agent-card-photo { flex: 0 0 38%; max-width: 220px; }
+.agent-card--horizontal .agent-card-photo img { height: 100%; aspect-ratio: auto; min-height: 200px; }
+@media (max-width: 575.98px) { .agent-card--horizontal { flex-direction: column; } .agent-card--horizontal .agent-card-photo { flex: none; max-width: none; } .agent-card--horizontal .agent-card-photo img { aspect-ratio: 4 / 3; height: auto; } }
+
+/* Contact card: sits in the sidebar of the property details page */
+.agent-contact { padding: var(--spacing-lg); background: var(--color-bg-card); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); box-shadow: var(--shadow-sm); }
+.agent-contact-head { display: flex; align-items: center; gap: var(--spacing-md); margin-bottom: var(--spacing-lg); }
+.agent-contact-head strong { display: block; font-size: 1.0625rem; color: var(--color-text-brand); }
+.agent-contact-head span { font-size: 0.875rem; color: var(--color-text-secondary); }
+.agent-contact form { display: grid; gap: var(--spacing-sm); }
