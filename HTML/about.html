@@ -16,6 +16,7 @@
 
   <!-- Template theme -->
   <link href="assets/css/style.min.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim-off');setTimeout(function(){if(!window.__animReady)document.documentElement.classList.add('anim-off')},4000)</script>
 </head>
 <body>
 
@@ -97,7 +98,7 @@
 
 <main id="main">
   <section class="page-banner">
-    <div class="container">
+    <div class="container" data-animate="fade-up">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-chevron">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -111,9 +112,9 @@
   <section class="section">
     <div class="container">
       <div class="row align-items-center g-5">
-        <div class="col-lg-5"><div class="about-media"><img src="assets/img/hero/about-1.svg" alt="A family house"><div class="about-badge"><strong>15+</strong><span>Years of experience</span></div></div></div>
-        <div class="col-lg-6 offset-lg-1">
-          <div class="section-heading has-line"><span class="eyebrow">Our story</span><h2>We started with one simple idea</h2></div>
+        <div class="col-lg-5"><div class="about-media" data-animate="slide-left"><img src="assets/img/hero/about-1.svg" alt="A family house"><div class="about-badge"><strong>15+</strong><span>Years of experience</span></div></div></div>
+        <div class="col-lg-6 offset-lg-1" data-animate="slide-right">
+          <div class="section-heading has-line" data-animate="fade-up"><span class="eyebrow">Our story</span><h2>We started with one simple idea</h2></div>
           <p>Finding a home should feel calm, not stressful. We began as a small team of local agents who wanted clearer prices, honest photos and faster answers.</p>
           <p>Today we help thousands of families buy, sell and rent every year, and we still answer every message ourselves.</p>
           <a class="btn btn-primary btn-lg mt-2" href="contact.html">Talk to us <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
@@ -121,7 +122,7 @@
       </div>
     </div>
   </section>
-  <section class="section-sm section-brand"><div class="container"><ul class="stats">
+  <section class="section-sm section-brand"><div class="container"><ul class="stats" data-animate="fade-up" data-animate-stagger="0.12">
         <li><span class="stat-value">2,400+</span><span class="stat-label">Properties listed</span></li>
         <li><span class="stat-value">120</span><span class="stat-label">Expert agents</span></li>
         <li><span class="stat-value">15 yrs</span><span class="stat-label">In business</span></li>
@@ -129,7 +130,7 @@
   </ul></div></section>
   <section class="section">
     <div class="container">
-      <div class="section-heading is-center"><span class="eyebrow">What we believe</span><h2>Our values</h2></div><div class="row g-4">
+      <div class="section-heading is-center" data-animate="fade-up"><span class="eyebrow">What we believe</span><h2>Our values</h2></div><div class="row g-4" data-animate="fade-up" data-animate-stagger="0.12">
           <div class="col-sm-6 col-lg-3"><div class="feature-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg></span><h3 class="feature-title">Honest</h3><p class="feature-text">We show real photos and full prices.</p></div></div>
           <div class="col-sm-6 col-lg-3"><div class="feature-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-users"></use></svg></span><h3 class="feature-title">Local</h3><p class="feature-text">Our agents live where they work.</p></div></div>
           <div class="col-sm-6 col-lg-3"><div class="feature-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-award"></use></svg></span><h3 class="feature-title">Careful</h3><p class="feature-text">Every listing is checked twice.</p></div></div>
@@ -140,7 +141,7 @@
 
   <section class="section section-surface">
     <div class="container">
-      <div class="section-heading is-center"><span class="eyebrow">Our team</span><h2>Meet the people behind it</h2></div><div class="row g-4">
+      <div class="section-heading is-center" data-animate="fade-up"><span class="eyebrow">Our team</span><h2>Meet the people behind it</h2></div><div class="row g-4" data-animate="fade-up" data-animate-stagger="0.12">
           <div class="col-6 col-lg-3"><a class="agent-tile" href="agents.html"><img src="assets/img/agents/agent-1.svg" alt=""><div class="agent-tile-body"><h3 class="agent-tile-name">Sara Ahmed</h3><span class="agent-tile-role">Senior sales agent</span></div></a></div>
           <div class="col-6 col-lg-3"><a class="agent-tile" href="agents.html"><img src="assets/img/agents/agent-2.svg" alt=""><div class="agent-tile-body"><h3 class="agent-tile-name">Omar Khan</h3><span class="agent-tile-role">Rental specialist</span></div></a></div>
           <div class="col-6 col-lg-3"><a class="agent-tile" href="agents.html"><img src="assets/img/agents/agent-3.svg" alt=""><div class="agent-tile-body"><h3 class="agent-tile-name">Laila Noor</h3><span class="agent-tile-role">Luxury homes</span></div></a></div>
@@ -149,7 +150,7 @@
     </div>
   </section>
 
-  <section class="section-sm"><div class="container"><div class="cta-banner cta-banner--center"><div class="cta-banner-inner"><div class="cta-banner-text"><h2>Want to join our team?</h2><p>We are always looking for friendly, curious agents.</p></div><div class="cta-banner-actions"><a class="btn btn-accent btn-lg" href="contact.html">Get in touch</a></div></div></div></div></section>
+  <section class="section-sm"><div class="container"><div class="cta-banner cta-banner--center" data-animate="fade-up"><div class="cta-banner-inner" data-animate="fade-up"><div class="cta-banner-text" data-animate="fade-up"><h2>Want to join our team?</h2><p>We are always looking for friendly, curious agents.</p></div><div class="cta-banner-actions" data-animate="fade-up"><a class="btn btn-accent btn-lg" href="contact.html">Get in touch</a></div></div></div></div></section>
 </main>
 
 <footer class="site-footer">
@@ -196,5 +197,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="assets/js/icons.js"></script>
 <script src="assets/js/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer crossorigin="anonymous"></script>
+<script src="assets/js/animations.js" defer></script>
 </body>
 </html>
