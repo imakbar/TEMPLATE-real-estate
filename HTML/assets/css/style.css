@@ -2038,6 +2038,69 @@ body .offcanvas-lg .filters-panel { border: 0; }
 .compare-best::after { content: "Best"; margin-left: 8px; padding: 2px 8px; border-radius: var(--radius-full); background: var(--color-bg-surface); font-size: 0.6875rem; letter-spacing: 0.04em; text-transform: uppercase; }
 
 /* ==========================================================================
+   404 PAGE
+   ========================================================================== */
+.error-page {
+  position: relative; isolation: isolate; display: flex; flex-direction: column; align-items: center; justify-content: center;
+  min-height: min(720px, calc(100vh - 76px)); max-width: 640px; margin-inline: auto; padding: var(--spacing-4xl) var(--spacing-lg); text-align: center;
+}
+.error-code { position: relative; isolation: isolate; margin: 0 0 var(--spacing-sm); font-family: var(--font-heading); font-size: clamp(6rem, 22vw, 11rem); font-weight: 700; line-height: 1; letter-spacing: -0.04em; color: var(--color-text-brand); }
+.error-code::before { content: ""; position: absolute; z-index: -1; left: 50%; top: 50%; width: 1.75em; aspect-ratio: 1; transform: translate(-50%, -52%); border-radius: 50%; background: var(--color-bg-surface); }
+.error-code::after { content: ""; display: block; width: 72px; height: 4px; margin: var(--spacing-md) auto 0; border-radius: 2px; background: var(--color-bg-accent); }
+.error-page h1 { margin: var(--spacing-lg) 0 var(--spacing-sm); font-size: clamp(1.75rem, 4vw, 2.5rem); }
+.error-page > p:not(.error-code) { margin: 0 0 var(--spacing-xl); max-width: 46ch; font-size: 1.0625rem; color: var(--color-text-secondary); }
+
+/* ==========================================================================
+   BLOG LIST + SIDEBAR WIDGETS
+   ========================================================================== */
+.blog-layout { display: grid; grid-template-columns: minmax(0, 1fr) 340px; gap: var(--spacing-2xl); align-items: start; }
+.blog-layout > aside { position: sticky; top: 96px; display: grid; gap: var(--spacing-lg); }
+@media (max-width: 991.98px) { .blog-layout { grid-template-columns: 1fr; } .blog-layout > aside { position: static; } }
+.widget { padding: var(--spacing-lg); border: 1px solid var(--color-border-subtle); border-radius: var(--radius-lg); background: var(--color-bg-card); }
+.widget-title { position: relative; margin: 0 0 var(--spacing-md); padding-bottom: var(--spacing-sm); font-family: var(--font-body); font-size: 1rem; font-weight: 700; color: var(--color-text-brand); }
+.widget-title::after { content: ""; position: absolute; left: 0; bottom: 0; width: 32px; height: 3px; border-radius: 2px; background: var(--color-bg-accent); }
+.widget-list { margin: 0; padding: 0; list-style: none; }
+.widget-list li { display: flex; align-items: center; justify-content: space-between; gap: var(--spacing-md); padding: 10px 0; border-bottom: 1px solid var(--color-border-subtle); font-size: 0.9375rem; }
+.widget-list li:last-child { border-bottom: 0; padding-bottom: 0; }
+.widget-list a { color: var(--color-text-primary); text-decoration: none; font-weight: 500; }
+.widget-list a:hover { color: var(--color-text-link); }
+.widget-list span { min-width: 28px; padding: 2px 8px; border-radius: var(--radius-full); background: var(--color-bg-surface); font-size: 0.75rem; font-weight: 700; text-align: center; color: var(--color-text-brand); }
+.widget .blog-card--row { border: 0; padding: 0; background: none; }
+.widget .blog-card--row:hover { box-shadow: none; }
+.tag-list { display: flex; flex-wrap: wrap; gap: var(--spacing-xs); margin: 0; padding: 0; list-style: none; }
+.tag { display: inline-flex; align-items: center; height: 32px; padding: 0 var(--spacing-md); border: 1px solid var(--color-border-default); border-radius: var(--radius-full); background: var(--color-bg-card); font-size: 0.8125rem; font-weight: 600; color: var(--color-text-secondary); text-decoration: none; transition: border-color var(--transition-fast), background-color var(--transition-fast), color var(--transition-fast); }
+.tag:hover { border-color: var(--color-border-brand); background: var(--color-bg-surface); color: var(--color-text-brand); }
+
+/* ==========================================================================
+   ARTICLE (blog details)
+   ========================================================================== */
+.article-head { max-width: 820px; margin: 0 auto var(--spacing-xl); text-align: center; }
+.article-head h1 { margin: var(--spacing-md) 0; font-size: clamp(2rem, 4.5vw, 3.25rem); line-height: 1.12; }
+.article-head .blog-meta { justify-content: center; margin: 0; font-size: 0.875rem; }
+.article-head .avatar { vertical-align: middle; margin-right: 6px; }
+.article-cover { margin: 0 auto var(--spacing-2xl); overflow: hidden; border-radius: var(--radius-xl); background: var(--color-bg-subtle); }
+.article-cover img { display: block; width: 100%; aspect-ratio: 21 / 9; object-fit: cover; }
+.article, .article-foot, .author-box { max-width: 720px; margin-inline: auto; }
+.article > p, .article li { font-size: 1.0625rem; line-height: 1.85; color: var(--color-text-primary); }
+.article .lead { font-size: 1.3125rem; line-height: 1.6; color: var(--color-text-secondary); }
+.article > h2 { margin: var(--spacing-2xl) 0 var(--spacing-sm); font-size: 1.75rem; }
+.article > h3 { margin: var(--spacing-xl) 0 var(--spacing-xs); font-family: var(--font-body); font-size: 1.25rem; font-weight: 700; }
+.article blockquote { margin: var(--spacing-xl) 0; padding: var(--spacing-md) var(--spacing-xl); border-left: 4px solid var(--color-bg-accent); background: var(--color-bg-accent-subtle); border-radius: 0 var(--radius-md) var(--radius-md) 0; font-family: var(--font-heading); font-size: 1.375rem; line-height: 1.45; color: var(--color-text-brand); }
+.article ul, .article ol { padding-left: 1.4rem; margin-bottom: var(--spacing-lg); }
+.article li { margin-bottom: 6px; }
+.article-foot { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: var(--spacing-md); margin-top: var(--spacing-xl); padding-block: var(--spacing-lg); border-block: 1px solid var(--color-border-default); }
+.author-box { display: flex; align-items: center; gap: var(--spacing-lg); margin-top: var(--spacing-xl); padding: var(--spacing-lg); border-radius: var(--radius-lg); background: var(--color-bg-surface); }
+.author-box .avatar { flex: none; width: 88px; height: 88px; }
+.author-box h3 { margin: 0 0 4px; font-family: var(--font-heading); font-size: 1.25rem; }
+.author-box p { margin: 0; color: var(--color-text-secondary); }
+@media (max-width: 575.98px) { .author-box { flex-direction: column; text-align: center; } }
+.comment { display: flex; gap: var(--spacing-md); padding: var(--spacing-lg) 0; border-bottom: 1px solid var(--color-border-subtle); }
+.comment .avatar { flex: none; }
+.comment strong { color: var(--color-text-brand); }
+.comment time { margin-left: var(--spacing-sm); font-size: 0.8125rem; color: var(--color-text-secondary); }
+.comment p { margin: 4px 0 0; font-size: 1rem; line-height: 1.65; }
+
+/* ==========================================================================
    LOCATION CARD · image tile for cities and neighbourhoods.
    Default 4:5. Modifiers: .is-wide (2:1)  .is-square  .location-card--row
    ========================================================================== */
