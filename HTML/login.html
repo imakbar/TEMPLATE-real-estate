@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in | YourBrand</title>
+  <meta name="description" content="Sign in to your account.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="assets/css/style.min.css" rel="stylesheet">
+</head>
+<body>
+
+<a class="visually-hidden-focusable" href="#main">Skip to content</a>
+
+<main id="main">
+  <div class="auth-layout">
+    <div class="auth-media">
+      <img src="assets/img/hero/hero-1.svg" alt="">
+      <a class="site-logo" href="index.html"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+      <figure class="m-0"><blockquote>&ldquo;I saved twelve homes and found ours in a week.&rdquo;</blockquote><figcaption>Amina R., bought in Northfield</figcaption></figure>
+    </div>
+    <div class="auth-panel">
+      <div class="auth-top d-lg-none"><a class="site-logo" href="index.html"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a></div>
+      <div class="auth-card">
+        <h1>Welcome back</h1>
+        <p>Sign in to save homes, track enquiries and manage your listings.</p>
+        <form class="auth-form" onsubmit="return false">
+          <div><label for="lEmail" class="form-label">Email</label><input type="email" class="form-control" id="lEmail" autocomplete="email" placeholder="you@example.com"></div>
+          <div>
+            <label for="lPass" class="form-label">Password</label>
+            <div class="password-field">
+              <input type="password" class="form-control" id="lPass" autocomplete="current-password" placeholder="At least 8 characters">
+              <button type="button" class="btn btn-ghost btn-icon btn-sm" data-toggle-password="#lPass" aria-pressed="false" aria-label="Show password"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg></button>
+            </div>
+  
+          </div>
+          <div class="d-flex justify-content-between align-items-center">
+            <div class="form-check mb-0"><input class="form-check-input" type="checkbox" id="lRem"><label class="form-check-label" for="lRem">Remember me</label></div>
+            <a href="#" class="small fw-semibold">Forgot password?</a>
+          </div>
+          <button type="submit" class="btn btn-primary btn-lg">Sign in</button>
+          <div class="divider-text">or</div>
+          <button type="button" class="btn btn-outline-primary"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> Email me a sign-in link</button>
+        </form>
+        <p class="auth-foot">New here? <a href="register.html" class="fw-semibold">Create an account</a></p>
+      </div>
+    </div>
+  </div>
+</main>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>

@@ -99,6 +99,18 @@
       });
     }
 
+    /* 10. Show / hide password: <button data-toggle-password="#id"> */
+    document.querySelectorAll('[data-toggle-password]').forEach(function (b) {
+      b.addEventListener('click', function () {
+        var f = document.querySelector(b.getAttribute('data-toggle-password'));
+        if (!f) return;
+        var show = f.type === 'password';
+        f.type = show ? 'text' : 'password';
+        b.setAttribute('aria-pressed', show ? 'true' : 'false');
+        b.setAttribute('aria-label', show ? 'Hide password' : 'Show password');
+      });
+    });
+
     /* 7. Range slider output: <input type=range data-output="#id"> ------- */
     document.querySelectorAll('input[type="range"][data-output]').forEach(function (r) {
       var out = document.querySelector(r.getAttribute('data-output'));
