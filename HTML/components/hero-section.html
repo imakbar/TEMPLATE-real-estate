@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hero section | Real Estate Template</title>
+  <meta name="description" content="The first screen of the home page, in three styles: image with search card, split with a picture, and centered with a search bar.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 4 · Sections</span>
+    <h1 class="display-2 mt-2 mb-3">Hero section</h1>
+    <p class="lead mb-0">The first screen of the home page, in three styles: image with search card, split with a picture, and centered with a search bar.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Image hero with search</h3>
+    <div class="demo demo-bleed">
+      <div class="hero">
+        <div class="hero-bg"><img src="../assets/img/hero/hero-1.svg" alt=""></div>
+        <header class="site-header is-transparent">
+          <div class="site-navbar"><div class="container">
+            <a class="site-logo" href="#"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+            <ul class="site-menu d-none d-lg-flex"><li><a href="#" aria-current="page">Home</a></li><li><a href="#">Properties</a></li><li><a href="#">Agents</a></li><li><a href="#">Contact</a></li></ul>
+            <div class="site-actions"><a class="btn btn-accent d-none d-md-inline-flex" href="#"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a><button type="button" class="btn btn-outline-primary btn-icon d-lg-none" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></button></div>
+          </div></div>
+        </header>
+        <div class="container">
+          <div class="hero-content">
+            <span class="hero-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-shield-check"></use></svg> Trusted by 10,000+ families</span>
+            <h1 class="hero-title">Find a home that <em>feels like yours</em></h1>
+            <p class="hero-lead">Browse verified listings, compare neighbourhoods and talk to local agents who know the area.</p>
+            <div class="hero-actions">
+              <a class="btn btn-accent btn-lg" href="#">Browse properties</a>
+              <a class="btn btn-outline-light btn-lg" href="#"><svg class="icon" aria-hidden="true"><use href="#i-play"></use></svg> Watch tour</a>
+            </div>
+            <ul class="hero-stats"><li><strong>2,400+</strong><span>Properties listed</span></li><li><strong>120</strong><span>Expert agents</span></li><li><strong>98%</strong><span>Happy clients</span></li></ul>
+          </div>
+        </div>
+      </div>
+      <div class="container hero-search">
+        <form class="search-card search-card--inline" onsubmit="return false">
+          <div class="search-card-head"><div class="segmented" role="radiogroup" aria-label="Listing type">
+            <input type="radio" class="btn-check" name="h1" id="h10" checked><label class="segmented-item" for="h10">Buy</label>
+            <input type="radio" class="btn-check" name="h1" id="h11"><label class="segmented-item" for="h11">Rent</label></div></div>
+          <div class="search-fields">
+            <div class="search-field"><label for="h1l">Location</label><div class="input-icon"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg><input type="text" class="form-control" id="h1l" placeholder="City, area or postcode"></div></div>
+            <div class="search-field"><label for="h1t">Type</label><select class="form-select" id="h1t"><option>Any type</option><option>House</option><option>Apartment</option></select></div>
+            <div class="search-field"><label for="h1b">Bedrooms</label><select class="form-select" id="h1b"><option>Any</option><option>2+</option><option>3+</option></select></div>
+            <div class="search-field"><label for="h1p">Max price</label><select class="form-select" id="h1p"><option>No limit</option><option>$500,000</option></select></div>
+            <div class="search-actions"><button type="submit" class="btn btn-primary btn-lg"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg> Search</button></div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="api-note"><p>The search card uses <code>.hero-search</code> to overlap the section below. The transparent header sits on top, so the hero has extra top padding.</p></div>
+
+    <h3 class="demo-title">Split hero</h3>
+    <div class="demo demo-bleed">
+      <section class="hero hero--split">
+        <header class="site-header">
+          <div class="site-navbar"><div class="container">
+            <a class="site-logo" href="#"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+            <ul class="site-menu d-none d-lg-flex"><li><a href="#" aria-current="page">Home</a></li><li><a href="#">Properties</a></li><li><a href="#">Agents</a></li><li><a href="#">Contact</a></li></ul>
+            <div class="site-actions"><a class="btn btn-accent d-none d-md-inline-flex" href="#"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a><button type="button" class="btn btn-outline-primary btn-icon d-lg-none" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></button></div>
+          </div></div>
+        </header>
+        <div class="container">
+          <div class="hero-grid">
+            <div class="hero-content">
+              <span class="hero-eyebrow"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg> New listings every day</span>
+              <h1 class="hero-title">Your next home, <em>found faster</em></h1>
+              <p class="hero-lead">Clear prices, honest photos and agents who answer. Start with a place or a budget.</p>
+              <form class="search-bar" role="search" onsubmit="return false"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg><input type="search" placeholder="Search by city or area" aria-label="Search"><button type="submit" class="btn btn-primary">Search</button></form>
+              <ul class="hero-stats"><li><strong>2,400+</strong><span>Properties listed</span></li><li><strong>120</strong><span>Expert agents</span></li><li><strong>98%</strong><span>Happy clients</span></li></ul>
+            </div>
+            <div class="hero-visual">
+              <img src="../assets/img/hero/about-1.svg" alt="A bright family house with a garden">
+              <div class="hero-float is-top"><span class="spec-icon"><svg class="icon" aria-hidden="true"><use href="#i-building"></use></svg></span><div><strong>2,400+</strong><span>Verified listings</span></div></div>
+              <div class="hero-float is-bottom"><span class="spec-icon"><svg class="icon icon-fill" aria-hidden="true"><use href="#i-star"></use></svg></span><div><strong>4.9 / 5</strong><span>Client rating</span></div></div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <h3 class="demo-title">Centered hero with search bar</h3>
+    <div class="demo demo-bleed">
+      <section class="hero hero--center">
+        <div class="hero-bg"><img src="../assets/img/hero/hero-1.svg" alt=""></div>
+        <header class="site-header is-transparent">
+          <div class="site-navbar"><div class="container">
+            <a class="site-logo" href="#"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+            <ul class="site-menu d-none d-lg-flex"><li><a href="#" aria-current="page">Home</a></li><li><a href="#">Properties</a></li><li><a href="#">Agents</a></li><li><a href="#">Contact</a></li></ul>
+            <div class="site-actions"><a class="btn btn-accent d-none d-md-inline-flex" href="#"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a><button type="button" class="btn btn-outline-primary btn-icon d-lg-none" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></button></div>
+          </div></div>
+        </header>
+        <div class="container">
+          <div class="hero-content">
+            <h1 class="hero-title">Homes for every <em>chapter</em></h1>
+            <p class="hero-lead">Search thousands of properties for sale and rent.</p>
+            <form class="search-bar" role="search" onsubmit="return false"><svg class="icon" aria-hidden="true"><use href="#i-search"></use></svg><input type="search" placeholder="City, area or property ID" aria-label="Search"><button type="submit" class="btn btn-accent">Search</button></form>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Classes</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Class</th><th>Purpose</th></tr></thead>
+    <tbody>
+    <tr><td><code>.hero</code> + <code>.hero-bg</code></td><td>Full-width section with a background image and a dark overlay for readable text.</td></tr>
+    <tr><td><code>.hero--center</code> / <code>.hero--split</code> / <code>.hero--tall</code></td><td>Centered text, light split layout with a picture, or extra height.</td></tr>
+    <tr><td><code>.hero-eyebrow</code> / <code>-title</code> / <code>-lead</code> / <code>-actions</code> / <code>-stats</code></td><td>Label, heading, intro, buttons and numbers.</td></tr>
+    <tr><td><code>.hero-title em</code></td><td>Highlights words in brass.</td></tr>
+    <tr><td><code>.hero-search</code></td><td>Pulls the search card up over the hero edge.</td></tr>
+    <tr><td><code>.hero-visual</code> + <code>.hero-float</code></td><td>Rounded picture with floating info cards (split hero).</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>

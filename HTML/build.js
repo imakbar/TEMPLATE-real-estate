@@ -38,6 +38,8 @@ const ORDER = [
   'components/search.css',
   'components/property-details.css',
   'components/agent-card.css',
+  'components/hero.css',
+  'components/sections.css',
   'components/location-card.css',
 ];
 

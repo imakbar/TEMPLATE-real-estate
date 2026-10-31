@@ -25,10 +25,12 @@
       ['amenities-list', 'Amenities list'], ['floor-plan-card', 'Floor plan card'],
       ['agent-card', 'Agent card'], ['location-card', 'Location card']
     ]},
-    { title: 'Phase 4 · Sections', soon: true, items: [
-      ['', 'Hero section'], ['', 'Featured properties'], ['', 'Property categories'], ['', 'Popular locations'],
-      ['', 'Why choose us'], ['', 'Agent showcase'], ['', 'Testimonials'], ['', 'Blog cards'],
-      ['', 'CTA banner'], ['', 'Newsletter']
+    { title: 'Phase 4 · Sections', items: [
+      ['hero-section', 'Hero section'], ['featured-properties', 'Featured properties'],
+      ['property-categories', 'Property categories'], ['popular-locations', 'Popular locations'],
+      ['why-choose-us', 'Why choose us'], ['agent-showcase', 'Agent showcase'],
+      ['testimonials', 'Testimonials'], ['blog-cards', 'Blog cards'],
+      ['cta-banner', 'CTA banner'], ['newsletter', 'Newsletter']
     ]}
   ];
 
