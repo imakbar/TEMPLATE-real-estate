@@ -25,15 +25,25 @@
   <div class="doc-hero">
     <span class="eyebrow">Phase 5 · Global</span>
     <h1 class="display-2 mt-2 mb-3">Property map</h1>
-    <p class="lead mb-0">Properties as price pins on a Google Map. Click a pin to open a card. Pins that are close together group into a cluster.</p>
+    <p class="lead mb-0">Properties as price pins on a Google Map. Choose price pins or location icon pins. Pins drop in, click one to open a card, and pins that are close together group into a cluster.</p>
   </div>
 
   <section class="doc-section doc-prose" id="examples">
-    <div class="section-head"><h2>Example</h2></div>
+    <div class="section-head"><h2>Price pins</h2></div>
+    <p>Default. Each pin shows the price. Pins drop in when the map scrolls into view, and the card pops in when you click a pin. Reload to see the drop again.</p>
     <div class="demo p-0 overflow-hidden">
-      <div class="map-view" data-property-map="#map-data" data-map-key="YOUR_API_KEY" data-map-zoom="12"></div>
+      <div class="map-view" data-property-map="#map-data" data-map-key="YOUR_API_KEY" data-map-marker="price" data-map-zoom="12"></div>
     </div>
-    <p class="api-note"><code>YOUR_API_KEY</code> is not a real key, so this page shows the demo map. With a real key the same markup shows Google Maps with zoom, drag and clusters.</p>
+    <p class="api-note"><code>&lt;div class="map-view" data-map-marker="price" ...&gt;</code> <code>YOUR_API_KEY</code> is not a real key, so the demo map is shown. With a real key the same markup shows Google Maps.</p>
+  </section>
+
+  <section class="doc-section doc-prose" id="icon-pins">
+    <div class="section-head"><h2>Location icon pins</h2></div>
+    <p>A classic map pin with a home icon. Sale pins are green, rent pins are brass. Same data, same animations.</p>
+    <div class="demo p-0 overflow-hidden">
+      <div class="map-view" data-property-map="#map-data" data-map-key="YOUR_API_KEY" data-map-marker="icon" data-map-zoom="12"></div>
+    </div>
+    <p class="api-note"><code>&lt;div class="map-view" data-map-marker="icon" ...&gt;</code></p>
   </section>
 
   <section class="doc-section doc-prose" id="setup">
@@ -72,10 +82,12 @@
     <tr><td><code>data-property-map</code></td><td>Selector of the JSON script that holds the properties.</td></tr>
     <tr><td><code>data-map-key</code></td><td>Google Maps API key.</td></tr>
     <tr><td><code>data-map-zoom</code></td><td>Start zoom. By default the map fits all pins.</td></tr>
+    <tr><td><code>data-map-marker</code></td><td><code>price</code> (default) or <code>icon</code>.</td></tr>
+    <tr><td><code>data-map-animate</code></td><td><code>false</code> turns off the pin drop and the card pop-in. Both are also off for visitors who prefer reduced motion.</td></tr>
     <tr><td><code>data-map-center</code></td><td><code>lat,lng</code> to start at a fixed place.</td></tr>
     <tr><td><code>.map-view</code></td><td>The map box (560px high; 480px on phones).</td></tr>
     <tr><td><code>.map-view--full</code></td><td>Full screen height below the header.</td></tr>
-    <tr><td><code>.map-pin</code>, <code>.is-rent</code>, <code>.is-active</code></td><td>Price pin. Rent pins are brass. Added by <code>map-view.js</code>.</td></tr>
+    <tr><td><code>.map-pin</code>, <code>.map-pin--icon</code>, <code>.is-rent</code>, <code>.is-active</code></td><td>Pin (price or icon). Rent pins are brass. Added by <code>map-view.js</code>.</td></tr>
     <tr><td><code>.map-cluster</code></td><td>Group of close pins. Click to zoom in.</td></tr>
     <tr><td><code>.map-popup</code></td><td>Property card that opens above a pin.</td></tr>
     </tbody>

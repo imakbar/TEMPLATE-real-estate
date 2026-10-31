@@ -7,6 +7,8 @@
  * <script type="application/json" id="map-data">[ { ... }, ... ]</script>
  *
  * Optional attributes: data-map-zoom="12"  data-map-center="40.72,-73.99"
+ *   data-map-marker="price | icon"   pin style (default price)
+ *   data-map-animate="false"         turn off the drop and pop-in animations
  * Each property: id, lat, lng, price, title, address, image, url,
  *                status ("sale" | "rent"), beds, baths, area
  */
@@ -50,6 +52,10 @@
     this.projector = null;
     this.demo = true;
     this.raf = 0;
+    this.nodes = {};
+    this.inView = true;
+    this.marker = el.getAttribute('data-map-marker') === 'icon' ? 'icon' : 'price';
+    this.animate = el.getAttribute('data-map-animate') !== 'false';
 
     try {
       var src = document.querySelector(el.getAttribute('data-property-map'));
@@ -62,6 +68,7 @@
 
     this.key = (el.getAttribute('data-map-key') || '').trim();
     this.build();
+    this.watchView();
     this.useDemo();
     if (!PLACEHOLDER.test(this.key)) instances.push(this), loadGoogle();
   }
@@ -172,19 +179,74 @@
       } else groups.push({ x: pt.x, y: pt.y, list: [pt] });
     });
 
-    var html = '';
+    // Reuse existing elements so pins do not flicker or replay their drop animation.
+    var self2 = this, seen = {}, dropIndex = 0;
+    groups.sort(function (g1, g2) { return g1.y - g2.y; });
     groups.forEach(function (g) {
-      if (g.list.length > 1) {
-        var ids = g.list.map(function (a) { return a.p.id; }).join(',');
-        html += '<button type="button" class="map-cluster" style="left:' + g.x.toFixed(1) + 'px;top:' + g.y.toFixed(1) + 'px" data-ids="' + esc(ids) + '" aria-label="' + g.list.length + ' properties, zoom in">' + g.list.length + '</button>';
-      } else {
-        var p = g.list[0].p;
-        html += '<button type="button" class="map-pin' + (p.status === 'rent' ? ' is-rent' : '') + (String(p.id) === String(self.active) ? ' is-active' : '') +
-          '" style="left:' + g.x.toFixed(1) + 'px;top:' + g.y.toFixed(1) + 'px" data-id="' + esc(p.id) + '" aria-label="' + esc(p.title) + ', ' + esc(p.price) + '">' + esc(p.price) + '</button>';
+      var single = g.list.length === 1, p = single ? g.list[0].p : null;
+      var key = single ? 'p' + p.id : 'c' + g.list.map(function (a) { return a.p.id; }).join(',');
+      var node = self2.nodes[key];
+      if (!node) {
+        node = document.createElement('button');
+        node.type = 'button';
+        if (single) {
+          node.className = 'map-pin map-pin--' + self2.marker + (p.status === 'rent' ? ' is-rent' : '');
+          node.setAttribute('data-id', p.id);
+          node.setAttribute('aria-label', p.title + ', ' + p.price);
+          node.innerHTML = self2.marker === 'icon'
+            ? '<svg class="map-pin-shape" viewBox="0 0 40 52" aria-hidden="true"><path d="M20 1.5C9.4 1.5 1.5 9.7 1.5 19.8 1.5 33 20 50.5 20 50.5S38.5 33 38.5 19.8C38.5 9.7 30.6 1.5 20 1.5z"/></svg>' + icon('home')
+            : esc(p.price);
+        } else {
+          node.className = 'map-cluster';
+          node.setAttribute('data-ids', g.list.map(function (a) { return a.p.id; }).join(','));
+          node.setAttribute('aria-label', g.list.length + ' properties, zoom in');
+          node.textContent = g.list.length;
+        }
+        self2.nodes[key] = node;
+        self2.layer.appendChild(node);
+        if (self2.animate) {
+          if (self2.inView) self2.drop(node, dropIndex++); else node.classList.add('is-hold');
+        }
       }
+      if (single) node.classList.toggle('is-active', String(p.id) === String(self2.active));
+      node.style.left = g.x.toFixed(1) + 'px';
+      node.style.top = g.y.toFixed(1) + 'px';
+      seen[key] = true;
     });
-    this.layer.innerHTML = html;
+    Object.keys(this.nodes).forEach(function (k) {
+      if (!seen[k]) { self2.nodes[k].remove(); delete self2.nodes[k]; }
+    });
     this.placePopup();
+  };
+
+  // Drop a pin from above onto its place (CSS animation, plays once).
+  MapView.prototype.drop = function (node, i) {
+    node.classList.remove('is-hold', 'is-drop');
+    node.style.animationDelay = (i * 70) + 'ms';
+    void node.offsetWidth;
+    node.classList.add('is-drop');
+    node.addEventListener('animationend', function done() {
+      node.classList.remove('is-drop');
+      node.style.animationDelay = '';
+      node.removeEventListener('animationend', done);
+    });
+  };
+
+  // Start the drop when the map scrolls into view.
+  MapView.prototype.watchView = function () {
+    var self = this;
+    if (!this.animate || !('IntersectionObserver' in window)) return;
+    this.inView = false;
+    var io = new IntersectionObserver(function (entries) {
+      if (!entries[0].isIntersecting) return;
+      io.disconnect();
+      self.inView = true;
+      var i = 0;
+      Object.keys(self.nodes).map(function (k) { return self.nodes[k]; })
+        .sort(function (a, b) { return parseFloat(a.style.top) - parseFloat(b.style.top); })
+        .forEach(function (n) { self.drop(n, i++); });
+    }, { threshold: 0.35 });
+    io.observe(this.el);
   };
 
   /* ---------- Popup ---------- */
@@ -211,6 +273,10 @@
         (meta ? '<ul class="map-popup-meta">' + meta + '</ul>' : '') +
       '</div>' +
       '<button type="button" class="map-popup-close" aria-label="Close">' + icon('close') + '</button>';
+    // Restart the pop-in animation every time a card opens.
+    this.popup.classList.remove('is-open');
+    void this.popup.offsetWidth;
+    this.popup.classList.toggle('is-animated', this.animate);
     this.popup.classList.add('is-open');
     this.render();
     // Keep the pin and popup in view on the real map.
