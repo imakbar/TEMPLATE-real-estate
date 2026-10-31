@@ -14,6 +14,8 @@
   var icons = {
     'plus': '<path d="M12 5v14M5 12h14"/>',
     'minus': '<path d="M5 12h14"/>',
+    'expand': '<path d="M4 9V4h5M20 9V4h-5M4 15v5h5M20 15v5h-5"/>',
+    'shrink': '<path d="M9 4v5H4M15 4v5h5M9 20v-5H4M15 20v-5h5"/>',
     'arrow-right': '<path d="M5 12h14M13 6l6 6-6 6"/>',
     'arrow-left': '<path d="M19 12H5M11 6l-6 6 6 6"/>',
     'arrow-up-right': '<path d="M7 17L17 7M8 7h9v9"/>',

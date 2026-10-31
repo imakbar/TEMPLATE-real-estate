@@ -44,6 +44,7 @@ const ORDER = [
   'components/pages.css',
   'components/location-card.css',
   'components/animations.css',
+  'components/map-view.css',
 ];
 
 const banner = `/*!
