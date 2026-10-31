@@ -16,7 +16,7 @@
 
   <!-- Template theme -->
   <link href="assets/css/style.min.css" rel="stylesheet">
-  <script>document.documentElement.classList.add('js');setTimeout(function(){if(!window.__animReady)document.documentElement.classList.add('anim-off')},4000)</script>
+  <script>document.documentElement.classList.add('js');if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim-off');setTimeout(function(){if(!window.__animReady)document.documentElement.classList.add('anim-off')},4000)</script>
 </head>
 <body>
 

@@ -147,12 +147,45 @@
     });
   }
 
-  gsap.matchMedia().add('(prefers-reduced-motion: no-preference)', function () {
+  /* ---------- Rules: reduced motion, failures, refresh, cleanup ---------- */
+  var mm = gsap.matchMedia();
+
+  // Visitors who ask for less motion: no animation, content shows normally.
+  mm.add('(prefers-reduced-motion: reduce)', function () {
+    root.classList.add('anim-off');
+  });
+
+  mm.add('(prefers-reduced-motion: no-preference)', function () {
     root.classList.remove('anim-off');
-    initHero();
-    initReveals();
-    initParallax();
+    try {
+      initHero();
+      initReveals();
+      initParallax();
+    } catch (err) {
+      // Never leave content hidden if something goes wrong.
+      root.classList.add('anim-off');
+      if (window.console) console.warn('animations.js:', err);
+    }
   });
 
   window.__animReady = true;
+
+  // Recalculate trigger positions once images are loaded (layout shifts).
+  var timer;
+  function refreshSoon() {
+    clearTimeout(timer);
+    timer = setTimeout(function () { ScrollTrigger.refresh(); }, 120);
+  }
+  window.addEventListener('load', refreshSoon);
+  document.addEventListener('load', function (e) {
+    if (e.target && e.target.tagName === 'IMG') refreshSoon();
+  }, true);
+
+  // Clean up when leaving the page (not when it is kept in the back/forward cache).
+  window.addEventListener('pagehide', function (e) {
+    if (!e.persisted) {
+      mm.revert();
+      ScrollTrigger.getAll().forEach(function (st) { st.kill(); });
+    }
+  });
 })();
