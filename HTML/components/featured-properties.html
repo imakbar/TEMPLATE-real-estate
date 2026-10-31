@@ -1,0 +1,487 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Featured properties | Real Estate Template</title>
+  <meta name="description" content="A home page section that shows a handful of property cards under a heading, as a grid, with filter tabs or as a swipeable row.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="../assets/css/style.css" rel="stylesheet">
+  <link href="../assets/css/docs.css" rel="stylesheet">
+</head>
+<body class="doc-page">
+
+<main class="doc-main">
+
+  <div class="doc-hero">
+    <span class="eyebrow">Phase 4 · Sections</span>
+    <h1 class="display-2 mt-2 mb-3">Featured properties</h1>
+    <p class="lead mb-0">A home page section that shows a handful of property cards under a heading, as a grid, with filter tabs or as a swipeable row.</p>
+  </div>
+
+  <section class="doc-section" id="examples">
+    <div class="section-head">
+      <h2>Examples</h2>
+    </div>
+
+    <h3 class="demo-title">Heading with link and a grid</h3>
+    <div class="demo demo-bleed">
+      <section class="section">
+        <div class="container">
+          <div class="section-heading is-split">
+            <div>
+              <span class="eyebrow">Featured</span>
+              <h2 class="mb-0">Homes picked for you</h2>
+            </div>
+            <a class="btn btn-outline-primary" href="#">View all properties <svg class="icon" aria-hidden="true"><use href="#i-arrow-right"></use></svg></a>
+          </div>
+          <div class="row g-4">
+            <div class="col-md-6 col-lg-4">
+              <article class="property-card">
+                <div class="property-card-media">
+                  <img src="../assets/img/properties/property-1.svg" alt="Family house with garden">
+                  <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+                  <div class="property-card-actions">
+                    <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                  </div>
+                  <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 12</span>
+                </div>
+                <div class="property-card-body">
+                  <div class="property-card-price">$485,000<small></small></div>
+                  <h3 class="property-card-title"><a class="stretched-link" href="#">Family house with garden</a></h3>
+                  <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>24 Maple Avenue, Northfield</p>
+                  <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>4 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>3 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>2,450 sq ft</li></ul>
+                </div>
+                <div class="property-card-footer">
+                  <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-1.svg" alt=""></span>Sara Ahmed</span>
+                  <span>2 days ago</span>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="property-card">
+                <div class="property-card-media">
+                  <img src="../assets/img/properties/property-2.svg" alt="Modern villa with pool">
+                  <div class="property-card-badges"><span class="badge badge-rent">For Rent</span></div>
+                  <div class="property-card-actions">
+                    <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                  </div>
+                  <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 24</span>
+                </div>
+                <div class="property-card-body">
+                  <div class="property-card-price">$2,800<small>/mo</small></div>
+                  <h3 class="property-card-title"><a class="stretched-link" href="#">Modern villa with pool</a></h3>
+                  <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>8 Lakeview Road, Lakeside</p>
+                  <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>5 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>4 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>3,900 sq ft</li></ul>
+                </div>
+                <div class="property-card-footer">
+                  <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-2.svg" alt=""></span>Sara Ahmed</span>
+                  <span>2 days ago</span>
+                </div>
+              </article>
+            </div>
+            <div class="col-md-6 col-lg-4">
+              <article class="property-card">
+                <div class="property-card-media">
+                  <img src="../assets/img/properties/property-3.svg" alt="Bright two-bedroom apartment">
+                  <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+                  <div class="property-card-actions">
+                    <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                  </div>
+                  <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 9</span>
+                </div>
+                <div class="property-card-body">
+                  <div class="property-card-price">$312,000<small></small></div>
+                  <h3 class="property-card-title"><a class="stretched-link" href="#">Bright two-bedroom apartment</a></h3>
+                  <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>Tower 3, Harbor Bay</p>
+                  <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>2 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>2 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>1,120 sq ft</li></ul>
+                </div>
+                <div class="property-card-footer">
+                  <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-3.svg" alt=""></span>Sara Ahmed</span>
+                  <span>2 days ago</span>
+                </div>
+              </article>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <h3 class="demo-title">Filter tabs</h3>
+    <div class="demo demo-bleed">
+      <section class="section section-surface">
+        <div class="container">
+          <div class="section-heading is-split">
+            <div>
+              <span class="eyebrow">Latest</span>
+              <h2 class="mb-0">New on the market</h2>
+            </div>
+            <ul class="nav nav-pills" role="tablist">
+              <li class="nav-item" role="presentation"><button class="nav-link active" data-bs-toggle="pill" data-bs-target="#ft-all" type="button" role="tab" aria-selected="true">All</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#ft-sale" type="button" role="tab" aria-selected="false">For sale</button></li>
+              <li class="nav-item" role="presentation"><button class="nav-link" data-bs-toggle="pill" data-bs-target="#ft-rent" type="button" role="tab" aria-selected="false">For rent</button></li>
+            </ul>
+          </div>
+          <div class="tab-content" style="padding-top: 0">
+            <div class="tab-pane fade show active" id="ft-all" role="tabpanel" tabindex="0">
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                  <article class="property-card">
+                    <div class="property-card-media">
+                      <img src="../assets/img/properties/property-1.svg" alt="Family house with garden">
+                      <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+                      <div class="property-card-actions">
+                        <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                      </div>
+                      <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 12</span>
+                    </div>
+                    <div class="property-card-body">
+                      <div class="property-card-price">$485,000<small></small></div>
+                      <h3 class="property-card-title"><a class="stretched-link" href="#">Family house with garden</a></h3>
+                      <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>24 Maple Avenue, Northfield</p>
+                      <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>4 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>3 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>2,450 sq ft</li></ul>
+                    </div>
+                    <div class="property-card-footer">
+                      <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-1.svg" alt=""></span>Sara Ahmed</span>
+                      <span>2 days ago</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="property-card">
+                    <div class="property-card-media">
+                      <img src="../assets/img/properties/property-2.svg" alt="Modern villa with pool">
+                      <div class="property-card-badges"><span class="badge badge-rent">For Rent</span></div>
+                      <div class="property-card-actions">
+                        <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                      </div>
+                      <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 24</span>
+                    </div>
+                    <div class="property-card-body">
+                      <div class="property-card-price">$2,800<small>/mo</small></div>
+                      <h3 class="property-card-title"><a class="stretched-link" href="#">Modern villa with pool</a></h3>
+                      <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>8 Lakeview Road, Lakeside</p>
+                      <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>5 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>4 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>3,900 sq ft</li></ul>
+                    </div>
+                    <div class="property-card-footer">
+                      <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-2.svg" alt=""></span>Sara Ahmed</span>
+                      <span>2 days ago</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="property-card">
+                    <div class="property-card-media">
+                      <img src="../assets/img/properties/property-3.svg" alt="Bright two-bedroom apartment">
+                      <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+                      <div class="property-card-actions">
+                        <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                      </div>
+                      <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 9</span>
+                    </div>
+                    <div class="property-card-body">
+                      <div class="property-card-price">$312,000<small></small></div>
+                      <h3 class="property-card-title"><a class="stretched-link" href="#">Bright two-bedroom apartment</a></h3>
+                      <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>Tower 3, Harbor Bay</p>
+                      <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>2 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>2 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>1,120 sq ft</li></ul>
+                    </div>
+                    <div class="property-card-footer">
+                      <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-3.svg" alt=""></span>Sara Ahmed</span>
+                      <span>2 days ago</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="ft-sale" role="tabpanel" tabindex="0">
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                  <article class="property-card">
+                    <div class="property-card-media">
+                      <img src="../assets/img/properties/property-3.svg" alt="Bright two-bedroom apartment">
+                      <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+                      <div class="property-card-actions">
+                        <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                      </div>
+                      <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 9</span>
+                    </div>
+                    <div class="property-card-body">
+                      <div class="property-card-price">$312,000<small></small></div>
+                      <h3 class="property-card-title"><a class="stretched-link" href="#">Bright two-bedroom apartment</a></h3>
+                      <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>Tower 3, Harbor Bay</p>
+                      <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>2 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>2 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>1,120 sq ft</li></ul>
+                    </div>
+                    <div class="property-card-footer">
+                      <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-3.svg" alt=""></span>Sara Ahmed</span>
+                      <span>2 days ago</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="property-card">
+                    <div class="property-card-media">
+                      <img src="../assets/img/properties/property-5.svg" alt="Quiet cottage with orchard">
+                      <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+                      <div class="property-card-actions">
+                        <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                      </div>
+                      <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 8</span>
+                    </div>
+                    <div class="property-card-body">
+                      <div class="property-card-price">$268,500<small></small></div>
+                      <h3 class="property-card-title"><a class="stretched-link" href="#">Quiet cottage with orchard</a></h3>
+                      <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>3 Orchard Lane, Westfield</p>
+                      <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>2 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>1 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>980 sq ft</li></ul>
+                    </div>
+                    <div class="property-card-footer">
+                      <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-1.svg" alt=""></span>Sara Ahmed</span>
+                      <span>2 days ago</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="property-card">
+                    <div class="property-card-media">
+                      <img src="../assets/img/properties/property-6.svg" alt="Corner office building">
+                      <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+                      <div class="property-card-actions">
+                        <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                      </div>
+                      <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 18</span>
+                    </div>
+                    <div class="property-card-body">
+                      <div class="property-card-price">$1,250,000<small></small></div>
+                      <h3 class="property-card-title"><a class="stretched-link" href="#">Corner office building</a></h3>
+                      <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>90 Market Street, Central</p>
+                      <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>2 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>6,400 sq ft</li></ul>
+                    </div>
+                    <div class="property-card-footer">
+                      <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-2.svg" alt=""></span>Sara Ahmed</span>
+                      <span>2 days ago</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="ft-rent" role="tabpanel" tabindex="0">
+              <div class="row g-4">
+                <div class="col-md-6 col-lg-4">
+                  <article class="property-card">
+                    <div class="property-card-media">
+                      <img src="../assets/img/properties/property-2.svg" alt="Modern villa with pool">
+                      <div class="property-card-badges"><span class="badge badge-rent">For Rent</span></div>
+                      <div class="property-card-actions">
+                        <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                      </div>
+                      <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 24</span>
+                    </div>
+                    <div class="property-card-body">
+                      <div class="property-card-price">$2,800<small>/mo</small></div>
+                      <h3 class="property-card-title"><a class="stretched-link" href="#">Modern villa with pool</a></h3>
+                      <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>8 Lakeview Road, Lakeside</p>
+                      <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>5 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>4 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>3,900 sq ft</li></ul>
+                    </div>
+                    <div class="property-card-footer">
+                      <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-2.svg" alt=""></span>Sara Ahmed</span>
+                      <span>2 days ago</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="property-card">
+                    <div class="property-card-media">
+                      <img src="../assets/img/properties/property-4.svg" alt="Townhouse near the park">
+                      <div class="property-card-badges"><span class="badge badge-rent">For Rent</span></div>
+                      <div class="property-card-actions">
+                        <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                      </div>
+                      <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 15</span>
+                    </div>
+                    <div class="property-card-body">
+                      <div class="property-card-price">$1,950<small>/mo</small></div>
+                      <h3 class="property-card-title"><a class="stretched-link" href="#">Townhouse near the park</a></h3>
+                      <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>17 Garden Row, Southgate</p>
+                      <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>3 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>2 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>1,780 sq ft</li></ul>
+                    </div>
+                    <div class="property-card-footer">
+                      <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-4.svg" alt=""></span>Sara Ahmed</span>
+                      <span>2 days ago</span>
+                    </div>
+                  </article>
+                </div>
+                <div class="col-md-6 col-lg-4">
+                  <article class="property-card">
+                    <div class="property-card-media">
+                      <img src="../assets/img/properties/property-2.svg" alt="Modern villa with pool">
+                      <div class="property-card-badges"><span class="badge badge-rent">For Rent</span></div>
+                      <div class="property-card-actions">
+                        <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                      </div>
+                      <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 24</span>
+                    </div>
+                    <div class="property-card-body">
+                      <div class="property-card-price">$2,800<small>/mo</small></div>
+                      <h3 class="property-card-title"><a class="stretched-link" href="#">Modern villa with pool</a></h3>
+                      <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>8 Lakeview Road, Lakeside</p>
+                      <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>5 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>4 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>3,900 sq ft</li></ul>
+                    </div>
+                    <div class="property-card-footer">
+                      <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-2.svg" alt=""></span>Sara Ahmed</span>
+                      <span>2 days ago</span>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="api-note"><p>The pills use Bootstrap's tab JavaScript. For real filtering, load each tab's cards from your backend.</p></div>
+
+    <h3 class="demo-title">Scroll row</h3>
+    <div class="demo demo-bleed">
+      <section class="section">
+        <div class="container">
+          <div class="section-heading"><span class="eyebrow">Just listed</span><h2>Swipe through new homes</h2></div>
+          <div class="scroll-row">
+            <article class="property-card">
+              <div class="property-card-media">
+                <img src="../assets/img/properties/property-1.svg" alt="Family house with garden">
+                <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+                <div class="property-card-actions">
+                  <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                </div>
+                <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 12</span>
+              </div>
+              <div class="property-card-body">
+                <div class="property-card-price">$485,000<small></small></div>
+                <h3 class="property-card-title"><a class="stretched-link" href="#">Family house with garden</a></h3>
+                <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>24 Maple Avenue, Northfield</p>
+                <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>4 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>3 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>2,450 sq ft</li></ul>
+              </div>
+              <div class="property-card-footer">
+                <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-1.svg" alt=""></span>Sara Ahmed</span>
+                <span>2 days ago</span>
+              </div>
+            </article>
+            <article class="property-card">
+              <div class="property-card-media">
+                <img src="../assets/img/properties/property-2.svg" alt="Modern villa with pool">
+                <div class="property-card-badges"><span class="badge badge-rent">For Rent</span></div>
+                <div class="property-card-actions">
+                  <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                </div>
+                <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 24</span>
+              </div>
+              <div class="property-card-body">
+                <div class="property-card-price">$2,800<small>/mo</small></div>
+                <h3 class="property-card-title"><a class="stretched-link" href="#">Modern villa with pool</a></h3>
+                <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>8 Lakeview Road, Lakeside</p>
+                <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>5 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>4 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>3,900 sq ft</li></ul>
+              </div>
+              <div class="property-card-footer">
+                <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-2.svg" alt=""></span>Sara Ahmed</span>
+                <span>2 days ago</span>
+              </div>
+            </article>
+            <article class="property-card">
+              <div class="property-card-media">
+                <img src="../assets/img/properties/property-3.svg" alt="Bright two-bedroom apartment">
+                <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+                <div class="property-card-actions">
+                  <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                </div>
+                <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 9</span>
+              </div>
+              <div class="property-card-body">
+                <div class="property-card-price">$312,000<small></small></div>
+                <h3 class="property-card-title"><a class="stretched-link" href="#">Bright two-bedroom apartment</a></h3>
+                <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>Tower 3, Harbor Bay</p>
+                <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>2 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>2 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>1,120 sq ft</li></ul>
+              </div>
+              <div class="property-card-footer">
+                <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-3.svg" alt=""></span>Sara Ahmed</span>
+                <span>2 days ago</span>
+              </div>
+            </article>
+            <article class="property-card">
+              <div class="property-card-media">
+                <img src="../assets/img/properties/property-4.svg" alt="Townhouse near the park">
+                <div class="property-card-badges"><span class="badge badge-rent">For Rent</span></div>
+                <div class="property-card-actions">
+                  <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                </div>
+                <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 15</span>
+              </div>
+              <div class="property-card-body">
+                <div class="property-card-price">$1,950<small>/mo</small></div>
+                <h3 class="property-card-title"><a class="stretched-link" href="#">Townhouse near the park</a></h3>
+                <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>17 Garden Row, Southgate</p>
+                <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>3 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>2 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>1,780 sq ft</li></ul>
+              </div>
+              <div class="property-card-footer">
+                <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-4.svg" alt=""></span>Sara Ahmed</span>
+                <span>2 days ago</span>
+              </div>
+            </article>
+            <article class="property-card">
+              <div class="property-card-media">
+                <img src="../assets/img/properties/property-5.svg" alt="Quiet cottage with orchard">
+                <div class="property-card-badges"><span class="badge badge-sale">For Sale</span></div>
+                <div class="property-card-actions">
+                  <button type="button" class="btn btn-overlay btn-favorite btn-icon btn-sm btn-pill" aria-pressed="false" aria-label="Save to favorites"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></button>
+                </div>
+                <span class="property-card-photos"><svg class="icon" aria-hidden="true"><use href="#i-camera"></use></svg> 8</span>
+              </div>
+              <div class="property-card-body">
+                <div class="property-card-price">$268,500<small></small></div>
+                <h3 class="property-card-title"><a class="stretched-link" href="#">Quiet cottage with orchard</a></h3>
+                <p class="property-card-address"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg>3 Orchard Lane, Westfield</p>
+                <ul class="property-card-specs"><li><svg class="icon" aria-hidden="true"><use href="#i-bed"></use></svg>2 Beds</li><li><svg class="icon" aria-hidden="true"><use href="#i-bath"></use></svg>1 Baths</li><li><svg class="icon" aria-hidden="true"><use href="#i-area"></use></svg>980 sq ft</li></ul>
+              </div>
+              <div class="property-card-footer">
+                <span class="property-card-agent"><span class="avatar avatar-sm"><img src="../assets/img/avatars/avatar-1.svg" alt=""></span>Sara Ahmed</span>
+                <span>2 days ago</span>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+    <div class="api-note"><p><code>.scroll-row</code> is a horizontal list with snapping. It works by touch and trackpad with no JavaScript.</p></div>
+  </section>
+
+  <section class="doc-section" id="classes">
+    <div class="section-head">
+      <h2>Building blocks</h2>
+    </div>
+
+    <table class="doc-table">
+    <thead><tr><th>Pattern</th><th>Parts</th></tr></thead>
+    <tbody>
+    <tr><td>Grid</td><td><code>.section</code> &rarr; <code>.container</code> &rarr; <code>.section-heading.is-split</code> &rarr; <code>.row.g-4</code> with <code>.property-card</code>.</td></tr>
+    <tr><td>Tabs</td><td><code>.nav-pills</code> in the heading and <code>.tab-content</code> with one <code>.tab-pane</code> per filter.</td></tr>
+    <tr><td>Scroll row</td><td><code>.scroll-row</code> instead of <code>.row</code>. Each child is one card.</td></tr>
+    </tbody>
+    </table>
+  </section>
+
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="../assets/js/icons.js"></script>
+<script src="../assets/js/site.js"></script>
+<script src="../assets/js/docs-shell.js"></script>
+<script src="../assets/js/docs.js"></script>
+</body>
+</html>
