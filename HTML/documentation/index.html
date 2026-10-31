@@ -49,6 +49,7 @@
     <h2>Components</h2>
     <ul>
       <li><a href="#components">All components</a></li>
+      <li><a href="#pages">Pages</a></li>
       <li><a href="#using-components">Using a component</a></li>
       <li><a href="#js">JavaScript (site.js)</a></li>
     </ul>
@@ -104,6 +105,7 @@
     <section class="doc-section" id="structure">
       <div class="section-head"><h2>File structure</h2></div>
 <pre class="doc-snippet"><code>HTML/
+├── index.html  listing.html  property-details.html  ...   The 19 pages
 ├── components/              One page per component (start at index.html)
 ├── documentation/
 │   └── index.html           This guide
@@ -252,6 +254,44 @@ node build.js</code></pre>
         <li><a href="../components/cta-banner.html">CTA banner</a></li>
         <li><a href="../components/newsletter.html">Newsletter</a></li>
       </ul>
+      <h3 class="h5 mt-4">Phase 5 · Global</h3>
+      <ul>
+        <li><a href="../components/accordion.html">Accordion</a></li>
+        <li><a href="../components/alert-toast.html">Alert and toast</a></li>
+        <li><a href="../components/empty-state.html">Empty state</a></li>
+        <li><a href="../components/back-to-top.html">Back to top</a></li>
+        <li><a href="../components/table.html">Table</a></li>
+        <li><a href="../components/stepper.html">Stepper</a></li>
+      </ul>
+    </section>
+
+    <!-- ===================================================== PAGES -->
+    <section class="doc-section" id="pages">
+      <div class="section-head"><h2>Pages</h2><p>All 19 pages are in the <code>HTML/</code> folder and are built only from the components above. Open <code>index.html</code> to start. The header and footer are repeated in every file, so a change to the menu means editing each page (or moving them into your template engine or build step).</p></div>
+      <table class="doc-table">
+        <thead><tr><th>File</th><th>Page</th><th>Contains</th></tr></thead>
+        <tbody>
+          <tr><td><a href="../index.html"><code>index.html</code></a></td><td>Home</td><td>Hero with search, categories, featured properties, locations, agents, testimonials, blog, CTA</td></tr>
+          <tr><td><a href="../listing.html"><code>listing.html</code></a></td><td>Property listing</td><td>Filters sidebar, grid and list view, pagination</td></tr>
+          <tr><td><a href="../property-details.html"><code>property-details.html</code></a></td><td>Property details</td><td>Gallery, key facts, description, amenities, floor plans, map, agent contact</td></tr>
+          <tr><td><a href="../about.html"><code>about.html</code></a></td><td>About</td><td>Story, numbers, team</td></tr>
+          <tr><td><a href="../agents.html"><code>agents.html</code></a></td><td>Agents</td><td>Team grid</td></tr>
+          <tr><td><a href="../contact.html"><code>contact.html</code></a></td><td>Contact</td><td>Form, details, map</td></tr>
+          <tr><td><a href="../login.html"><code>login.html</code></a></td><td>Login</td><td>Sign in form</td></tr>
+          <tr><td><a href="../register.html"><code>register.html</code></a></td><td>Register</td><td>Sign up form</td></tr>
+          <tr><td><a href="../profile.html"><code>profile.html</code></a></td><td>Profile</td><td>Account dashboard</td></tr>
+          <tr><td><a href="../add-property.html"><code>add-property.html</code></a></td><td>Add property</td><td>Multi-step form</td></tr>
+          <tr><td><a href="../wishlist.html"><code>wishlist.html</code></a></td><td>Wishlist</td><td>Saved properties</td></tr>
+          <tr><td><a href="../compare.html"><code>compare.html</code></a></td><td>Compare</td><td>Side-by-side table</td></tr>
+          <tr><td><a href="../blog.html"><code>blog.html</code></a></td><td>Blog</td><td>Article list</td></tr>
+          <tr><td><a href="../blog-details.html"><code>blog-details.html</code></a></td><td>Blog details</td><td>Article page</td></tr>
+          <tr><td><a href="../pricing.html"><code>pricing.html</code></a></td><td>Pricing</td><td>Plans with billing switch</td></tr>
+          <tr><td><a href="../faq.html"><code>faq.html</code></a></td><td>FAQ</td><td>Accordion</td></tr>
+          <tr><td><a href="../404.html"><code>404.html</code></a></td><td>404</td><td>Page not found</td></tr>
+          <tr><td><a href="../privacy.html"><code>privacy.html</code></a></td><td>Privacy policy</td><td>Legal text</td></tr>
+          <tr><td><a href="../terms.html"><code>terms.html</code></a></td><td>Terms</td><td>Legal text</td></tr>
+        </tbody>
+      </table>
     </section>
 
     <section class="doc-section" id="using-components">
@@ -319,7 +359,12 @@ node build.js</code></pre>
     <!-- ================================================= CHANGELOG -->
     <section class="doc-section" id="changelog">
       <div class="section-head"><h2>Changelog</h2></div>
-      <h3 class="h5">0.3.0: Section blocks</h3>
+      <h3 class="h5">0.4.0: Pages and global components</h3>
+      <ul>
+        <li>All 19 pages: home, listing, property details, about, agents, contact, login, register, profile, add property, wishlist, compare, blog, blog details, pricing, FAQ, 404, privacy, terms.</li>
+        <li>Global components: accordion, alert and toast, empty state, back to top, table, stepper.</li>
+      </ul>
+      <h3 class="h5 mt-4">0.3.0: Section blocks</h3>
       <ul>
         <li>Hero (image, split, centered), featured properties, property categories, popular locations, why choose us with stats, agent showcase, testimonials, blog cards, CTA banner and newsletter.</li>
         <li>New original illustrations for the hero, about and blog images.</li>
@@ -339,7 +384,7 @@ node build.js</code></pre>
       </ul>
       <h3 class="h5 mt-4">Planned</h3>
       <ul>
-        <li>All 19 pages (home, listings, property details, agents, blog and more).</li>
+        <li>Real map, form backend and payment integrations are left to the buyer.</li>
       </ul>
     </section>
 
