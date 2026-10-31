@@ -16,6 +16,7 @@
 
   <!-- Template theme -->
   <link href="assets/css/style.min.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim-off');setTimeout(function(){if(!window.__animReady)document.documentElement.classList.add('anim-off')},4000)</script>
 </head>
 <body>
 
@@ -97,7 +98,7 @@
 
 <main id="main">
   <section class="page-banner">
-    <div class="container">
+    <div class="container" data-animate="fade-up">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-chevron">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -126,7 +127,7 @@
           <div class="dash-section">
             <h1 class="h2">Welcome back, Sara</h1>
             <div class="alert alert-info mt-3" role="status"><svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg><div>Your listing <strong>Modern villa with pool</strong> is waiting for review. It usually takes one working day.</div></div>
-            <div class="row g-3 mt-1">
+            <div class="row g-3 mt-1" data-animate="fade-up" data-animate-stagger="0.08">
               <div class="col-6 col-xl-3"><div class="stat-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span><div><strong>12</strong><span class="stat-card-label">Active listings</span></div></div></div>
               <div class="col-6 col-xl-3"><div class="stat-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg></span><div><strong>3,480</strong><span class="stat-card-label">Total views</span></div></div></div>
               <div class="col-6 col-xl-3"><div class="stat-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></span><div><strong>27</strong><span class="stat-card-label">Enquiries</span></div></div></div>
@@ -135,7 +136,7 @@
           </div>
           <div class="dash-section" id="my-properties">
             <div class="d-flex justify-content-between align-items-center mb-3"><h2 class="mb-0">My properties</h2><a class="btn btn-primary btn-sm" href="add-property.html"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a></div>
-            <div class="table-card"><div class="table-responsive"><table class="table table-hover">
+            <div class="table-card" data-animate="fade-up"><div class="table-responsive"><table class="table table-hover">
               <thead><tr><th scope="col">Property</th><th scope="col">Price</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
               <tbody>
                 <tr><td><div class="table-media"><img src="assets/img/properties/property-1.svg" alt=""><div><strong>Family house with garden</strong><span>24 Maple Avenue</span></div></div></td><td>$485,000</td><td><span class="badge badge-success badge-dot">Active</span></td><td class="text-end text-nowrap"><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Edit Family house with garden"><svg class="icon" aria-hidden="true"><use href="#i-edit"></use></svg></button><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Delete Family house with garden"><svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg></button></td></tr>
@@ -213,5 +214,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="assets/js/icons.js"></script>
 <script src="assets/js/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer crossorigin="anonymous"></script>
+<script src="assets/js/animations.js" defer></script>
 </body>
 </html>

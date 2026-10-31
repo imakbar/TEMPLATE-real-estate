@@ -48,10 +48,15 @@
   }
 
   /* ---------- Scroll reveals: [data-animate] and stagger parents ---------- */
-  function initReveals() {
-    var items = gsap.utils.toArray('[data-animate]');
+  // scope: where to look. done: elements that already have a trigger.
+  // Elements that are not visible yet (inactive tab panes) are skipped here
+  // and set up later, when their tab is shown.
+  function initReveals(scope, done) {
+    var items = gsap.utils.toArray(scope.querySelectorAll('[data-animate]'));
 
     items.forEach(function (el) {
+      if (done.has(el) || !el.getClientRects().length) return;
+      done.add(el);
       // Children of a stagger parent are animated by the parent.
       if (el.parentElement && el.parentElement.hasAttribute('data-animate-stagger')) return;
 
@@ -157,15 +162,27 @@
 
   mm.add('(prefers-reduced-motion: no-preference)', function () {
     root.classList.remove('anim-off');
+    var done = new WeakSet();
+    var ctx = arguments[0];
+    // Tabs: set up the cards of a pane when it is shown for the first time.
+    function onTabShown(e) {
+      var sel = e.target && (e.target.getAttribute('data-bs-target') || e.target.getAttribute('href'));
+      var pane = sel && sel.charAt(0) === '#' && document.querySelector(sel);
+      if (!pane) return;
+      ctx.add(function () { initReveals(pane, done); });
+      ScrollTrigger.refresh();
+    }
+    document.addEventListener('shown.bs.tab', onTabShown);
     try {
       initHero();
-      initReveals();
+      initReveals(document, done);
       initParallax();
     } catch (err) {
       // Never leave content hidden if something goes wrong.
       root.classList.add('anim-off');
       if (window.console) console.warn('animations.js:', err);
     }
+    return function () { document.removeEventListener('shown.bs.tab', onTabShown); };
   });
 
   window.__animReady = true;

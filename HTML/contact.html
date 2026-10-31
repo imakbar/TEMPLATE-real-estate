@@ -16,6 +16,7 @@
 
   <!-- Template theme -->
   <link href="assets/css/style.min.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim-off');setTimeout(function(){if(!window.__animReady)document.documentElement.classList.add('anim-off')},4000)</script>
 </head>
 <body>
 
@@ -97,7 +98,7 @@
 
 <main id="main">
   <section class="page-banner">
-    <div class="container">
+    <div class="container" data-animate="fade-up">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-chevron">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -110,13 +111,13 @@
   </section>
   <section class="section-sm">
     <div class="container">
-      <div class="row g-4 mb-5">
+      <div class="row g-4 mb-5" data-animate="fade-up" data-animate-stagger="0.12">
       <div class="col-md-4"><div class="info-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg></span><div><h3>Visit us</h3><p>120 Example Street, Your City</p></div></div></div>
       <div class="col-md-4"><div class="info-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg></span><div><h3>Call us</h3><p>+1 000 000 0000</p></div></div></div>
       <div class="col-md-4"><div class="info-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></span><div><h3>Email us</h3><p>hello@example.com</p></div></div></div>
       </div>
       <div class="row g-4 align-items-start">
-        <div class="col-lg-7">
+        <div class="col-lg-7" data-animate="slide-left">
           <form class="form-card" onsubmit="return false">
             <h2 class="h4 mb-4">Send us a message</h2>
             <div class="row g-3">
@@ -130,7 +131,7 @@
             </div>
           </form>
         </div>
-        <div class="col-lg-5">
+        <div class="col-lg-5" data-animate="slide-right">
           <div class="map-box mb-4"><img src="assets/img/hero/map.svg" alt="Map showing our office"><a class="btn btn-light" href="#"><svg class="icon" aria-hidden="true"><use href="#i-map"></use></svg> Get directions</a></div>
           <div class="info-card d-block"><h3 class="mb-2">Opening hours</h3><ul class="hours">
             <li><span>Monday to Friday</span><span>9:00 to 18:00</span></li>
@@ -187,5 +188,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="assets/js/icons.js"></script>
 <script src="assets/js/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer crossorigin="anonymous"></script>
+<script src="assets/js/animations.js" defer></script>
 </body>
 </html>

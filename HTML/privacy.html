@@ -16,6 +16,7 @@
 
   <!-- Template theme -->
   <link href="assets/css/style.min.css" rel="stylesheet">
+  <script>document.documentElement.classList.add('js');if(window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches)document.documentElement.classList.add('anim-off');setTimeout(function(){if(!window.__animReady)document.documentElement.classList.add('anim-off')},4000)</script>
 </head>
 <body>
 
@@ -97,7 +98,7 @@
 
 <main id="main">
   <section class="page-banner">
-    <div class="container">
+    <div class="container" data-animate="fade-up">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb breadcrumb-chevron">
           <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -111,7 +112,7 @@
   <section class="section-sm">
     <div class="container">
       <div class="legal-layout">
-        <nav class="toc" aria-label="On this page"><h2 class="widget-title">On this page</h2><ol>
+        <nav class="toc" aria-label="On this page" data-animate="fade-in"><h2 class="widget-title">On this page</h2><ol>
           <li><a href="#s0">Information we collect</a></li>
           <li><a href="#s1">How we use it</a></li>
           <li><a href="#s2">Cookies</a></li>
@@ -120,11 +121,11 @@
         </ol></nav>
         <div class="legal">
           <p class="small text-secondary">Last updated: March 1, 2026. This is sample text. Replace it with your own policy and have it checked by a lawyer.</p>
-          <section id="s0"><h2>Information we collect</h2><p>We collect the details you give us, such as your name, email and phone number, and basic information about how you use the site.</p></section>
-          <section id="s1"><h2>How we use it</h2><p>We use your information to answer enquiries, show relevant properties and improve the service. We do not sell your personal data.</p></section>
-          <section id="s2"><h2>Cookies</h2><p>We use cookies to remember your settings and to understand how the site is used. You can turn cookies off in your browser.</p></section>
-          <section id="s3"><h2>Your rights</h2><p>You can ask to see, correct or delete your data at any time by emailing <a href='mailto:privacy@example.com'>privacy@example.com</a>.</p></section>
-          <section id="s4"><h2>Contact</h2><p>Questions about this policy? Write to us at the address on the <a href='contact.html'>contact page</a>.</p></section>
+          <section id="s0" data-animate="fade-up"><h2>Information we collect</h2><p>We collect the details you give us, such as your name, email and phone number, and basic information about how you use the site.</p></section>
+          <section id="s1" data-animate="fade-up"><h2>How we use it</h2><p>We use your information to answer enquiries, show relevant properties and improve the service. We do not sell your personal data.</p></section>
+          <section id="s2" data-animate="fade-up"><h2>Cookies</h2><p>We use cookies to remember your settings and to understand how the site is used. You can turn cookies off in your browser.</p></section>
+          <section id="s3" data-animate="fade-up"><h2>Your rights</h2><p>You can ask to see, correct or delete your data at any time by emailing <a href='mailto:privacy@example.com'>privacy@example.com</a>.</p></section>
+          <section id="s4" data-animate="fade-up"><h2>Contact</h2><p>Questions about this policy? Write to us at the address on the <a href='contact.html'>contact page</a>.</p></section>
         </div>
       </div>
     </div>
@@ -175,5 +176,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
 <script src="assets/js/icons.js"></script>
 <script src="assets/js/site.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js" defer crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js" defer crossorigin="anonymous"></script>
+<script src="assets/js/animations.js" defer></script>
 </body>
 </html>
