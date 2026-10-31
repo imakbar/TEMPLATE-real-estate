@@ -2,7 +2,7 @@
 
 A modern HTML template for real estate agencies, built on Bootstrap 5.3 with a Forest Green theme.
 
-> **Status: in development (v0.2.0).** Design tokens, Phase 1 foundation, Phase 2 layout and Phase 3 real estate components are done. Section blocks and the full pages are being added step by step.
+> **Status: in development (v0.3.0).** Design tokens and all 38 components (foundation, layout, real estate and page sections) are done. The 19 full pages are next.
 
 ## What is inside
 
