@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My account | YourBrand</title>
+  <meta name="description" content="Your dashboard: listings, enquiries and profile settings.">
+
+  <!-- Fonts: Fraunces (headings) + DM Sans (body). Both open source (SIL OFL). -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&display=swap" rel="stylesheet">
+
+  <!-- Bootstrap 5.3 (CDN) -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" crossorigin="anonymous">
+
+  <!-- Template theme -->
+  <link href="assets/css/style.min.css" rel="stylesheet">
+</head>
+<body>
+
+<a class="visually-hidden-focusable" href="#main">Skip to content</a>
+
+<header class="site-header" data-sticky>
+  <div class="site-navbar">
+    <div class="container">
+      <a class="site-logo" href="index.html"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+      <ul class="site-menu d-none d-lg-flex">
+        <li><a href="index.html">Home</a></li>
+        <li class="dropdown">
+          <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Properties <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="listing.html">All properties</a></li>
+            <li><a class="dropdown-item" href="property-details.html">Property details</a></li>
+            <li><a class="dropdown-item" href="compare.html">Compare</a></li>
+            <li><a class="dropdown-item" href="wishlist.html">Wishlist</a></li>
+          </ul>
+        </li>
+        <li><a href="agents.html">Agents</a></li>
+        <li class="dropdown">
+          <button type="button" class="dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">Pages <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></button>
+          <ul class="dropdown-menu">
+            <li><a class="dropdown-item" href="about.html">About us</a></li>
+            <li><a class="dropdown-item" href="pricing.html">Pricing</a></li>
+            <li><a class="dropdown-item" href="faq.html">FAQ</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="login.html">Sign in</a></li>
+            <li><a class="dropdown-item" href="register.html">Create account</a></li>
+            <li><a class="dropdown-item" href="404.html">404 page</a></li>
+          </ul>
+        </li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="site-actions">
+        <a class="btn btn-ghost btn-icon d-none d-sm-inline-flex" href="wishlist.html" aria-label="Wishlist"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></a>
+        <a class="btn btn-ghost btn-icon d-none d-sm-inline-flex" href="login.html" aria-label="Sign in"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg></a>
+        <a class="btn btn-primary d-none d-md-inline-flex" href="add-property.html"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a>
+        <button type="button" class="btn btn-outline-primary btn-icon d-lg-none" data-bs-toggle="offcanvas" data-bs-target="#mobileNav" aria-controls="mobileNav" aria-label="Open menu"><svg class="icon" aria-hidden="true"><use href="#i-menu"></use></svg></button>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="offcanvas offcanvas-start mobile-nav" tabindex="-1" id="mobileNav" aria-labelledby="mobileNavLabel">
+  <div class="offcanvas-header">
+    <a class="site-logo" href="index.html" id="mobileNavLabel"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+    <button type="button" class="btn btn-ghost btn-icon" data-bs-dismiss="offcanvas" aria-label="Close menu"><svg class="icon" aria-hidden="true"><use href="#i-close"></use></svg></button>
+  </div>
+  <div class="offcanvas-body">
+    <ul class="mobile-menu">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="listing.html">Properties</a></li>
+      <li><a href="agents.html">Agents</a></li>
+      <li>
+        <button type="button" data-bs-toggle="collapse" data-bs-target="#mmPages" aria-expanded="false" aria-controls="mmPages">Pages <svg class="icon" aria-hidden="true"><use href="#i-chevron-down"></use></svg></button>
+        <div class="collapse" id="mmPages">
+          <ul class="mobile-submenu">
+            <li><a href="about.html">About us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="faq.html">FAQ</a></li>
+            <li><a href="compare.html">Compare</a></li><li><a href="wishlist.html">Wishlist</a></li>
+          </ul>
+        </div>
+      </li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="mobile-nav-footer">
+      <ul class="mobile-nav-contact">
+        <li><a href="tel:+10000000000"><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg> +1 000 000 0000</a></li>
+        <li><a href="mailto:hello@example.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg> hello@example.com</a></li>
+      </ul>
+      <a class="btn btn-primary" href="add-property.html"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a>
+      <a class="btn btn-outline-primary" href="login.html">Sign in</a>
+    </div>
+  </div>
+</div>
+
+<main id="main">
+  <section class="page-banner">
+    <div class="container">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb breadcrumb-chevron">
+          <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">My account</li>
+        </ol>
+      </nav>
+      <h1>My account</h1>
+      <p>Manage your listings, saved homes and settings.</p>
+    </div>
+  </section>
+  <section class="section-sm">
+    <div class="container">
+      <div class="dash-layout">
+        <nav class="dash-nav" aria-label="Account">
+          <div class="dash-user"><span class="avatar avatar-lg"><img src="assets/img/avatars/avatar-1.svg" alt=""></span><div><strong>Sara Ahmed</strong><span>sara@example.com</span></div></div>
+          <ul class="dash-menu">
+            <li><a href="profile.html" aria-current="page"><svg class="icon" aria-hidden="true"><use href="#i-user"></use></svg>Overview</a></li>
+            <li><a href="profile.html#my-properties"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg>My properties</a></li>
+            <li><a href="wishlist.html"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg>Wishlist<span class="badge badge-neutral">6</span></a></li>
+            <li><a href="add-property.html"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg>Add property</a></li>
+            <li><a href="profile.html#settings"><svg class="icon" aria-hidden="true"><use href="#i-settings"></use></svg>Settings</a></li>
+            <li><a href="login.html"><svg class="icon" aria-hidden="true"><use href="#i-log-out"></use></svg>Sign out</a></li>
+          </ul>
+        </nav>
+        <div>
+          <div class="dash-section">
+            <h1 class="h2">Welcome back, Sara</h1>
+            <div class="alert alert-info mt-3" role="status"><svg class="icon" aria-hidden="true"><use href="#i-info"></use></svg><div>Your listing <strong>Modern villa with pool</strong> is waiting for review. It usually takes one working day.</div></div>
+            <div class="row g-3 mt-1">
+              <div class="col-6 col-xl-3"><div class="stat-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span><div><strong>12</strong><span class="stat-card-label">Active listings</span></div></div></div>
+              <div class="col-6 col-xl-3"><div class="stat-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-eye"></use></svg></span><div><strong>3,480</strong><span class="stat-card-label">Total views</span></div></div></div>
+              <div class="col-6 col-xl-3"><div class="stat-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg></span><div><strong>27</strong><span class="stat-card-label">Enquiries</span></div></div></div>
+              <div class="col-6 col-xl-3"><div class="stat-card"><span class="feature-icon"><svg class="icon" aria-hidden="true"><use href="#i-heart"></use></svg></span><div><strong>6</strong><span class="stat-card-label">Saved homes</span></div></div></div>
+            </div>
+          </div>
+          <div class="dash-section" id="my-properties">
+            <div class="d-flex justify-content-between align-items-center mb-3"><h2 class="mb-0">My properties</h2><a class="btn btn-primary btn-sm" href="add-property.html"><svg class="icon" aria-hidden="true"><use href="#i-plus"></use></svg> Add property</a></div>
+            <div class="table-card"><div class="table-responsive"><table class="table table-hover">
+              <thead><tr><th scope="col">Property</th><th scope="col">Price</th><th scope="col">Status</th><th scope="col"><span class="visually-hidden">Actions</span></th></tr></thead>
+              <tbody>
+                <tr><td><div class="table-media"><img src="assets/img/properties/property-1.svg" alt=""><div><strong>Family house with garden</strong><span>24 Maple Avenue</span></div></div></td><td>$485,000</td><td><span class="badge badge-success badge-dot">Active</span></td><td class="text-end text-nowrap"><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Edit Family house with garden"><svg class="icon" aria-hidden="true"><use href="#i-edit"></use></svg></button><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Delete Family house with garden"><svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg></button></td></tr>
+                <tr><td><div class="table-media"><img src="assets/img/properties/property-2.svg" alt=""><div><strong>Modern villa with pool</strong><span>8 Lakeview Road</span></div></div></td><td>$2,800/mo</td><td><span class="badge badge-info badge-dot">Pending</span></td><td class="text-end text-nowrap"><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Edit Modern villa with pool"><svg class="icon" aria-hidden="true"><use href="#i-edit"></use></svg></button><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Delete Modern villa with pool"><svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg></button></td></tr>
+                <tr><td><div class="table-media"><img src="assets/img/properties/property-3.svg" alt=""><div><strong>Bright two-bedroom apartment</strong><span>Tower 3, Harbor Bay</span></div></div></td><td>$312,000</td><td><span class="badge badge-neutral badge-dot">Draft</span></td><td class="text-end text-nowrap"><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Edit Bright two-bedroom apartment"><svg class="icon" aria-hidden="true"><use href="#i-edit"></use></svg></button><button type="button" class="btn btn-ghost btn-icon btn-sm" aria-label="Delete Bright two-bedroom apartment"><svg class="icon" aria-hidden="true"><use href="#i-trash"></use></svg></button></td></tr>
+              </tbody>
+            </table></div></div>
+          </div>
+          <div class="dash-section" id="settings">
+            <h2>Profile settings</h2>
+            <form class="form-card" onsubmit="return false">
+              <div class="d-flex align-items-center gap-3 mb-4"><span class="avatar avatar-2xl"><img src="assets/img/avatars/avatar-1.svg" alt="Your profile photo"></span><div><label for="pPhoto" class="form-label">Profile photo</label><input type="file" class="form-control" id="pPhoto" accept="image/*"></div></div>
+              <div class="row g-3">
+                <div class="col-sm-6"><label for="pFirst" class="form-label">First name</label><input type="text" class="form-control" id="pFirst" value="Sara"></div>
+                <div class="col-sm-6"><label for="pLast" class="form-label">Last name</label><input type="text" class="form-control" id="pLast" value="Ahmed"></div>
+                <div class="col-sm-6"><label for="pEmail" class="form-label">Email</label><input type="email" class="form-control" id="pEmail" value="sara@example.com"></div>
+                <div class="col-sm-6"><label for="pPhone" class="form-label">Phone</label><input type="tel" class="form-control" id="pPhone" value="+1 000 000 0000"></div>
+                <div class="col-12"><label for="pBio" class="form-label">About you</label><textarea class="form-control" id="pBio" rows="3" maxlength="300" data-counter="#pBioCount">Senior sales agent in Northfield.</textarea><div class="form-text text-end" id="pBioCount"></div></div>
+              </div>
+              <hr class="my-4">
+              <h3 class="h6">Notifications</h3>
+              <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="n1" checked><label class="form-check-label" for="n1">Email me about new enquiries</label></div>
+              <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="n2" checked><label class="form-check-label" for="n2">Price drop alerts for saved homes</label></div>
+              <div class="form-check form-switch"><input class="form-check-input" type="checkbox" role="switch" id="n3"><label class="form-check-label" for="n3">Monthly newsletter</label></div>
+              <div class="d-flex gap-2 mt-4"><button type="submit" class="btn btn-primary">Save changes</button><button type="reset" class="btn btn-ghost">Cancel</button></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="site-footer-main">
+    <div class="container">
+      <div class="row g-5">
+        <div class="col-lg-4 footer-brand">
+          <a class="site-logo" href="index.html"><span class="site-logo-mark"><svg class="icon" aria-hidden="true"><use href="#i-home"></use></svg></span>YourBrand</a>
+          <p>Short line about your agency. Helping people find a place to call home.</p>
+          <ul class="footer-social">
+            <li><a href="#" aria-label="Facebook"><svg class="icon" aria-hidden="true"><use href="#i-facebook"></use></svg></a></li><li><a href="#" aria-label="Instagram"><svg class="icon" aria-hidden="true"><use href="#i-instagram"></use></svg></a></li>
+            <li><a href="#" aria-label="LinkedIn"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"></use></svg></a></li><li><a href="#" aria-label="YouTube"><svg class="icon" aria-hidden="true"><use href="#i-youtube"></use></svg></a></li>
+          </ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h2 class="footer-title">Explore</h2>
+          <ul class="footer-links"><li><a href="listing.html">Properties</a></li><li><a href="agents.html">Agents</a></li><li><a href="compare.html">Compare</a></li><li><a href="blog.html">Blog</a></li></ul>
+        </div>
+        <div class="col-6 col-md-3 col-lg-2">
+          <h2 class="footer-title">Company</h2>
+          <ul class="footer-links"><li><a href="about.html">About us</a></li><li><a href="pricing.html">Pricing</a></li><li><a href="faq.html">FAQ</a></li><li><a href="contact.html">Contact</a></li></ul>
+        </div>
+        <div class="col-md-6 col-lg-4">
+          <h2 class="footer-title">Contact</h2>
+          <ul class="footer-contact">
+            <li><svg class="icon" aria-hidden="true"><use href="#i-map-pin"></use></svg><span>120 Example Street, Your City</span></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-phone"></use></svg><a href="tel:+10000000000">+1 000 000 0000</a></li>
+            <li><svg class="icon" aria-hidden="true"><use href="#i-mail"></use></svg><a href="mailto:hello@example.com">hello@example.com</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="container">
+      <span>&copy; 2026 YourBrand. All rights reserved.</span>
+      <ul><li><a href="privacy.html">Privacy</a></li><li><a href="terms.html">Terms</a></li></ul>
+    </div>
+  </div>
+</footer>
+
+<button type="button" class="btn btn-primary btn-icon btn-pill back-to-top" aria-label="Back to top"><svg class="icon" aria-hidden="true"><use href="#i-arrow-up"></use></svg></button>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"></script>
+<script src="assets/js/icons.js"></script>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
